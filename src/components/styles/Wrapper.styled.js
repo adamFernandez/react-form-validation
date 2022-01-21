@@ -1,7 +1,10 @@
 import styled from 'styled-components';
 
 export const Wrapper = styled.section`
-    width: 60%;
-    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    align-content: center;
+    justify-content: space-evenly;
+    height: 101vh;
     padding-top: 1em;
 `;

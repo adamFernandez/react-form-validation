@@ -8,6 +8,7 @@ export const GlobalStyles = createGlobalStyle`
    } 
 
    body {
+       background-color: #444960;
        font-family: 'Merriweather', sans-serif; 
        font-size: 1.15em;
        margin: 0;
@@ -22,19 +23,28 @@ export const GlobalStyles = createGlobalStyle`
    }
 
    form {
-       width: 95%;
-       margin: 0 auto;
+       p {
+           color: red;
+       }
+   }
+
+   .field {
+    margin-bottom: 1.5em;
+    margin-top: .2em;
    }
 
    label {
-       font-weight: bold;
+       font-size: .75em;
+       font-weight: 700;
    }
 
    input {
-        width: 100%;
-        margin-bottom: 1.5em;
+        width: 100%;        
         padding: .8em 0.5em;
-        border: 1px solid #999999;
+        border: 1px solid #DDDDDD;
         border-radius: .5em;
+        ::placeholder {
+            color: #CCCCCC;
+        }
    }
 `;
