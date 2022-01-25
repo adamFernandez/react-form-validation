@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 
 export const Container = styled.div`
     background-color: #fff;
@@ -7,5 +7,10 @@ export const Container = styled.div`
     border: ${({ border }) => border || '1px solid #999999'};
     border-radius: .5em;
     padding: ${({ pd }) => pd || '1.2em'} 1.2em;
+
+    ${({ card }) => 
+			card && css`
+        width: 300px;
+    `}
 `;
 

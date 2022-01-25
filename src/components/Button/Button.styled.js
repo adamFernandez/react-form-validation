@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const Button = styled.button`
+export const StyledButton = styled.button`
     font-size: .9em;
     width: ${({ width }) => width || '100%' };
     margin-top: .5em;
