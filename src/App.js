@@ -2,8 +2,9 @@ import { useEffect, useState } from 'react';
 
 import { Container } from './components/styles/Container.styled';
 import { Wrapper } from './components/styles/Wrapper.styled';
-import { Button } from './components/styles/Button.styled';
 import { GlobalStyles } from './components/styles/Global';
+
+import Form from "./components/Form/Form";
 
 function App() {
   const defaultValues = { username: '', email: '', password: ''};
@@ -57,54 +58,97 @@ function App() {
   return (
     <Wrapper>
       <GlobalStyles />
-      <Container border='none' mg='0' pd='.1em'>
+      {/* Container showing success on 0 errors or the input values */}
+      {/* <Container border='none' mg='0' pd='.1em'>
         {Object.keys(formErrors).length === 0 && isSubmit 
           ? <p>Signed in Successfully</p>
           : <pre>{JSON.stringify(formValues, undefined, 2)}</pre>
         }
+      </Container> */}      
+      <Container>        
+        <Form header="Sign Form" formValues={formValues} handleChange={handleChange} formErrors={formErrors} handleSubmit={handleSubmit} />
       </Container>
-
-      
-      <Container>
-        <form onSubmit={handleSubmit}>
-          <h1>Login Form</h1>
-          <div className='field'>
-            <label htmlFor="username">Username</label>
-            <input 
-              type="text" 
-              name="username" 
-              placeholder='Username'
-              value={formValues.username} 
-              onChange={handleChange}
-            />  
-          </div>
-          <p>{formErrors.username}</p>
-          <div className='field'>
-            <label htmlFor="email">Email</label>
-            <input 
-              type="email" 
-              name="email" 
-              placeholder='youremail@email.com'
-              value={formValues.email}
-              onChange={handleChange} 
-            />
-          </div>
-          <p>{formErrors.email}</p>
-          <div className='field'>
-            <label htmlFor="password">Password</label>
-            <input 
-              type="password" 
-              name="password" 
-              placeholder='password'
-              value={formValues.password} 
-              onChange={handleChange}
-            />
-          </div>
-          <p>{formErrors.password}</p>
-          <Button type="submit" onSubmit={handleSubmit}>Submit</Button>
-        </form>
+      <h1 className="title">Movies</h1>
+      <Wrapper auto>
         
-      </Container>      
+        <Container movie>
+          <img src="http://placekitten.com/300/150" alt="" />
+          <div className="info"> 
+            <h1>Title</h1>
+            <p>Description</p>
+          </div>
+          <div className="hiddenCard">
+            <h1>PLAY</h1>
+            <h1>PLAY</h1>
+            <h1>PLAY</h1>
+            <h1>PLAY</h1>
+          </div>                  
+        </Container>             
+        <Container movie>
+          <img src="http://placekitten.com/300/150" alt="" />
+          <div className="info"> 
+            <h1>Title</h1>
+            <p>Description</p>
+          </div>
+          <div className="hiddenCard">
+            <h1>PLAY</h1>
+            <h1>PLAY</h1>
+            <h1>PLAY</h1>
+            <h1>PLAY</h1>
+          </div>                  
+        </Container>             
+        <Container movie>
+          <img src="http://placekitten.com/300/150" alt="" />
+          <div className="info"> 
+            <h1>Title</h1>
+            <p>Description</p>
+          </div>
+          <div className="hiddenCard">
+            <h1>PLAY</h1>
+            <h1>PLAY</h1>
+            <h1>PLAY</h1>
+            <h1>PLAY</h1>
+          </div>                  
+        </Container>             
+        <Container movie>
+          <img src="http://placekitten.com/300/150" alt="" />
+          <div className="info"> 
+            <h1>Title</h1>
+            <p>Description</p>
+          </div>
+          <div className="hiddenCard">
+            <h1>PLAY</h1>
+            <h1>PLAY</h1>
+            <h1>PLAY</h1>
+            <h1>PLAY</h1>
+          </div>                  
+        </Container>             
+      </Wrapper>
+      <h1 className="title">Cards</h1>
+      <Wrapper auto>
+        <Container card>        
+          <Form header="Sign Form" formValues={formValues} handleChange={handleChange} formErrors={formErrors} handleSubmit={handleSubmit} />
+        </Container>     
+        <Container card>        
+          <Form header="Sign Form" formValues={formValues} handleChange={handleChange} formErrors={formErrors} handleSubmit={handleSubmit} />
+        </Container>
+        <Container card>        
+          <Form header="Sign Form" formValues={formValues} handleChange={handleChange} formErrors={formErrors} handleSubmit={handleSubmit} />
+        </Container>
+        <Container card>        
+          <Form header="Sign Form" formValues={formValues} handleChange={handleChange} formErrors={formErrors} handleSubmit={handleSubmit} />
+        </Container>
+        <Container card>        
+          <Form header="Sign Form" formValues={formValues} handleChange={handleChange} formErrors={formErrors} handleSubmit={handleSubmit} />
+        </Container>
+        <Container card>        
+          <Form header="Sign Form" formValues={formValues} handleChange={handleChange} formErrors={formErrors} handleSubmit={handleSubmit} />
+        </Container>
+        <Container card>        
+          <Form header="Sign Form" formValues={formValues} handleChange={handleChange} formErrors={formErrors} handleSubmit={handleSubmit} />
+        </Container>        
+      </Wrapper>      
+            
     </Wrapper>
   );
 }
