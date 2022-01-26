@@ -64,15 +64,71 @@ function App() {
           ? <p>Signed in Successfully</p>
           : <pre>{JSON.stringify(formValues, undefined, 2)}</pre>
         }
-      </Container> */}
-      
+      </Container> */}      
       <Container>        
         <Form header="Sign Form" formValues={formValues} handleChange={handleChange} formErrors={formErrors} handleSubmit={handleSubmit} />
       </Container>
+      <h1 className="title">Movies</h1>
+      <Wrapper auto>
+        
+        <Container movie>
+          <img src="http://placekitten.com/300/150" alt="" />
+          <div className="info"> 
+            <h1>Title</h1>
+            <p>Description</p>
+          </div>
+          <div className="hiddenCard">
+            <h1>PLAY</h1>
+            <h1>PLAY</h1>
+            <h1>PLAY</h1>
+            <h1>PLAY</h1>
+          </div>                  
+        </Container>             
+        <Container movie>
+          <img src="http://placekitten.com/300/150" alt="" />
+          <div className="info"> 
+            <h1>Title</h1>
+            <p>Description</p>
+          </div>
+          <div className="hiddenCard">
+            <h1>PLAY</h1>
+            <h1>PLAY</h1>
+            <h1>PLAY</h1>
+            <h1>PLAY</h1>
+          </div>                  
+        </Container>             
+        <Container movie>
+          <img src="http://placekitten.com/300/150" alt="" />
+          <div className="info"> 
+            <h1>Title</h1>
+            <p>Description</p>
+          </div>
+          <div className="hiddenCard">
+            <h1>PLAY</h1>
+            <h1>PLAY</h1>
+            <h1>PLAY</h1>
+            <h1>PLAY</h1>
+          </div>                  
+        </Container>             
+        <Container movie>
+          <img src="http://placekitten.com/300/150" alt="" />
+          <div className="info"> 
+            <h1>Title</h1>
+            <p>Description</p>
+          </div>
+          <div className="hiddenCard">
+            <h1>PLAY</h1>
+            <h1>PLAY</h1>
+            <h1>PLAY</h1>
+            <h1>PLAY</h1>
+          </div>                  
+        </Container>             
+      </Wrapper>
+      <h1 className="title">Cards</h1>
       <Wrapper auto>
         <Container card>        
           <Form header="Sign Form" formValues={formValues} handleChange={handleChange} formErrors={formErrors} handleSubmit={handleSubmit} />
-        </Container>      
+        </Container>     
         <Container card>        
           <Form header="Sign Form" formValues={formValues} handleChange={handleChange} formErrors={formErrors} handleSubmit={handleSubmit} />
         </Container>
@@ -82,7 +138,15 @@ function App() {
         <Container card>        
           <Form header="Sign Form" formValues={formValues} handleChange={handleChange} formErrors={formErrors} handleSubmit={handleSubmit} />
         </Container>
-        
+        <Container card>        
+          <Form header="Sign Form" formValues={formValues} handleChange={handleChange} formErrors={formErrors} handleSubmit={handleSubmit} />
+        </Container>
+        <Container card>        
+          <Form header="Sign Form" formValues={formValues} handleChange={handleChange} formErrors={formErrors} handleSubmit={handleSubmit} />
+        </Container>
+        <Container card>        
+          <Form header="Sign Form" formValues={formValues} handleChange={handleChange} formErrors={formErrors} handleSubmit={handleSubmit} />
+        </Container>        
       </Wrapper>      
             
     </Wrapper>

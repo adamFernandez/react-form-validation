@@ -9,6 +9,14 @@ export const Wrapper = styled.section`
 	// height: 101vh;
 	padding-top: 1em;
 
+	.title {
+		width: 100%;
+		text-align: center;
+		font-size: 2em;
+		color: #fff;
+		border-bottom: 3px solid #fff;
+	}
+
     ${({ auto }) => 
 			auto && 
 			css`
