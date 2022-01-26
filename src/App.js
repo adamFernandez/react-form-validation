@@ -23,11 +23,10 @@ function App() {
   }
 
   useEffect(() => {
-    console.log(formErrors);
     if (Object(formErrors).length === 0 && isSubmit) {  
       console.log(formValues);
     }
-  }, [formErrors]);
+  },[formErrors]);
 
   const validate = (values) => {
     const errors = {};
@@ -57,7 +56,7 @@ function App() {
   return (
     <Wrapper>
       <GlobalStyles />
-      <Container border='none' mg='0' pd='.1em'>
+      <Container border='none' mg='0' pd=''>
         {Object.keys(formErrors).length === 0 && isSubmit 
           ? <p>Signed in Successfully</p>
           : <pre>{JSON.stringify(formValues, undefined, 2)}</pre>
