@@ -70,59 +70,24 @@ function App() {
       </Container>
       <h1 className="title">Movies</h1>
       <Wrapper auto>
-        
         <Container movie>
-          <img src="http://placekitten.com/300/150" alt="" />
-          <div className="info"> 
-            <h1>Title</h1>
-            <p>Description</p>
+          <div className="movieCard">
+            <div className="front">
+              <img src="http://placekitten.com/300/150" alt="" />
+              <div className="info"> 
+                <h1>Title</h1>
+                <p>Description</p>
+              </div>
+            </div>
+            <div className="back">
+              <h1>PLAY</h1>
+              <h1>PLAY</h1>
+              <h1>PLAY</h1>
+              <h1>PLAY</h1>
+            </div>                  
           </div>
-          <div className="hiddenCard">
-            <h1>PLAY</h1>
-            <h1>PLAY</h1>
-            <h1>PLAY</h1>
-            <h1>PLAY</h1>
-          </div>                  
         </Container>             
-        <Container movie>
-          <img src="http://placekitten.com/300/150" alt="" />
-          <div className="info"> 
-            <h1>Title</h1>
-            <p>Description</p>
-          </div>
-          <div className="hiddenCard">
-            <h1>PLAY</h1>
-            <h1>PLAY</h1>
-            <h1>PLAY</h1>
-            <h1>PLAY</h1>
-          </div>                  
-        </Container>             
-        <Container movie>
-          <img src="http://placekitten.com/300/150" alt="" />
-          <div className="info"> 
-            <h1>Title</h1>
-            <p>Description</p>
-          </div>
-          <div className="hiddenCard">
-            <h1>PLAY</h1>
-            <h1>PLAY</h1>
-            <h1>PLAY</h1>
-            <h1>PLAY</h1>
-          </div>                  
-        </Container>             
-        <Container movie>
-          <img src="http://placekitten.com/300/150" alt="" />
-          <div className="info"> 
-            <h1>Title</h1>
-            <p>Description</p>
-          </div>
-          <div className="hiddenCard">
-            <h1>PLAY</h1>
-            <h1>PLAY</h1>
-            <h1>PLAY</h1>
-            <h1>PLAY</h1>
-          </div>                  
-        </Container>             
+                     
       </Wrapper>
       <h1 className="title">Cards</h1>
       <Wrapper auto>

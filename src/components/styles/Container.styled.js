@@ -24,71 +24,88 @@ export const Container = styled.div`
     `}
     ${({ movie }) => 
 			movie && css`
-        width: 300px;
-        padding: 0;
-        font-size: 1em;
-        position: relative;
-        border-radius: 0;
-        background-color: transparent;
-        border: none;
-        
-        img {
-            width: 100%;
-            border: none;
-            padding: 0;
-            margin: 0;       
-        }
+			padding: 0;
+			font-size: 1em;
+			background-color: transparent;
+			border-radius: 0;
+			border: none;
+			
+			.movieCard {
+					width: 300px;
+					height: 100%;
+					position: relative;
+					transition: width 150ms ease 150ms;
 
-        .info {
-            width: 100%;
-            color: #fff;
-            position: absolute;
-            bottom: .5em;
-            left: .5em;
+					.front{
+						position: relative;
+						height: 100%;
 
-            h1 {
-                margin: 0;
-            }
+						img {
+							width: 100%;
+							border: none;
+							padding: 0;
+							margin: 0;       									
+						}
 
-            p {
-                margin: 0;
-            }
-            
-        }
+						.info {
+							width: 100%;
+							color: #fff;
+							position: absolute;
+							bottom: .5em;
+							left: .5em;
+	
+							h1 {
+								margin: 0;
+							}
+	
+							p {
+								margin: 0;
+							}
+						}           
+					}        
 
-        .hiddenCard {
-            position: absolute;
-            //visibility: hidden;
-            background-color: #222;
-            color: #fff;
-            width: 100%;
-            height: 200px;
-            border-bottom-left-radius: .5em;
-            border-bottom-right-radius: .5em;
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            justify-content: center;
-            justify-items: center;
-            align-content: center;
-            opacity: 0;
-            transition: opacity 0.5s ease-in-out;
+					.back {
+						border: 1px solid #blue;
+						position: absolute;
+						z-index: 10;
+						visibility: hidden;
+						background-color: #222;
+						color: #fff;
+						width: 100%;
+						height: 200px;
+						border-bottom-left-radius: .5em;
+						border-bottom-right-radius: .5em;
+						display: grid;
+						grid-template-columns: repeat(4, 1fr);
+						justify-content: center;
+						justify-items: center;
+						align-content: center;
+						opacity: 0;
+						transition: opacity 0.5s ease-in-out;    
+						        
 
-            
-
-            h1 {
-                margin-top: 0;
-                font-size: 1em;
-            }
-        }
-
-        transition: width 150ms ease-in-out 250ms;
-
-        &:hover {
-            .hiddenCard {
-                opacity: 1;
-            }
-            width: 450px;
-            z-index: 100;
+						h1 {
+							margin-top: 0;
+							font-size: 1em;
+						}
+					}
+	
+					
+	
+					&:hover {
+						
+						.back {
+							opacity: 1;
+							visibility: visible;							
+							
+						}
+						.front {
+							
+						}
+						
+ 						width: 400px;
+						z-index: 10;
+					}
         }
 
     `}
