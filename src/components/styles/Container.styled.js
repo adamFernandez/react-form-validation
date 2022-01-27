@@ -33,73 +33,116 @@ export const Container = styled.div`
         font-size: 1em;				
 				border-radius: 0;
 				background-color: transparent;
+				border: none;
 
 				.movie {
 					position: relative;
 					z-index: 10;
 					border: none;
-				}
-               
-        img {
-            width: 100%;
-            border: none;
-            padding: 0;
-            margin: 0; 
+					height: 150px;
+
+					transition: width 150ms ease-in-out 250ms;
+
+					
+					.front {						
+						position: relative;
 						
-						transition: border-radius 300ms ease-in;
-        }
-
-        .info {
-            width: 100%;
-            color: #fff;
-            position: absolute;
-            bottom: .5em;
-            left: .5em;
-
-            h1 {
-                margin: 0;
-            }
-
-            p {
-                margin: 0;
-            }            
-        }
-
-        .hiddenCard {
-            position: absolute;
-            visibility: hidden;
+						img {
+							width: 100%;
+							border: none;
+							padding: 0;
+							margin: 0; 
+							
+							transition: border-radius 300ms ease-in;
+						}
+						
+						.info {
+							width: 100%;
+							color: #fff;
+							position: absolute;
+							bottom: .5em;
+							
+							h3 {
+								margin: 0 .5em;
+								
+							}
+							
+							p {
+								margin: 0;
+							}            
+						}
+					}
+					
+					.back {
+						position: relative;
+						bottom: 5px;
             background-color: #222;
             color: #fff;
             width: 100%;
-            height: 200px;
+            height: 150px;
             border-bottom-left-radius: .5em;
             border-bottom-right-radius: .5em;
             display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            justify-content: center;
-            justify-items: center;
-            align-content: center;
+            grid-template-columns: 1fr;
             opacity: 0;
-            transition: opacity 0.5s ease-in-out;            
-            h1 {
-                margin-top: 0;
-                font-size: 1em;
-            }
-        }
+            transition: opacity 0.5s ease-in-out;
 
-        transition: width 150ms ease-in-out 250ms;
+						.options {
+							margin: .5em;
+							display: grid;
+							grid-template-columns: repeat(8, 1fr);
+							justify-items: center;
 
-        &:hover {
-						img {
-							border-top-left-radius: .5em;
-							border-top-right-radius: .5em;
+							.sub_menu {
+								grid-column-start: 8;
+							}
 						}
-            .hiddenCard {
-              opacity: 1;
-            }
-            width: 450px;
-        }
 
-    `}
-`;
+						.info {
+							.age {
+								width: 1.5em;
+								height: 1.5em;
+								padding-top: .1em;
+								text-align: center;
+								border: 1px solid #fff;
+								border-radius: 50%;
+								background-color: #990000;
+							}
+							display: flex;
+							align-content: center;
+							margin: .5em;
+						}
+
+						.tags {
+							margin: .5em;
+						}
+
+            p {
+							margin-top: 0;
+							font-size: 1em;
+            }
+					}
+
+					&:hover {
+							img {
+								border-top-left-radius: .5em;
+								border-top-right-radius: .5em;
+							}
+							.front {
+								bottom: 50px;
+								right: 25px;
+							}
+							.back {
+								opacity: 1;
+								right: 25px;
+								bottom: 55px;
+							}
+							width: 350px;
+					}
+				}
+				
+        
+				
+				`}
+				`;
 

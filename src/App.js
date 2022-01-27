@@ -70,7 +70,7 @@ function App() {
       <h1 className="title">Movies</h1>
       <Wrapper auto>
         <Container movie>
-          <div className="movieCard">
+          <div className="movie">
             <div className="front">
               <img src="http://placekitten.com/300/150" alt="" />
               <div className="info"> 
@@ -78,21 +78,19 @@ function App() {
               </div>
             </div>
             <div className="back">
-              <div className="hiddenCard">
-                <div className="options">
-                  <p className="play">PLAY</p>
-                  <p className="add">+</p>
-                  <p className="up">TP</p>
-                  <p className="down">TD</p>
-                  <p className="sub_menu">v</p>
-                </div>
-                <div className="info">
-                  <p className="age">15</p>
-                  <p className="duration">2 temporadas</p>
-                </div>
-                <p className="tags">Sarcastic-Exciting-Superheroes</p>
-              </div>              
-            </div>            
+              <div className="options">
+                <p className="play"><i class="fas fa-play-circle"></i></p>
+                <p className="add"><img src="img/plus-solid.svg" alt="" /></p>
+                <p className="up">TP</p>
+                <p className="down">TD</p>
+                <p className="sub_menu">v</p>
+              </div>
+              <div className="info">
+                <p className="age">15</p>
+                <p className="duration">2 temporadas</p>
+              </div>
+              <p className="tags">Sarcastic-Exciting-Superheroes</p>
+            </div>              
           </div>                            
         </Container>             
       </Wrapper>
