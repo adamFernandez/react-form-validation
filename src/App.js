@@ -2,8 +2,9 @@ import { useEffect, useState } from 'react';
 
 import { Container } from './components/styles/Container.styled';
 import { Wrapper } from './components/styles/Wrapper.styled';
-import { Button } from './components/styles/Button.styled';
 import { GlobalStyles } from './components/styles/Global';
+
+import Form from "./components/Form/Form";
 
 function App() {
   const defaultValues = { username: '', email: '', password: ''};
@@ -56,54 +57,70 @@ function App() {
   return (
     <Wrapper>
       <GlobalStyles />
-      <Container border='none' mg='0' pd=''>
+      {/* Container showing success on 0 errors or the input values */}
+      {/* <Container border='none' mg='0' pd='.1em'>
         {Object.keys(formErrors).length === 0 && isSubmit 
           ? <p>Signed in Successfully</p>
           : <pre>{JSON.stringify(formValues, undefined, 2)}</pre>
         }
+      </Container> */}      
+      <Container>        
+        <Form header="Sign Form" formValues={formValues} handleChange={handleChange} formErrors={formErrors} handleSubmit={handleSubmit} />
       </Container>
-
-      
-      <Container>
-        <form onSubmit={handleSubmit}>
-          <h1>Login Form</h1>
-          <div className='field'>
-            <label htmlFor="username">Username</label>
-            <input 
-              type="text" 
-              name="username" 
-              placeholder='Username'
-              value={formValues.username} 
-              onChange={handleChange}
-            />  
-          </div>
-          <p>{formErrors.username}</p>
-          <div className='field'>
-            <label htmlFor="email">Email</label>
-            <input 
-              type="email" 
-              name="email" 
-              placeholder='youremail@email.com'
-              value={formValues.email}
-              onChange={handleChange} 
-            />
-          </div>
-          <p>{formErrors.email}</p>
-          <div className='field'>
-            <label htmlFor="password">Password</label>
-            <input 
-              type="password" 
-              name="password" 
-              placeholder='password'
-              value={formValues.password} 
-              onChange={handleChange}
-            />
-          </div>
-          <p>{formErrors.password}</p>
-          <Button type="submit" onSubmit={handleSubmit}>Submit</Button>
-        </form>
-        
-      </Container>      
+      <h1 className="title">Movies</h1>
+      <Wrapper auto>
+        <Container movie>
+          <div className="movieCard">
+            <div className="front">
+              <img src="http://placekitten.com/300/150" alt="" />
+              <div className="info"> 
+                <h3>Movie Title</h3>
+              </div>
+            </div>
+            <div className="back">
+              <div className="hiddenCard">
+                <div className="options">
+                  <p className="play">PLAY</p>
+                  <p className="add">+</p>
+                  <p className="up">TP</p>
+                  <p className="down">TD</p>
+                  <p className="sub_menu">v</p>
+                </div>
+                <div className="info">
+                  <p className="age">15</p>
+                  <p className="duration">2 temporadas</p>
+                </div>
+                <p className="tags">Sarcastic-Exciting-Superheroes</p>
+              </div>              
+            </div>            
+          </div>                            
+        </Container>             
+      </Wrapper>
+      <h1 className="title">Cards</h1>
+      <Wrapper auto>
+        <Container card>        
+          <Form header="Sign Form" formValues={formValues} handleChange={handleChange} formErrors={formErrors} handleSubmit={handleSubmit} />
+        </Container>     
+        <Container card>        
+          <Form header="Sign Form" formValues={formValues} handleChange={handleChange} formErrors={formErrors} handleSubmit={handleSubmit} />
+        </Container>
+        <Container card>        
+          <Form header="Sign Form" formValues={formValues} handleChange={handleChange} formErrors={formErrors} handleSubmit={handleSubmit} />
+        </Container>
+        <Container card>        
+          <Form header="Sign Form" formValues={formValues} handleChange={handleChange} formErrors={formErrors} handleSubmit={handleSubmit} />
+        </Container>
+        <Container card>        
+          <Form header="Sign Form" formValues={formValues} handleChange={handleChange} formErrors={formErrors} handleSubmit={handleSubmit} />
+        </Container>
+        <Container card>        
+          <Form header="Sign Form" formValues={formValues} handleChange={handleChange} formErrors={formErrors} handleSubmit={handleSubmit} />
+        </Container>
+        <Container card>        
+          <Form header="Sign Form" formValues={formValues} handleChange={handleChange} formErrors={formErrors} handleSubmit={handleSubmit} />
+        </Container>        
+      </Wrapper>      
+            
     </Wrapper>
   );
 }

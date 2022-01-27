@@ -14,37 +14,14 @@ export const GlobalStyles = createGlobalStyle`
        margin: 0;
    }
 
-   h1 {
-       margin: 0.5em 0;
+   h1, h2, h3, p {
+       margin: 0;
    }
-
-   p {
-       margin: .5em 0;
-   }
-
    form {
        p {
            color: red;
        }
-   }
+   }  
 
-   .field {
-    margin-bottom: 1.5em;
-    margin-top: .2em;
-   }
-
-   label {
-       font-size: .75em;
-       font-weight: 700;
-   }
-
-   input {
-        width: 100%;        
-        padding: .8em 0.5em;
-        border: 1px solid #DDDDDD;
-        border-radius: .5em;
-        ::placeholder {
-            color: #CCCCCC;
-        }
-   }
+   
 `;
