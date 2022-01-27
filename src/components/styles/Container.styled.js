@@ -21,93 +21,128 @@ export const Container = styled.div`
     ${({ card }) => 
 			card && css`
         width: 300px;
+				
+				h1 {
+					margin: .5em 0;
+				}
     `}
     ${({ movie }) => 
 			movie && css`
-			padding: 0;
-			font-size: 1em;
-			background-color: transparent;
-			border-radius: 0;
-			border: none;
-			
-			.movieCard {
-					width: 300px;
-					height: 100%;
+        width: 300px;
+        padding: 0;
+        font-size: 1em;				
+				border-radius: 0;
+				background-color: transparent;
+				border: none;
+
+				.movie {
 					position: relative;
-					transition: width 150ms ease 150ms;
+					z-index: 10;
+					border: none;
+					height: 150px;
 
-					.front{
+					transition: width 150ms ease-in-out 250ms;
+
+					
+					.front {						
 						position: relative;
-						height: 100%;
-
+						
 						img {
 							width: 100%;
 							border: none;
 							padding: 0;
-							margin: 0;       									
+							margin: 0; 
+							
+							transition: border-radius 300ms ease-in;
 						}
-
+						
 						.info {
 							width: 100%;
 							color: #fff;
 							position: absolute;
 							bottom: .5em;
-							left: .5em;
-	
-							h1 {
-								margin: 0;
+							
+							h3 {
+								margin: 0 .5em;
+								
 							}
-	
+							
 							p {
 								margin: 0;
-							}
-						}           
-					}        
-
+							}            
+						}
+					}
+					
 					.back {
-						border: 1px solid #blue;
-						position: absolute;
-						z-index: 10;
-						visibility: hidden;
-						background-color: #222;
-						color: #fff;
-						width: 100%;
-						height: 200px;
-						border-bottom-left-radius: .5em;
-						border-bottom-right-radius: .5em;
-						display: grid;
-						grid-template-columns: repeat(4, 1fr);
-						justify-content: center;
-						justify-items: center;
-						align-content: center;
-						opacity: 0;
-						transition: opacity 0.5s ease-in-out;    
-						        
+						position: relative;
+						bottom: 5px;
+            background-color: #222;
+            color: #fff;
+            width: 100%;
+            height: 150px;
+            border-bottom-left-radius: .5em;
+            border-bottom-right-radius: .5em;
+            display: grid;
+            grid-template-columns: 1fr;
+            opacity: 0;
+            transition: opacity 0.5s ease-in-out;
 
-						h1 {
+						.options {
+							margin: .5em;
+							display: grid;
+							grid-template-columns: repeat(8, 1fr);
+							justify-items: center;
+
+							.sub_menu {
+								grid-column-start: 8;
+							}
+						}
+
+						.info {
+							.age {
+								width: 1.5em;
+								height: 1.5em;
+								padding-top: .1em;
+								text-align: center;
+								border: 1px solid #fff;
+								border-radius: 50%;
+								background-color: #990000;
+							}
+							display: flex;
+							align-content: center;
+							margin: .5em;
+						}
+
+						.tags {
+							margin: .5em;
+						}
+
+            p {
 							margin-top: 0;
 							font-size: 1em;
-						}
+            }
 					}
-	
-					
-	
-					&:hover {
-						
-						.back {
-							opacity: 1;
-							visibility: visible;							
-							
-						}
-						.front {
-							
-						}
-						
- 						width: 400px;
-						z-index: 10;
-					}
-        }
 
-    `}
-`;
+					&:hover {
+							img {
+								border-top-left-radius: .5em;
+								border-top-right-radius: .5em;
+							}
+							.front {
+								bottom: 50px;
+								right: 25px;
+							}
+							.back {
+								opacity: 1;
+								right: 25px;
+								bottom: 55px;
+							}
+							width: 350px;
+					}
+				}
+				
+        
+				
+				`}
+				`;
 

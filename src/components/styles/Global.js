@@ -14,17 +14,14 @@ export const GlobalStyles = createGlobalStyle`
        margin: 0;
    }
 
-   h1 {
-       margin: 0.5em 0;
+   h1, h2, h3, p {
+       margin: 0;
    }
-
-   p {
-       margin: .5em 0;
-   }
-
    form {
        p {
            color: red;
        }
    }  
+
+   
 `;
