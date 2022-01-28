@@ -4,6 +4,8 @@ import { Container } from './components/styles/Container.styled';
 import { Wrapper } from './components/styles/Wrapper.styled';
 import { GlobalStyles } from './components/styles/Global';
 
+import "./FontAwesomeIcons";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Form from "./components/Form/Form";
 
 function App() {
@@ -70,6 +72,32 @@ function App() {
       <h1 className="title">Movies</h1>
       <Wrapper auto>
         <Container movie>
+          <img src="./img/netflix_1.png" alt="" />
+          <div className="movie">
+            <div className="trade">N</div>
+            <div className="front">
+              <img src="http://placekitten.com/300/150" alt="" />
+              <div className="info"> 
+                <h3>Movie Title</h3>
+              </div>
+            </div>
+            <div className="back">
+              <div className="options">
+                <p className="play"><FontAwesomeIcon icon="play" size="xs" /></p>
+                <p className="add"><FontAwesomeIcon icon="plus" size="xs" /></p>
+                <p className="up"><FontAwesomeIcon icon="thumbs-up" size="xs" /></p>
+                <p className="down"><FontAwesomeIcon icon="thumbs-down" size="xs" /></p>
+                <p className="sub_menu"><FontAwesomeIcon icon="angle-down" size="xs" /></p>
+              </div>
+              <div className="info">
+                <p className="age">15</p>
+                <p className="duration">2 temporadas</p>
+              </div>
+              <p className="tags">Sarcastic-Exciting-Superheroes</p>
+            </div>              
+          </div>                            
+        </Container>             
+        <Container movie>
           <div className="movie">
             <div className="front">
               <img src="http://placekitten.com/300/150" alt="" />
@@ -79,11 +107,203 @@ function App() {
             </div>
             <div className="back">
               <div className="options">
-                <p className="play"><i class="fas fa-play-circle"></i></p>
-                <p className="add"><img src="img/plus-solid.svg" alt="" /></p>
-                <p className="up">TP</p>
-                <p className="down">TD</p>
-                <p className="sub_menu">v</p>
+                <p className="play"><FontAwesomeIcon icon="play" size="xs" /></p>
+                <p className="add"><FontAwesomeIcon icon="plus" size="xs" /></p>
+                <p className="up"><FontAwesomeIcon icon="thumbs-up" size="xs" /></p>
+                <p className="down"><FontAwesomeIcon icon="thumbs-down" size="xs" /></p>
+                <p className="sub_menu"><FontAwesomeIcon icon="angle-down" size="xs" /></p>
+              </div>
+              <div className="info">
+                <p className="age">15</p>
+                <p className="duration">2 temporadas</p>
+              </div>
+              <p className="tags">Sarcastic-Exciting-Superheroes</p>
+            </div>              
+          </div>                            
+        </Container>             
+        <Container movie>
+          <div className="movie">
+            <div className="front">
+              <img src="http://placekitten.com/300/150" alt="" />
+              <div className="info"> 
+                <h3>Movie Title</h3>
+              </div>
+            </div>
+            <div className="back">
+              <div className="options">
+                <p className="play"><FontAwesomeIcon icon="play" size="xs" /></p>
+                <p className="add"><FontAwesomeIcon icon="plus" size="xs" /></p>
+                <p className="up"><FontAwesomeIcon icon="thumbs-up" size="xs" /></p>
+                <p className="down"><FontAwesomeIcon icon="thumbs-down" size="xs" /></p>
+                <p className="sub_menu"><FontAwesomeIcon icon="angle-down" size="xs" /></p>
+              </div>
+              <div className="info">
+                <p className="age">15</p>
+                <p className="duration">2 temporadas</p>
+              </div>
+              <p className="tags">Sarcastic-Exciting-Superheroes</p>
+            </div>              
+          </div>                            
+        </Container>             
+        <Container movie>
+          <div className="movie">
+            <div className="front">
+              <img src="http://placekitten.com/300/150" alt="" />
+              <div className="info"> 
+                <h3>Movie Title</h3>
+              </div>
+            </div>
+            <div className="back">
+              <div className="options">
+                <p className="play"><FontAwesomeIcon icon="play" size="xs" /></p>
+                <p className="add"><FontAwesomeIcon icon="plus" size="xs" /></p>
+                <p className="up"><FontAwesomeIcon icon="thumbs-up" size="xs" /></p>
+                <p className="down"><FontAwesomeIcon icon="thumbs-down" size="xs" /></p>
+                <p className="sub_menu"><FontAwesomeIcon icon="angle-down" size="xs" /></p>
+              </div>
+              <div className="info">
+                <p className="age">15</p>
+                <p className="duration">2 temporadas</p>
+              </div>
+              <p className="tags">Sarcastic-Exciting-Superheroes</p>
+            </div>              
+          </div>                            
+        </Container>             
+        <Container movie>
+          <div className="movie">
+            <div className="front">
+              <img src="http://placekitten.com/300/150" alt="" />
+              <div className="info"> 
+                <h3>Movie Title</h3>
+              </div>
+            </div>
+            <div className="back">
+              <div className="options">
+                <p className="play"><FontAwesomeIcon icon="play" size="xs" /></p>
+                <p className="add"><FontAwesomeIcon icon="plus" size="xs" /></p>
+                <p className="up"><FontAwesomeIcon icon="thumbs-up" size="xs" /></p>
+                <p className="down"><FontAwesomeIcon icon="thumbs-down" size="xs" /></p>
+                <p className="sub_menu"><FontAwesomeIcon icon="angle-down" size="xs" /></p>
+              </div>
+              <div className="info">
+                <p className="age">15</p>
+                <p className="duration">2 temporadas</p>
+              </div>
+              <p className="tags">Sarcastic-Exciting-Superheroes</p>
+            </div>              
+          </div>                            
+        </Container>             
+        <Container movie>
+          <div className="movie">
+            <div className="front">
+              <img src="http://placekitten.com/300/150" alt="" />
+              <div className="info"> 
+                <h3>Movie Title</h3>
+              </div>
+            </div>
+            <div className="back">
+              <div className="options">
+                <p className="play"><FontAwesomeIcon icon="play" size="xs" /></p>
+                <p className="add"><FontAwesomeIcon icon="plus" size="xs" /></p>
+                <p className="up"><FontAwesomeIcon icon="thumbs-up" size="xs" /></p>
+                <p className="down"><FontAwesomeIcon icon="thumbs-down" size="xs" /></p>
+                <p className="sub_menu"><FontAwesomeIcon icon="angle-down" size="xs" /></p>
+              </div>
+              <div className="info">
+                <p className="age">15</p>
+                <p className="duration">2 temporadas</p>
+              </div>
+              <p className="tags">Sarcastic-Exciting-Superheroes</p>
+            </div>              
+          </div>                            
+        </Container>             
+        <Container movie>
+          <div className="movie">
+            <div className="front">
+              <img src="http://placekitten.com/300/150" alt="" />
+              <div className="info"> 
+                <h3>Movie Title</h3>
+              </div>
+            </div>
+            <div className="back">
+              <div className="options">
+                <p className="play"><FontAwesomeIcon icon="play" size="xs" /></p>
+                <p className="add"><FontAwesomeIcon icon="plus" size="xs" /></p>
+                <p className="up"><FontAwesomeIcon icon="thumbs-up" size="xs" /></p>
+                <p className="down"><FontAwesomeIcon icon="thumbs-down" size="xs" /></p>
+                <p className="sub_menu"><FontAwesomeIcon icon="angle-down" size="xs" /></p>
+              </div>
+              <div className="info">
+                <p className="age">15</p>
+                <p className="duration">2 temporadas</p>
+              </div>
+              <p className="tags">Sarcastic-Exciting-Superheroes</p>
+            </div>              
+          </div>                            
+        </Container>             
+        <Container movie>
+          <div className="movie">
+            <div className="front">
+              <img src="http://placekitten.com/300/150" alt="" />
+              <div className="info"> 
+                <h3>Movie Title</h3>
+              </div>
+            </div>
+            <div className="back">
+              <div className="options">
+                <p className="play"><FontAwesomeIcon icon="play" size="xs" /></p>
+                <p className="add"><FontAwesomeIcon icon="plus" size="xs" /></p>
+                <p className="up"><FontAwesomeIcon icon="thumbs-up" size="xs" /></p>
+                <p className="down"><FontAwesomeIcon icon="thumbs-down" size="xs" /></p>
+                <p className="sub_menu"><FontAwesomeIcon icon="angle-down" size="xs" /></p>
+              </div>
+              <div className="info">
+                <p className="age">15</p>
+                <p className="duration">2 temporadas</p>
+              </div>
+              <p className="tags">Sarcastic-Exciting-Superheroes</p>
+            </div>              
+          </div>                            
+        </Container>             
+        <Container movie>
+          <div className="movie">
+            <div className="front">
+              <img src="http://placekitten.com/300/150" alt="" />
+              <div className="info"> 
+                <h3>Movie Title</h3>
+              </div>
+            </div>
+            <div className="back">
+              <div className="options">
+                <p className="play"><FontAwesomeIcon icon="play" size="xs" /></p>
+                <p className="add"><FontAwesomeIcon icon="plus" size="xs" /></p>
+                <p className="up"><FontAwesomeIcon icon="thumbs-up" size="xs" /></p>
+                <p className="down"><FontAwesomeIcon icon="thumbs-down" size="xs" /></p>
+                <p className="sub_menu"><FontAwesomeIcon icon="angle-down" size="xs" /></p>
+              </div>
+              <div className="info">
+                <p className="age">15</p>
+                <p className="duration">2 temporadas</p>
+              </div>
+              <p className="tags">Sarcastic-Exciting-Superheroes</p>
+            </div>              
+          </div>                            
+        </Container>             
+        <Container movie>
+          <div className="movie">
+            <div className="front">
+              <img src="http://placekitten.com/300/150" alt="" />
+              <div className="info"> 
+                <h3>Movie Title</h3>
+              </div>
+            </div>
+            <div className="back">
+              <div className="options">
+                <p className="play"><FontAwesomeIcon icon="play" size="xs" /></p>
+                <p className="add"><FontAwesomeIcon icon="plus" size="xs" /></p>
+                <p className="up"><FontAwesomeIcon icon="thumbs-up" size="xs" /></p>
+                <p className="down"><FontAwesomeIcon icon="thumbs-down" size="xs" /></p>
+                <p className="sub_menu"><FontAwesomeIcon icon="angle-down" size="xs" /></p>
               </div>
               <div className="info">
                 <p className="age">15</p>

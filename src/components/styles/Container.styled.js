@@ -37,13 +37,26 @@ export const Container = styled.div`
 
 				.movie {
 					position: relative;
-					z-index: 10;
 					border: none;
 					height: 150px;
 
 					transition: width 150ms ease-in-out 250ms;
-
 					
+					img {
+						position: relative;
+						z-index: 2;
+						border: 1px solid red;
+					}
+
+					.trade {
+						font-family: Arial, sans-serif;
+						font-weight: 900;
+						position: absolute;
+						z-index: 5;
+						left: .4em;
+						top: .3em
+					}
+
 					.front {						
 						position: relative;
 						
@@ -80,6 +93,7 @@ export const Container = styled.div`
             color: #fff;
             width: 100%;
             height: 150px;
+						padding: .7em;
             border-bottom-left-radius: .5em;
             border-bottom-right-radius: .5em;
             display: grid;
@@ -88,29 +102,52 @@ export const Container = styled.div`
             transition: opacity 0.5s ease-in-out;
 
 						.options {
-							margin: .5em;
+							font-size: 1em;
 							display: grid;
-							grid-template-columns: repeat(8, 1fr);
+							grid-template-columns: repeat(7, 1fr);
 							justify-items: center;
+							text-align: center;
+							align-items: center;
+							
+							p {
+								height: 2em;
+								width: 2em;
+								padding-top: .3em;
+								background-color: #444;
+								border: 2px solid #666;
+								border-radius: 50%;
+										
+							}
+
+							.play {
+								color: black;
+								border: none;
+								padding-top: .4em;
+								padding-left: .2em;
+								background-color: #fff;
+							}
 
 							.sub_menu {
-								grid-column-start: 8;
+								grid-column-start: 7;
 							}
 						}
 
 						.info {
+							display: flex;
+							gap: 10px;
+							align-content: center;
+							margin: 1em 0 1em .7em;
+
 							.age {
-								width: 1.5em;
-								height: 1.5em;
-								padding-top: .1em;
+								font-size: .7em;
+								width: 2em;
+								height: 2em;
+								padding-top: .3em;
 								text-align: center;
 								border: 1px solid #fff;
 								border-radius: 50%;
 								background-color: #990000;
-							}
-							display: flex;
-							align-content: center;
-							margin: .5em;
+							}							
 						}
 
 						.tags {
@@ -137,6 +174,8 @@ export const Container = styled.div`
 								right: 25px;
 								bottom: 55px;
 							}
+
+							z-index: 10;
 							width: 350px;
 					}
 				}
