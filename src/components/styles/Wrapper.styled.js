@@ -21,6 +21,12 @@ export const Wrapper = styled.section`
 			auto && 
 			css`
 				grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-        // grid-auto-columns: 300px;
-    	`}
+		`}
+		
+		${({ row }) => 
+			row && 
+			css`
+				grid-template-rows: 1fr;
+
+		`}
 `;

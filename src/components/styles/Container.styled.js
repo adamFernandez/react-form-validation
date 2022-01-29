@@ -1,14 +1,5 @@
-import styled, { css, keyframes } from 'styled-components';
+import styled, { css } from 'styled-components';
 
-const showInfo = keyframes`
-    from {
-        transform: scale(100%);
-    }
-
-    to {
-        transform: scale(150%);
-    }
-`
 
 export const Container = styled.div`
     background-color: #fff;
@@ -34,28 +25,53 @@ export const Container = styled.div`
 				border-radius: 0;
 				background-color: transparent;
 				border: none;
-
+				
 				.movie {
 					position: relative;
 					border: none;
 					height: 150px;
-
+					
 					transition: width 150ms ease-in-out 250ms;
 					
-					img {
-						position: relative;
-						z-index: 2;
-						border: 1px solid red;
-					}
-
 					.trade {
 						font-family: Arial, sans-serif;
+						width: 100%;
+						height: 5vh;
 						font-weight: 900;
 						position: absolute;
-						z-index: 5;
-						left: .4em;
-						top: .3em
-					}
+						
+						img {
+							position: absolute;
+							z-index: 5;
+							left: .4em;
+							top: .4em;
+							width: 6%;
+							height: 3vh;
+						}
+						
+						.top10 {
+							font-size: .4em;
+							font-weight: bold;
+							line-height: 1.48em;
+							color: #fff;
+							position: absolute;
+							z-index: 5;
+							right: 0;
+							text-align: center;
+							padding: .3em 0 0 1em;
+							margin: 0;
+							clip-path: polygon(25% 0%, 100% 0%, 100% 100%, 26% 89%);
+							width: 12%;
+							height: 4vh;
+							background-color: red;
+
+							.number {
+								margin: 0;
+								padding: 0;
+								font-size: 2em;
+							}
+						}
+					}				
 
 					.front {						
 						position: relative;
@@ -66,7 +82,7 @@ export const Container = styled.div`
 							padding: 0;
 							margin: 0; 
 							
-							transition: border-radius 300ms ease-in;
+							transition: border-radius 600ms ease-out 250ms;
 						}
 						
 						.info {
@@ -89,7 +105,7 @@ export const Container = styled.div`
 					.back {
 						position: relative;
 						bottom: 5px;
-            background-color: #222;
+            background-color: #333;
             color: #fff;
             width: 100%;
             height: 150px;
@@ -99,7 +115,8 @@ export const Container = styled.div`
             display: grid;
             grid-template-columns: 1fr;
             opacity: 0;
-            transition: opacity 0.5s ease-in-out;
+						visibility: hidden;
+            transition: opacity 0.3s ease;
 
 						.options {
 							font-size: 1em;
@@ -112,23 +129,29 @@ export const Container = styled.div`
 							p {
 								height: 2em;
 								width: 2em;
-								padding-top: .3em;
-								background-color: #444;
-								border: 2px solid #666;
+								padding-top: .25em;
+								/* background-color: #444; */
+								border: .15em solid #888;
 								border-radius: 50%;
+
+								&:hover {
+									border-color: #ddd;
+								}
 										
 							}
 
 							.play {
 								color: black;
 								border: none;
-								padding-top: .4em;
-								padding-left: .2em;
+								padding-top: .37em;
+								padding-left: .15em;
 								background-color: #fff;
 							}
 
 							.sub_menu {
+								padding-top: .35em;
 								grid-column-start: 7;
+								
 							}
 						}
 
@@ -161,21 +184,35 @@ export const Container = styled.div`
 					}
 
 					&:hover {
+							.trade {
+								img {
+									z-index: 40;
+									top: -38px;
+									left: -20px;
+									width: 8%;
+									height: 5vh;
+								}
+								.top10 {
+									z-index: 0;
+									left: 0;
+								}
+							}							
 							img {
 								border-top-left-radius: .5em;
 								border-top-right-radius: .5em;
 							}
 							.front {
 								bottom: 50px;
-								right: 25px;
+								right: 25px;								
 							}
 							.back {
 								opacity: 1;
+								visibility: visible;
 								right: 25px;
 								bottom: 55px;
 							}
 
-							z-index: 10;
+							z-index: 40;
 							width: 350px;
 					}
 				}

@@ -1,0 +1,18 @@
+{
+  "properties": [
+    {
+      "id": "1",
+      "image": {
+        "src": "https://picsum.photos/200/300"
+      },
+      "bedrooms": "1",
+      "title": "1 bed flat for sale",
+      "address": "Mansford Street",
+      "post-code": "E2",
+      "description": "Lovely one bedroom flat located....",
+      "asking-price": 425000,
+      "date-listed" : "7th May 2020",
+      "status": "active"
+    }
+  ]
+}

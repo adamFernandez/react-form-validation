@@ -5,6 +5,7 @@ import { Wrapper } from './components/styles/Wrapper.styled';
 import { GlobalStyles } from './components/styles/Global';
 
 import "./FontAwesomeIcons";
+import logo from "./img/netflix_2.png";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Form from "./components/Form/Form";
 
@@ -71,10 +72,13 @@ function App() {
       </Container>
       <h1 className="title">Movies</h1>
       <Wrapper auto>
+        <Wrapper row>
         <Container movie>
-          <img src="./img/netflix_1.png" alt="" />
           <div className="movie">
-            <div className="trade">N</div>
+            <div className="trade">
+              <img src={logo} width="25px" alt="" />
+              <div className="top10">TOP <span className="number">10</span></div>   
+            </div>
             <div className="front">
               <img src="http://placekitten.com/300/150" alt="" />
               <div className="info"> 
@@ -87,7 +91,7 @@ function App() {
                 <p className="add"><FontAwesomeIcon icon="plus" size="xs" /></p>
                 <p className="up"><FontAwesomeIcon icon="thumbs-up" size="xs" /></p>
                 <p className="down"><FontAwesomeIcon icon="thumbs-down" size="xs" /></p>
-                <p className="sub_menu"><FontAwesomeIcon icon="angle-down" size="xs" /></p>
+                <p className="sub_menu"><FontAwesomeIcon icon="angle-down" size="s" /></p>
               </div>
               <div className="info">
                 <p className="age">15</p>
@@ -99,6 +103,10 @@ function App() {
         </Container>             
         <Container movie>
           <div className="movie">
+            <div className="trade">
+              <img src={logo} width="25px" alt="" />
+              <div className="top10">TOP <span className="number">10</span></div>   
+            </div>
             <div className="front">
               <img src="http://placekitten.com/300/150" alt="" />
               <div className="info"> 
@@ -111,7 +119,7 @@ function App() {
                 <p className="add"><FontAwesomeIcon icon="plus" size="xs" /></p>
                 <p className="up"><FontAwesomeIcon icon="thumbs-up" size="xs" /></p>
                 <p className="down"><FontAwesomeIcon icon="thumbs-down" size="xs" /></p>
-                <p className="sub_menu"><FontAwesomeIcon icon="angle-down" size="xs" /></p>
+                <p className="sub_menu"><FontAwesomeIcon icon="angle-down" size="s" /></p>
               </div>
               <div className="info">
                 <p className="age">15</p>
@@ -121,8 +129,14 @@ function App() {
             </div>              
           </div>                            
         </Container>             
+
+        </Wrapper>
         <Container movie>
           <div className="movie">
+            <div className="trade">
+              <img src={logo} width="25px" alt="" />
+              <div className="top10">TOP <span className="number">10</span></div>   
+            </div>
             <div className="front">
               <img src="http://placekitten.com/300/150" alt="" />
               <div className="info"> 
@@ -135,7 +149,7 @@ function App() {
                 <p className="add"><FontAwesomeIcon icon="plus" size="xs" /></p>
                 <p className="up"><FontAwesomeIcon icon="thumbs-up" size="xs" /></p>
                 <p className="down"><FontAwesomeIcon icon="thumbs-down" size="xs" /></p>
-                <p className="sub_menu"><FontAwesomeIcon icon="angle-down" size="xs" /></p>
+                <p className="sub_menu"><FontAwesomeIcon icon="angle-down" size="s" /></p>
               </div>
               <div className="info">
                 <p className="age">15</p>
@@ -147,6 +161,10 @@ function App() {
         </Container>             
         <Container movie>
           <div className="movie">
+            <div className="trade">
+              <img src={logo} width="25px" alt="" />
+              <div className="top10">TOP <span className="number">10</span></div>   
+            </div>
             <div className="front">
               <img src="http://placekitten.com/300/150" alt="" />
               <div className="info"> 
@@ -159,7 +177,7 @@ function App() {
                 <p className="add"><FontAwesomeIcon icon="plus" size="xs" /></p>
                 <p className="up"><FontAwesomeIcon icon="thumbs-up" size="xs" /></p>
                 <p className="down"><FontAwesomeIcon icon="thumbs-down" size="xs" /></p>
-                <p className="sub_menu"><FontAwesomeIcon icon="angle-down" size="xs" /></p>
+                <p className="sub_menu"><FontAwesomeIcon icon="angle-down" size="s" /></p>
               </div>
               <div className="info">
                 <p className="age">15</p>
@@ -171,6 +189,10 @@ function App() {
         </Container>             
         <Container movie>
           <div className="movie">
+            <div className="trade">
+              <img src={logo} width="25px" alt="" />
+              <div className="top10">TOP <span className="number">10</span></div>   
+            </div>
             <div className="front">
               <img src="http://placekitten.com/300/150" alt="" />
               <div className="info"> 
@@ -183,7 +205,7 @@ function App() {
                 <p className="add"><FontAwesomeIcon icon="plus" size="xs" /></p>
                 <p className="up"><FontAwesomeIcon icon="thumbs-up" size="xs" /></p>
                 <p className="down"><FontAwesomeIcon icon="thumbs-down" size="xs" /></p>
-                <p className="sub_menu"><FontAwesomeIcon icon="angle-down" size="xs" /></p>
+                <p className="sub_menu"><FontAwesomeIcon icon="angle-down" size="s" /></p>
               </div>
               <div className="info">
                 <p className="age">15</p>
@@ -195,6 +217,10 @@ function App() {
         </Container>             
         <Container movie>
           <div className="movie">
+            <div className="trade">
+              <img src={logo} width="25px" alt="" />
+              <div className="top10">TOP <span className="number">10</span></div>   
+            </div>
             <div className="front">
               <img src="http://placekitten.com/300/150" alt="" />
               <div className="info"> 
@@ -207,7 +233,7 @@ function App() {
                 <p className="add"><FontAwesomeIcon icon="plus" size="xs" /></p>
                 <p className="up"><FontAwesomeIcon icon="thumbs-up" size="xs" /></p>
                 <p className="down"><FontAwesomeIcon icon="thumbs-down" size="xs" /></p>
-                <p className="sub_menu"><FontAwesomeIcon icon="angle-down" size="xs" /></p>
+                <p className="sub_menu"><FontAwesomeIcon icon="angle-down" size="s" /></p>
               </div>
               <div className="info">
                 <p className="age">15</p>
@@ -216,55 +242,7 @@ function App() {
               <p className="tags">Sarcastic-Exciting-Superheroes</p>
             </div>              
           </div>                            
-        </Container>             
-        <Container movie>
-          <div className="movie">
-            <div className="front">
-              <img src="http://placekitten.com/300/150" alt="" />
-              <div className="info"> 
-                <h3>Movie Title</h3>
-              </div>
-            </div>
-            <div className="back">
-              <div className="options">
-                <p className="play"><FontAwesomeIcon icon="play" size="xs" /></p>
-                <p className="add"><FontAwesomeIcon icon="plus" size="xs" /></p>
-                <p className="up"><FontAwesomeIcon icon="thumbs-up" size="xs" /></p>
-                <p className="down"><FontAwesomeIcon icon="thumbs-down" size="xs" /></p>
-                <p className="sub_menu"><FontAwesomeIcon icon="angle-down" size="xs" /></p>
-              </div>
-              <div className="info">
-                <p className="age">15</p>
-                <p className="duration">2 temporadas</p>
-              </div>
-              <p className="tags">Sarcastic-Exciting-Superheroes</p>
-            </div>              
-          </div>                            
-        </Container>             
-        <Container movie>
-          <div className="movie">
-            <div className="front">
-              <img src="http://placekitten.com/300/150" alt="" />
-              <div className="info"> 
-                <h3>Movie Title</h3>
-              </div>
-            </div>
-            <div className="back">
-              <div className="options">
-                <p className="play"><FontAwesomeIcon icon="play" size="xs" /></p>
-                <p className="add"><FontAwesomeIcon icon="plus" size="xs" /></p>
-                <p className="up"><FontAwesomeIcon icon="thumbs-up" size="xs" /></p>
-                <p className="down"><FontAwesomeIcon icon="thumbs-down" size="xs" /></p>
-                <p className="sub_menu"><FontAwesomeIcon icon="angle-down" size="xs" /></p>
-              </div>
-              <div className="info">
-                <p className="age">15</p>
-                <p className="duration">2 temporadas</p>
-              </div>
-              <p className="tags">Sarcastic-Exciting-Superheroes</p>
-            </div>              
-          </div>                            
-        </Container>             
+        </Container> 
         <Container movie>
           <div className="movie">
             <div className="front">
@@ -313,7 +291,34 @@ function App() {
             </div>              
           </div>                            
         </Container>             
-                     
+        <Container movie>
+          <div className="movie">
+            <div className="trade">
+              <img src={logo} width="25px" alt="" />
+              <div className="top10">TOP <span className="number">10</span></div>   
+            </div>
+            <div className="front">
+              <img src="http://placekitten.com/300/150" alt="" />
+              <div className="info"> 
+                <h3>Movie Title</h3>
+              </div>
+            </div>
+            <div className="back">
+              <div className="options">
+                <p className="play"><FontAwesomeIcon icon="play" size="xs" /></p>
+                <p className="add"><FontAwesomeIcon icon="plus" size="xs" /></p>
+                <p className="up"><FontAwesomeIcon icon="thumbs-up" size="xs" /></p>
+                <p className="down"><FontAwesomeIcon icon="thumbs-down" size="xs" /></p>
+                <p className="sub_menu"><FontAwesomeIcon icon="angle-down" size="s" /></p>
+              </div>
+              <div className="info">
+                <p className="age">15</p>
+                <p className="duration">2 temporadas</p>
+              </div>
+              <p className="tags">Sarcastic-Exciting-Superheroes</p>
+            </div>              
+          </div>                            
+        </Container>   
       </Wrapper>
       <h1 className="title">Cards</h1>
       <Wrapper auto>
