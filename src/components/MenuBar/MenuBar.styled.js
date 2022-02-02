@@ -5,7 +5,7 @@ export const StyledMenuBar = styled.div`
   width: 100%;
   margin: auto;
   height: 3em;
-  background-color: #999999;
+  background-color: #e4eeff;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(30px, 0.5fr));
   align-items: center;
