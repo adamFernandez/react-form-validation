@@ -8,6 +8,7 @@ import "./FontAwesomeIcons";
 import logo from "./img/netflix_2.png";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Form from "./components/Form/Form";
+import MenuBar from "./components/MenuBar/MenuBar";
 
 function App() {
   const defaultValues = { username: '', email: '', password: ''};
@@ -59,6 +60,7 @@ function App() {
 
   return (
     <Wrapper>
+      
       <GlobalStyles />
       {/* Container showing success on 0 errors or the input values */}
       {/* <Container border='none' mg='0' pd='.1em'>
@@ -67,6 +69,7 @@ function App() {
           : <pre>{JSON.stringify(formValues, undefined, 2)}</pre>
         }
       </Container> */}      
+      <MenuBar />
       <Container>        
         <Form header="Sign Form" formValues={formValues} handleChange={handleChange} formErrors={formErrors} handleSubmit={handleSubmit} />
       </Container>
