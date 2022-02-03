@@ -11,6 +11,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Products from "./components/Products/Products";
 import Form from "./components/Form/Form";
 import MenuBar from "./components/MenuBar/MenuBar";
+import Listing  from "./components/Listing/Listing"
 
 function App() {
   const defaultValues = { username: '', email: '', password: ''};
@@ -18,8 +19,10 @@ function App() {
   const [formErrors, setFormErrors] = useState({});
   const [isSubmit, setIsSubmit] = useState(false);
   const [data, setData] = useState("");
+  const [listing, setListing] = useState("");
+  const [page, setPage] = useState("form");
 
-  // UseEffect to fetch from db.json files or any API
+  // UseEffect to fetch from db_products.json files or any API
   useEffect(() => {
     const url = "http://localhost:3005/products";
     const fetchData = async () => {
@@ -27,6 +30,21 @@ function App() {
         const response = await fetch(url);
         const json = await response.json();
         setData(json);
+      } catch (error) {
+        console.log("Error: ", error);
+      }
+    };
+
+    fetchData();
+  },[]);
+  
+  useEffect(() => {
+    const url = "http://localhost:3010/properties";
+    const fetchData = async () => {
+      try {
+        const response = await fetch(url);
+        const json = await response.json();
+        setListing(json);
       } catch (error) {
         console.log("Error: ", error);
       }
@@ -47,14 +65,19 @@ function App() {
   }
 
   const changeStatus = (item) => {
-    const currentItem = data.find(i => i.id === item.id);
+    const currentItem = listing.find(i => i.id === item.id);
     const newStatus = item.status === 'active' ? 'expired' : 'active';
-    setData(
-      data.map(i => i.id === item.id
+    setListing(
+      listing.map(i => i.id === item.id
         ? {...currentItem, status: newStatus } 
         : i
       )
     )
+  }
+
+  // show a component depending on menu clicked 
+  const show = (e) => {
+    setPage(e.target.innerText.toLowerCase());
   }
 
   useEffect(() => {
@@ -99,13 +122,15 @@ function App() {
           : <pre>{JSON.stringify(formValues, undefined, 2)}</pre>
         }
       </Container> */}      
-      <MenuBar />
-      <Container>        
-        <Form header="Sign Form" formValues={formValues} handleChange={handleChange} formErrors={formErrors} handleSubmit={handleSubmit} />
-      </Container>
-      <h1 className="title">Movies</h1>
+      <MenuBar show={show}/>
+      {page === 'form' &&
+        <Container>        
+          <Form header="Sign Form" formValues={formValues} handleChange={handleChange} formErrors={formErrors} handleSubmit={handleSubmit} />
+        </Container>}
+      {page === 'movies' &&
+      <>
+        <h1 className="title">Movies</h1>
       <Wrapper auto>
-        <Wrapper row>
           <Container movie>
             <div className="movie">
               <div className="trade">
@@ -124,7 +149,7 @@ function App() {
                   <p className="add"><FontAwesomeIcon icon="plus" size="xs" /></p>
                   <p className="up"><FontAwesomeIcon icon="thumbs-up" size="xs" /></p>
                   <p className="down"><FontAwesomeIcon icon="thumbs-down" size="xs" /></p>
-                  <p className="sub_menu"><FontAwesomeIcon icon="angle-down" size="s" /></p>
+                  <p className="sub_menu"><FontAwesomeIcon icon="angle-down" size="sm" /></p>
                 </div>
                 <div className="info">
                   <p className="age">15</p>
@@ -152,7 +177,7 @@ function App() {
                   <p className="add"><FontAwesomeIcon icon="plus" size="xs" /></p>
                   <p className="up"><FontAwesomeIcon icon="thumbs-up" size="xs" /></p>
                   <p className="down"><FontAwesomeIcon icon="thumbs-down" size="xs" /></p>
-                  <p className="sub_menu"><FontAwesomeIcon icon="angle-down" size="s" /></p>
+                  <p className="sub_menu"><FontAwesomeIcon icon="angle-down" size="sm" /></p>
                 </div>
                 <div className="info">
                   <p className="age">15</p>
@@ -162,8 +187,26 @@ function App() {
               </div>              
             </div>                            
           </Container>
-        </Wrapper>
       </Wrapper>
+      </>
+      }
+      { page === 'products' &&
+      <>
+        <h1 className="title">Products</h1>
+        <Wrapper auto>
+          <Products data={data} changeStatus={changeStatus} />
+        </Wrapper>           
+      </>
+      }
+      {
+        page === 'listing' &&
+        <>
+          <h1 className='title'>Listing</h1>
+          <Wrapper>
+            <Listing data={listing} changeStatus={changeStatus} />
+          </Wrapper>
+        </>
+      }
       <Wrapper>
           <Container movie>
             <div className="movie">
@@ -183,7 +226,7 @@ function App() {
                   <p className="add"><FontAwesomeIcon icon="plus" size="xs" /></p>
                   <p className="up"><FontAwesomeIcon icon="thumbs-up" size="xs" /></p>
                   <p className="down"><FontAwesomeIcon icon="thumbs-down" size="xs" /></p>
-                  <p className="sub_menu"><FontAwesomeIcon icon="angle-down" size="s" /></p>
+                  <p className="sub_menu"><FontAwesomeIcon icon="angle-down" size="sm" /></p>
                 </div>
                 <div className="info">
                   <p className="age">15</p>
@@ -194,11 +237,6 @@ function App() {
             </div>                            
           </Container>             
       </Wrapper>
-      <h1 className="title">Cards</h1>
-      <Wrapper auto>
-        <Products data={data} changeStatus={changeStatus} />
-      </Wrapper>      
-            
     </Wrapper>
   );
 }

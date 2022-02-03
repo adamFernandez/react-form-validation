@@ -26,7 +26,7 @@ export const Wrapper = styled.section`
 		${({ row }) => 
 			row && 
 			css`
-				grid-template-rows: 1fr;
+				// grid-template-rows: 1fr;
 
 		`}
 `;

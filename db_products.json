@@ -38,6 +38,32 @@
       "price": 5000,
       "date-listed" : "7th May 2020",
       "status": "available"
+    },
+    {
+      "id": "4",
+      "image": {
+        "src": "https://picsum.photos/600/350"
+      },
+      "quantity": 0,
+      "stock": 10,
+      "title": "Beautiful product title",
+      "description": "Beautiful product description....",
+      "price": 5000,
+      "date-listed" : "7th May 2020",
+      "status": "available"
+    },
+    {
+      "id": "5",
+      "image": {
+        "src": "https://picsum.photos/600/350"
+      },
+      "quantity": 0,
+      "stock": 10,
+      "title": "Beautiful product title",
+      "description": "Beautiful product description....",
+      "price": 5000,
+      "date-listed" : "7th May 2020",
+      "status": "available"
     }
   ]
 }

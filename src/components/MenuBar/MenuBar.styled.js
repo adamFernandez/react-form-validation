@@ -1,36 +1,32 @@
 import styled from "styled-components";
 
 export const StyledMenuBar = styled.div`
-
+  margin: 1em 0;
   width: 100%;
-  margin: auto;
   height: 3em;
   background-color: #e4eeff;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(30px, 0.5fr));
+  display: flex;
   align-items: center;
-  justify-items: start;
-  border: 1px solid $border-grey;
+  font-size: 1.4em;
+  
+  div:nth-child(n){
+      margin-left: .6em;
+      cursor: pointer;
+  }
 
-  .form {
-      padding-left: 1.4rem;
-      font-size: 1.4em;
-      cursor: pointer;
-  }
-  .movies {
-      padding-left: 1.4rem;
-      font-size: 1.4em;
-      cursor: pointer;
-  }
-  .card {
-      padding-left: 1.4rem;
-      font-size: 1.4em;
-      cursor: pointer;
-  }
+  // .form {
+  //     cursor: pointer;
+  // }
+  // .movies {
+  //     cursor: pointer;
+  // }
+  // .card {
+  //     cursor: pointer;
+  // }
 
   .currency_symbols {
     display: flex;
-    color: lighten($items-grey, 30%);
+    color: #999999;
 
     &:nth-child(1) {
       padding: 0;
@@ -43,19 +39,11 @@ export const StyledMenuBar = styled.div`
   }
 
 
-  .currency {
-    width: 90%;
-    font-family: gothamBold, Arial, sans-serif;
-    color: $items-grey;
-    border: 1px solid $border-grey;
-    border-radius: 3px;
-  }
-
-  .icon {
-    justify-self: center; 
-    grid-column: 3/4;
-    grid-row: 1/1; 
-    cursor: pointer;    
+  .cart {
+    margin-left: auto;
+    // grid-column: 3/4;
+    // grid-row: 1/1;
+    cursor: pointer;   
   }
 
   .counter {
@@ -65,11 +53,12 @@ export const StyledMenuBar = styled.div`
     border-radius: 50%;
     width: 1.5rem;
     height: 1.5rem;
-    justify-self: center;
     line-height: 1.5rem;
+    position: relative;
+    z-index: 20;
+    right: 5.7vw;
+    top: 1.3vw;
     text-align: center;
-    grid-column: 2/3;
-    grid-row: 1/1;
     cursor: pointer;
   }
 

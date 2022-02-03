@@ -1,14 +1,12 @@
-import { Wrapper } from "../styles/Wrapper.styled";
 import { StyledProducts } from "./Products.styled";
 
 import Product from "./Product/Product";
-
 
 const Products = ({ data }) => {
   return (
     <StyledProducts>
         {data && data.map(product => 
-          <Product key={data.id} product={product} />
+            <Product key={product.id} product={product} />
         )}
     </StyledProducts>
   );
