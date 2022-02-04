@@ -38,29 +38,29 @@ export const StyledMenuBar = styled.div`
     }
   }
 
-
   .cart {
     margin-left: auto;
     // grid-column: 3/4;
     // grid-row: 1/1;
     cursor: pointer;   
+    
+    .counter {
+      font-size: 0.9em;
+      background-color: #ffffff;
+      border: 1px solid $light-red;
+      border-radius: 50%;
+      width: 1.5rem;
+      height: 1.5rem;
+      line-height: 1.5rem;
+      position: relative;
+      z-index: 20;
+      right: 5.7vw;
+      top: 1.3vw;
+      text-align: center;
+      cursor: pointer;
+    }
   }
 
-  .counter {
-    font-size: 0.9em;
-    background-color: #ffffff;
-    border: 1px solid $light-red;
-    border-radius: 50%;
-    width: 1.5rem;
-    height: 1.5rem;
-    line-height: 1.5rem;
-    position: relative;
-    z-index: 20;
-    right: 5.7vw;
-    top: 1.3vw;
-    text-align: center;
-    cursor: pointer;
-  }
 
   .sub_menu {
     display: grid;

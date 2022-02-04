@@ -12,7 +12,7 @@ const Product = ({ product, changeStatus }) => {
         </div>
         <div className="info">
           <h2 className="title">{product.title}</h2>
-          <p className="price">£{product.price}</p>/
+          <p className="price">£{product.price}</p>
           <p className="description">{product.description}</p>
           <p className="stock">{product.stock}</p>
         </div>

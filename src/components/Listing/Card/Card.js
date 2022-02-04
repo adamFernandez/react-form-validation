@@ -1,11 +1,11 @@
 import { StyledCard } from "./Card.styled";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { Container } from "./styles/Container.styled";
+import { ListingContainer } from "./styles/Container.styled";
 
 const Card = ({ item, changeStatus }) => {
   
   return (
-    <Container>
+    <ListingContainer>
       <div className="status"><div className={`banner ${item.status === "expired" ? 'expired' : ''}`} onClick={() => changeStatus(item)}>{item.status}</div></div>
       <StyledCard>
         <div className="image">
@@ -24,7 +24,7 @@ const Card = ({ item, changeStatus }) => {
         </div>
       </StyledCard>
       <p className="message">Click on the card status banner to toggle between active or expired</p>
-    </Container>
+    </ListingContainer>
   );
 };
 

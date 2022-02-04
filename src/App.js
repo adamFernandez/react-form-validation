@@ -1,5 +1,10 @@
 import { useEffect, useState } from 'react';
 
+
+
+// import { Container, Wrapper } from "./components/styles/index";
+
+
 import { Container } from './components/styles/Container.styled';
 import { Wrapper } from './components/styles/Wrapper.styled';
 import { GlobalStyles } from './components/styles/Global';
@@ -11,20 +16,23 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Products from "./components/Products/Products";
 import Form from "./components/Form/Form";
 import MenuBar from "./components/MenuBar/MenuBar";
-import Listing  from "./components/Listing/Listing"
+import Listing  from "./components/Listing/Listing";
+import Movies from './components/Movies/Movies';
 
 function App() {
   const defaultValues = { username: '', email: '', password: ''};
   const [formValues, setFormValues] = useState(defaultValues);
   const [formErrors, setFormErrors] = useState({});
   const [isSubmit, setIsSubmit] = useState(false);
+  
+  // setting the data state
   const [data, setData] = useState("");
-  const [listing, setListing] = useState("");
+  // const [listing, setListing] = useState("");
   const [page, setPage] = useState("form");
 
-  // UseEffect to fetch from db_products.json files or any API
+  // connecting to db
   useEffect(() => {
-    const url = "http://localhost:3005/products";
+    const url = "http://localhost:3005/data";
     const fetchData = async () => {
       try {
         const response = await fetch(url);
@@ -38,20 +46,21 @@ function App() {
     fetchData();
   },[]);
   
-  useEffect(() => {
-    const url = "http://localhost:3010/properties";
-    const fetchData = async () => {
-      try {
-        const response = await fetch(url);
-        const json = await response.json();
-        setListing(json);
-      } catch (error) {
-        console.log("Error: ", error);
-      }
-    };
+  // // connedt to the Listing db
+  // useEffect(() => {
+  //   const url = "http://localhost:3010/properties";
+  //   const fetchData = async () => {
+  //     try {
+  //       const response = await fetch(url);
+  //       const json = await response.json();
+  //       setListing(json);
+  //     } catch (error) {
+  //       console.log("Error: ", error);
+  //     }
+  //   };
 
-    fetchData();
-  },[]);
+  //   fetchData();
+  // },[]);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -65,10 +74,10 @@ function App() {
   }
 
   const changeStatus = (item) => {
-    const currentItem = listing.find(i => i.id === item.id);
+    const currentItem = data["properties"].find(i => i.id === item.id);
     const newStatus = item.status === 'active' ? 'expired' : 'active';
-    setListing(
-      listing.map(i => i.id === item.id
+    setData(
+      data.properties.map(i => i.id === item.id
         ? {...currentItem, status: newStatus } 
         : i
       )
@@ -115,7 +124,7 @@ function App() {
     <Wrapper>
       
       <GlobalStyles />
-      {/* Container showing success on 0 errors or the input values */}
+      {/* Container showing success on 0 errors or the input values on the Form component*/}
       {/* <Container border='none' mg='0' pd='.1em'>
         {Object.keys(formErrors).length === 0 && isSubmit 
           ? <p>Signed in Successfully</p>
@@ -123,120 +132,38 @@ function App() {
         }
       </Container> */}      
       <MenuBar show={show}/>
-      {page === 'form' &&
+      {page === 'form' && data &&
         <Container>        
           <Form header="Sign Form" formValues={formValues} handleChange={handleChange} formErrors={formErrors} handleSubmit={handleSubmit} />
         </Container>}
-      {page === 'movies' &&
+      {page === 'movies' && data &&
       <>
         <h1 className="title">Movies</h1>
       <Wrapper auto>
-          <Container movie>
-            <div className="movie">
-              <div className="trade">
-                <img src={logo} width="25px" alt="" />
-                <div className="top10">TOP <span className="number">10</span></div>   
-              </div>
-              <div className="front">
-                <img src="http://placekitten.com/300/150" alt="" />
-                <div className="info"> 
-                  <h3>Movie Title</h3>
-                </div>
-              </div>
-              <div className="back">
-                <div className="options">
-                  <p className="play"><FontAwesomeIcon icon="play" size="xs" /></p>
-                  <p className="add"><FontAwesomeIcon icon="plus" size="xs" /></p>
-                  <p className="up"><FontAwesomeIcon icon="thumbs-up" size="xs" /></p>
-                  <p className="down"><FontAwesomeIcon icon="thumbs-down" size="xs" /></p>
-                  <p className="sub_menu"><FontAwesomeIcon icon="angle-down" size="sm" /></p>
-                </div>
-                <div className="info">
-                  <p className="age">15</p>
-                  <p className="duration">2 temporadas</p>
-                </div>
-                <p className="tags">Sarcastic-Exciting-Superheroes</p>
-              </div>              
-            </div>                            
-          </Container>             
-          <Container movie>
-            <div className="movie">
-              <div className="trade">
-                <img src={logo} width="25px" alt="" />
-                <div className="top10">TOP <span className="number">10</span></div>   
-              </div>
-              <div className="front">
-                <img src="http://placekitten.com/300/150" alt="" />
-                <div className="info"> 
-                  <h3>Movie Title</h3>
-                </div>
-              </div>
-              <div className="back">
-                <div className="options">
-                  <p className="play"><FontAwesomeIcon icon="play" size="xs" /></p>
-                  <p className="add"><FontAwesomeIcon icon="plus" size="xs" /></p>
-                  <p className="up"><FontAwesomeIcon icon="thumbs-up" size="xs" /></p>
-                  <p className="down"><FontAwesomeIcon icon="thumbs-down" size="xs" /></p>
-                  <p className="sub_menu"><FontAwesomeIcon icon="angle-down" size="sm" /></p>
-                </div>
-                <div className="info">
-                  <p className="age">15</p>
-                  <p className="duration">2 temporadas</p>
-                </div>
-                <p className="tags">Sarcastic-Exciting-Superheroes</p>
-              </div>              
-            </div>                            
-          </Container>
+          <Movies data={data.movies} logo={logo} />
+      </Wrapper>
+      <Wrapper>
+          <Movies data={data.movies} logo={logo} />             
       </Wrapper>
       </>
       }
-      { page === 'products' &&
+      { page === 'products' && data &&
       <>
         <h1 className="title">Products</h1>
         <Wrapper auto>
-          <Products data={data} changeStatus={changeStatus} />
+          <Products data={data.products} changeStatus={changeStatus} />
         </Wrapper>           
       </>
       }
       {
-        page === 'listing' &&
+        page === 'listing' && data &&
         <>
           <h1 className='title'>Listing</h1>
           <Wrapper>
-            <Listing data={listing} changeStatus={changeStatus} />
+            <Listing data={data.properties} changeStatus={changeStatus} />
           </Wrapper>
         </>
       }
-      <Wrapper>
-          <Container movie>
-            <div className="movie">
-              <div className="trade">
-                <img src={logo} width="25px" alt="" />
-                <div className="top10">TOP <span className="number">10</span></div>   
-              </div>
-              <div className="front">
-                <img src="http://placekitten.com/300/150" alt="" />
-                <div className="info"> 
-                  <h3>Movie Title</h3>
-                </div>
-              </div>
-              <div className="back">
-                <div className="options">
-                  <p className="play"><FontAwesomeIcon icon="play" size="xs" /></p>
-                  <p className="add"><FontAwesomeIcon icon="plus" size="xs" /></p>
-                  <p className="up"><FontAwesomeIcon icon="thumbs-up" size="xs" /></p>
-                  <p className="down"><FontAwesomeIcon icon="thumbs-down" size="xs" /></p>
-                  <p className="sub_menu"><FontAwesomeIcon icon="angle-down" size="sm" /></p>
-                </div>
-                <div className="info">
-                  <p className="age">15</p>
-                  <p className="duration">2 temporadas</p>
-                </div>
-                <p className="tags">Sarcastic-Exciting-Superheroes</p>
-              </div>              
-            </div>                            
-          </Container>             
-      </Wrapper>
     </Wrapper>
   );
 }

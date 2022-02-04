@@ -1,6 +1,6 @@
 import styled, { css } from 'styled-components';
 
-export const Container = styled.div`
+export const ListingContainer = styled.div`
   position: relative;
   width: 90%;
   background-color: #fff;

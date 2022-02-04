@@ -24,9 +24,9 @@ const MenuBar = ({ basketData = 0, show }) => {
             <FontAwesomeIcon className="symbol" value="USA" icon="dollar-sign" size="lg" onClick={(e) => switchCurrency(e)} />
             <FontAwesomeIcon className="symbol" value="EUR" icon="euro-sign" size="lg" onClick={() => switchCurrency(3)} />
           </div>
-          
-          <FontAwesomeIcon className="cart" icon="shopping-bag" size="2x" />
-          {1 > 0 && <span className="counter">2</span>}
+            <FontAwesomeIcon className="cart" icon="shopping-bag" size="2x">
+              {basketData === 0 && <span className="counter">2</span>}
+            </FontAwesomeIcon>
         </StyledMenuBar>
 
 				{/* <div className="sub_menu">
