@@ -23,5 +23,31 @@ export const GlobalStyles = createGlobalStyle`
        }
    }  
 
+   .tooltip {
+       position: relative;
+       display: inline-block;
+       border-bottom: 1px dotted red;
+
+       .tooltiptext {
+            visibility: hidden;
+            width: 120px;
+            background-color: #888888;
+            color: #ffffff;
+            text-align: center;
+            padding: .2em 0;
+            border-radius: .5em;
+            
+            position: absolute;
+            z-index: 15;
+       }
+
+       &:hover .tooltiptext {
+           visibility: visible;
+       }
+   }
+
+
+
+
    
 `;

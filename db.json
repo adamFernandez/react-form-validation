@@ -1,241 +1,290 @@
 {
-  "data": 
+  "listing": [
     {
-      "properties": [
-        {
-          "id": "1",
-          "image": {
-            "src": "images/house1.jpg"
-          },
-          "rooms": {
-            "bedrooms": "1",
-            "bathrooms": "1",
-            "livingrooms": "1"
-          },
-          "title": "2 bed flat for sale",
-          "address": "Mansford Street",
-          "postcode": "E2",
-          "description": "Lovely two bedroom flat located....",
-          "price": 425000,
-          "status": "active"
-        },
-        {
-          "id": "2",
-          "image": {
-            "src": "images/house2.jpg"
-          },
-          "rooms": {
-            "bedrooms": "2",
-            "bathrooms": "1",
-            "livingrooms": "1"
-          },
-          "title": "1 bed flat for sale",
-          "address": "Letter Street",
-          "postcode": "SW2",
-          "description": "Lovely one bedroom flat located....",
-          "price": 400000,
-          "status": "expired"
-        },
-        {
-          "id": "3",
-          "image": {
-            "src": "images/house3.jpg"
-          },
-          "rooms": {
-            "bedrooms": "1",
-            "bathrooms": "1",
-            "livingrooms": "1"
-          },
-          "title": "1 bed flat for sale",
-          "address": "Oxford Street",
-          "postcode": "E2",
-          "description": "Lovely one bedroom flat located....",
-          "price": 225000,
-          "status": "active"
-        }
-      ],
-      "products": [
-        {
-          "id": "1",
-          "image": {
-            "src": "https://picsum.photos/600/350"
-          },
-          "quantity": 0,
-          "stock": 10,
-          "title": "Beautiful product title",
-          "description": "Beautiful product description....",
-          "price": 5000,
-          "date-listed" : "7th May 2020",
-          "status": "available"
-        },
-        {
-          "id": "2",
-          "image": {
-            "src": "https://picsum.photos/600/350"
-          },
-          "quantity": 0,
-          "stock": 10,
-          "title": "Beautiful product title",
-          "description": "Beautiful product description....",
-          "price": 5000,
-          "date-listed" : "7th May 2020",
-          "status": "available"
-        },
-        {
-          "id": "3",
-          "image": {
-            "src": "https://picsum.photos/600/350"
-          },
-          "quantity": 0,
-          "stock": 10,
-          "title": "Beautiful product title",
-          "description": "Beautiful product description....",
-          "price": 5000,
-          "date-listed" : "7th May 2020",
-          "status": "available"
-        },
-        {
-          "id": "4",
-          "image": {
-            "src": "https://picsum.photos/600/350"
-          },
-          "quantity": 0,
-          "stock": 10,
-          "title": "Beautiful product title",
-          "description": "Beautiful product description....",
-          "price": 5000,
-          "date-listed" : "7th May 2020",
-          "status": "available"
-        },
-        {
-          "id": "5",
-          "image": {
-            "src": "https://picsum.photos/600/350"
-          },
-          "quantity": 0,
-          "stock": 10,
-          "title": "Beautiful product title",
-          "description": "Beautiful product description....",
-          "price": 5000,
-          "date-listed" : "7th May 2020",
-          "status": "available"
-        }
-      ],
-      "movies": [
-        {
-          "id": "1",
-          "trade": {
-            "image": {
-              "src": "",
-              "alt": ""
-            }
-          },
-          "img": {
-            "src": "http://placekitten.com/300/150",
-            "alt": "A really nice and clear description"
-          },
-          "title": "Movie title",
-          "info": {
-            "age": "15",
-            "length": "2 seasons"
-          },
-          "tags": ["Sarcastic", "Exciting", "Superheroes"]
-        },
-        {
-          "id": "2",
-          "trade": {
-            "image": {
-              "src": "",
-              "alt": ""
-            }
-          },
-          "img": {
-            "src": "http://placekitten.com/300/150",
-            "alt": "A really nice and clear description"
-          },
-          "title": "Movie title",
-          "info": {
-            "age": "15",
-            "length": "2 seasons"
-          },
-          "tags": ["Sarcastic", "Exciting", "Superheroes"]
-        },
-        {
-          "id": "3",
-          "trade": {
-            "image": {
-              "src": "",
-              "alt": ""
-            }
-          },
-          "img": {
-            "src": "http://placekitten.com/300/150",
-            "alt": "A really nice and clear description"
-          },
-          "title": "Movie title",
-          "info": {
-            "age": "15",
-            "length": "10 seasons"
-          },
-          "tags": ["Sarcastic", "Funny", "Superheroes"]
-        },
-        {
-          "id": "4",
-          "trade": {
-            "image": {
-              "src": "",
-              "alt": ""
-            }
-          },
-          "img": {
-            "src": "http://placekitten.com/300/150",
-            "alt": "A really nice and clear description"
-          },
-          "title": "Movie title",
-          "info": {
-            "age": "15",
-            "length": "4 seasons"
-          },
-          "tags": ["Sarcastic", "Exciting", "Superheroes"]
-        },
-        {
-          "id": "5",
-          "trade": {
-            "image": {
-              "src": "",
-              "alt": ""
-            }
-          },
-          "img": {
-            "src": "http://placekitten.com/300/150",
-            "alt": "A really nice and clear description"
-          },
-          "title": "Movie title",
-          "info": {
-            "age": "15",
-            "length": "7 seasons"
-          },
-          "tags": ["Comedy", "Exciting", "Adventures"]
-        },
-        {
-          "id": "6",
-          "trade": {
-            "image": {
-              "src": "",
-              "alt": ""
-            }
-          },
-          "img": {
-            "src": "http://placekitten.com/300/150",
-            "alt": "A really nice and clear description"
-          },
-          "title": "Movie title",
-          "info": {
-            "age": "15",
-            "length": "1 seasons"
-          },
-          "tags": ["Sarcastic", "Exciting", "Romantic"]
-        }
-      ]
+      "id": "1",
+      "image": {
+        "src": "images/house1.jpg"
+      },
+      "rooms": {
+        "bedrooms": "1",
+        "bathrooms": "1",
+        "livingrooms": "1"
+      },
+      "title": "2 bed flat for sale",
+      "address": "Mansford Street",
+      "postcode": "E2",
+      "description": "Lovely two bedroom flat located....",
+      "price": 425000,
+      "status": "active"
+    },
+    {
+      "id": "2",
+      "image": {
+        "src": "images/house2.jpg"
+      },
+      "rooms": {
+        "bedrooms": "2",
+        "bathrooms": "1",
+        "livingrooms": "1"
+      },
+      "title": "1 bed flat for sale",
+      "address": "Letter Street",
+      "postcode": "SW2",
+      "description": "Lovely one bedroom flat located....",
+      "price": 400000,
+      "status": "expired"
+    },
+    {
+      "id": "3",
+      "image": {
+        "src": "images/house3.jpg"
+      },
+      "rooms": {
+        "bedrooms": "1",
+        "bathrooms": "1",
+        "livingrooms": "1"
+      },
+      "title": "1 bed flat for sale",
+      "address": "Oxford Street",
+      "postcode": "E2",
+      "description": "Lovely one bedroom flat located....",
+      "price": 225000,
+      "status": "active"
     }
+  ],
+  "products": [
+    {
+      "id": "1",
+      "image": {
+        "src": "https://picsum.photos/600/350"
+      },
+      "quantity": 0,
+      "stock": 4,
+      "title": "Smart Ring",
+      "description": "Beautiful product description....",
+      "price": 250,
+      "date-listed" : "7th May 2020",
+      "status": "available"
+    },
+    {
+      "id": "2",
+      "image": {
+        "src": "https://picsum.photos/600/350"
+      },
+      "quantity": 0,
+      "stock": 60,
+      "title": "2TB of Storage",
+      "description": "Beautiful product description....",
+      "price": 250,
+      "date-listed" : "7th May 2020",
+      "status": "available"
+    },
+    {
+      "id": "3",
+      "image": {
+        "src": "https://picsum.photos/600/350"
+      },
+      "quantity": 0,
+      "stock": 24,
+      "title": "Samsung Full HD Screen",
+      "description": "Beautiful product description....",
+      "price": 356,
+      "date-listed" : "7th May 2020",
+      "status": "available"
+    },
+    {
+      "id": "4",
+      "image": {
+        "src": "https://picsum.photos/600/350"
+      },
+      "quantity": 0,
+      "stock": 2,
+      "title": "Smart watch",
+      "description": "Beautiful product description....",
+      "price": 140,
+      "date-listed" : "7th May 2020",
+      "status": "available"
+    },
+    {
+      "id": "5",
+      "image": {
+        "src": "https://picsum.photos/600/350"
+      },
+      "quantity": 0,
+      "stock": 24,
+      "title": "Samsung Full HD Screen",
+      "description": "Beautiful product description....",
+      "price": 356,
+      "date-listed" : "7th May 2020",
+      "status": "available"
+    },
+    {
+      "id": "6",
+      "image": {
+        "src": "https://picsum.photos/600/350"
+      },
+      "quantity": 0,
+      "stock": 2,
+      "title": "Smart watch",
+      "description": "Beautiful product description....",
+      "price": 140,
+      "date-listed" : "7th May 2020",
+      "status": "available"
+    },
+    {
+      "id": "7",
+      "image": {
+        "src": "https://picsum.photos/600/350"
+      },
+      "quantity": 0,
+      "stock": 24,
+      "title": "Samsung Full HD Screen",
+      "description": "Beautiful product description....",
+      "price": 356,
+      "date-listed" : "7th May 2020",
+      "status": "available"
+    },
+    {
+      "id": "8",
+      "image": {
+        "src": "https://picsum.photos/600/350"
+      },
+      "quantity": 0,
+      "stock": 0,
+      "title": "Smart watch",
+      "description": "Beautiful product description....",
+      "price": 140,
+      "date-listed" : "7th May 2020",
+      "status": "available"
+    },
+    {
+      "id": "9",
+      "image": {
+        "src": "https://picsum.photos/600/350"
+      },
+      "quantity": 0,
+      "stock": 7,
+      "title": "Sony Camcorder",
+      "description": "Beautiful product description....",
+      "price": 256,
+      "date-listed" : "7th May 2020",
+      "status": "available"
+    }
+  ],
+  "movies": [
+    {
+      "id": "1",
+      "trade": {
+        "image": {
+          "src": "",
+          "alt": ""
+        }
+      },
+      "img": {
+        "src": "http://placekitten.com/300/150",
+        "alt": "A really nice and clear description"
+      },
+      "title": "Movie title",
+      "info": {
+        "age": "15",
+        "length": "2 seasons"
+      },
+      "tags": ["Sarcastic", "Exciting", "Superheroes"]
+    },
+    {
+      "id": "2",
+      "trade": {
+        "image": {
+          "src": "",
+          "alt": ""
+        }
+      },
+      "img": {
+        "src": "http://placekitten.com/300/150",
+        "alt": "A really nice and clear description"
+      },
+      "title": "Movie title",
+      "info": {
+        "age": "15",
+        "length": "2 seasons"
+      },
+      "tags": ["Sarcastic", "Exciting", "Superheroes"]
+    },
+    {
+      "id": "3",
+      "trade": {
+        "image": {
+          "src": "",
+          "alt": ""
+        }
+      },
+      "img": {
+        "src": "http://placekitten.com/300/150",
+        "alt": "A really nice and clear description"
+      },
+      "title": "Movie title",
+      "info": {
+        "age": "15",
+        "length": "10 seasons"
+      },
+      "tags": ["Sarcastic", "Funny", "Superheroes"]
+    },
+    {
+      "id": "4",
+      "trade": {
+        "image": {
+          "src": "",
+          "alt": ""
+        }
+      },
+      "img": {
+        "src": "http://placekitten.com/300/150",
+        "alt": "A really nice and clear description"
+      },
+      "title": "Movie title",
+      "info": {
+        "age": "15",
+        "length": "4 seasons"
+      },
+      "tags": ["Sarcastic", "Exciting", "Superheroes"]
+    },
+    {
+      "id": "5",
+      "trade": {
+        "image": {
+          "src": "",
+          "alt": ""
+        }
+      },
+      "img": {
+        "src": "http://placekitten.com/300/150",
+        "alt": "A really nice and clear description"
+      },
+      "title": "Movie title",
+      "info": {
+        "age": "15",
+        "length": "7 seasons"
+      },
+      "tags": ["Comedy", "Exciting", "Adventures"]
+    },
+    {
+      "id": "6",
+      "trade": {
+        "image": {
+          "src": "",
+          "alt": ""
+        }
+      },
+      "img": {
+        "src": "http://placekitten.com/300/150",
+        "alt": "A really nice and clear description"
+      },
+      "title": "Movie title",
+      "info": {
+        "age": "15",
+        "length": "1 seasons"
+      },
+      "tags": ["Sarcastic", "Exciting", "Romantic"]
+    }
+  ]
 }

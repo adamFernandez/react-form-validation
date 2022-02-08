@@ -2,10 +2,9 @@ import styled, { css } from 'styled-components';
 
 export const ListingContainer = styled.div`
   position: relative;
-  width: 90%;
+  width: 60%;
   background-color: #fff;
   margin: .5em auto;
-  border: 1px solid #999999;
   padding: 1.2em;
   overflow: hidden;
   
@@ -56,8 +55,10 @@ export const ListingContainer = styled.div`
       grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     `} 
 
-  @media screen and (max-width: 400px) { 
-  }
+  /* @media screen and (max-width: 400px) { 
+    display: grid;
+    grid-template-columns: 1fr;
+  } */
 
   @media screen and (max-width: 600px) {
     font-size: 2vw;

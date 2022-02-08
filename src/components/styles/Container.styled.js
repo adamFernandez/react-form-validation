@@ -17,6 +17,60 @@ export const Container = styled.div`
 					margin: .5em 0;
 				}
     `}
+    
+		${({ product }) => 
+			product && css`
+        width: 300px;
+				h1 {
+					margin: .5em 0;
+				}
+
+				position: relative;
+				background-color: #fff;
+				margin: .5em auto;
+				border: 1px solid #999999;
+				padding: 1.2em;
+				/* overflow: hidden; */
+				border: none;
+				
+				.status {
+					margin: 0;
+					display: grid;
+					justify-items: end;
+					align-items: start;
+					text-align: center;
+					position: absolute;
+					top: 0;
+					left: 0;
+					z-index: 20;
+					width: 100%;
+					height: 5%;
+					color: white;
+					
+					.banner {
+						position: relative;
+						top: 1.3vw;
+						right: -1.3vw;
+						font-size: .8vw;
+						display: grid;
+						align-items: center;
+						justify-content: center;
+						border-radius: 50%;
+						padding: .2em 0;
+						width: 60px;
+						height: 60px;
+						background-color: #02641e;
+						transform: rotate(45deg) translate(2%, -10%);
+					}
+				}
+
+				.out {
+					background-color: #c40606 !important;
+				}
+				
+    `}
+
+
     ${({ movie }) => 
 			movie && css`
         width: 300px;

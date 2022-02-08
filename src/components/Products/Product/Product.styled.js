@@ -3,25 +3,27 @@ import styled from "styled-components";
 export const StyledProduct = styled.div`
   border-bottom: 1px solid #bbbbbb;
   margin: 0;
-  padding: .2em 0;  
+  padding: .2em 0;
   
   .image {
     width: 100%;
-
+    
     img {
       width: 100%;
     }
   }
   
   .title {
-    font-size: 1.3em;
+    color: #000000;
+    text-align: left;
+    font-size: 1em;
   }
 
   .price {
     color: purple;
     margin: 0;
     padding: 0;
-    font-size: 1em;
+    font-size: 1.2em;
   }
 
   .description {
