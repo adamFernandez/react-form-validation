@@ -30,13 +30,13 @@ export const Container = styled.div`
 					position: relative;
 					border: none;
 					height: 150px;
-					
 					transition: width 150ms ease-in-out 250ms;
+					
 					
 					.trade {
 						font-family: Arial, sans-serif;
 						width: 100%;
-						height: 5vh;
+						height: 6vh;
 						font-weight: 900;
 						position: absolute;
 						
@@ -46,7 +46,7 @@ export const Container = styled.div`
 							left: .4em;
 							top: .4em;
 							width: 6%;
-							height: 3vh;
+							height: 100%;
 						}
 						
 						.top10 {
@@ -58,11 +58,10 @@ export const Container = styled.div`
 							z-index: 5;
 							right: 0;
 							text-align: center;
-							padding: .3em 0 0 1em;
+							padding: .8em 0 0 1em;
 							margin: 0;
 							clip-path: polygon(25% 0%, 100% 0%, 100% 100%, 26% 89%);
 							width: 12%;
-							height: 4vh;
 							background-color: red;
 
 							.number {
@@ -75,12 +74,13 @@ export const Container = styled.div`
 
 					.front {						
 						position: relative;
+						transition: width 500ms ease-out 250ms;
 						
 						img {
 							width: 100%;
 							border: none;
 							padding: 0;
-							margin: 0; 
+							margin: 0; 							
 							
 							transition: border-radius 600ms ease-out 250ms;
 						}
@@ -190,7 +190,6 @@ export const Container = styled.div`
 									top: -38px;
 									left: -20px;
 									width: 8%;
-									height: 5vh;
 								}
 								.top10 {
 									z-index: 0;

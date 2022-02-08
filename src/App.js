@@ -33,7 +33,7 @@ function App() {
   // connecting to db
   useEffect(() => {
     const url = "http://localhost:3005/data";
-    const fetchData = async () => {
+    const fetchData = async (page) => {
       try {
         const response = await fetch(url);
         const json = await response.json();
@@ -41,9 +41,9 @@ function App() {
       } catch (error) {
         console.log("Error: ", error);
       }
-    };
-
+    }
     fetchData();
+
   },[]);
   
   // // connedt to the Listing db
@@ -74,14 +74,21 @@ function App() {
   }
 
   const changeStatus = (item) => {
-    const currentItem = data["properties"].find(i => i.id === item.id);
     const newStatus = item.status === 'active' ? 'expired' : 'active';
-    setData(
-      data.properties.map(i => i.id === item.id
-        ? {...currentItem, status: newStatus } 
-        : i
-      )
-    )
+    const newData = {...data};
+    const currentItem = newData.properties.find(i => i.id === item.id);
+    // newData.properties[item.id].status = newStatus;
+    setData(newData.properties.map(i => i.id === item.id 
+            ? {...currentItem, status: newStatus } : i));
+    console.log(newData.properties);
+    // const currentItem = data.properties.find(i => i.id === item.id);
+    // const newStatus = item.status === 'active' ? 'expired' : 'active';
+    // setData(
+    //   data.properties.map(i => i.id === item.id
+    //     ? {...currentItem, status: newStatus } 
+    //     : i
+    //   )
+    // )
   }
 
   // show a component depending on menu clicked 
@@ -122,7 +129,6 @@ function App() {
 
   return (
     <Wrapper>
-      
       <GlobalStyles />
       {/* Container showing success on 0 errors or the input values on the Form component*/}
       {/* <Container border='none' mg='0' pd='.1em'>
@@ -133,10 +139,11 @@ function App() {
       </Container> */}      
       <MenuBar show={show}/>
       {page === 'form' && data &&
+      
         <Container>        
           <Form header="Sign Form" formValues={formValues} handleChange={handleChange} formErrors={formErrors} handleSubmit={handleSubmit} />
         </Container>}
-      {page === 'movies' && data &&
+      {page === 'movies' && data.page &&
       <>
         <h1 className="title">Movies</h1>
       <Wrapper auto>

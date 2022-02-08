@@ -9,7 +9,6 @@ export const StyledCard = styled.div`
   margin: 0;
   padding: .2em 0;
   
-  
   .image {
     width: 90%;
 

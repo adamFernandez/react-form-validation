@@ -9,15 +9,16 @@ export const StyledCard = styled.div`
   margin: 0;
   padding: .2em 0;
   
-  
   .image {
     width: 90%;
-
+    
     img {
       width: 100%;
     }
   }
   .title {
+    color: #000000;
+    text-align: left;
     font-size: 1.3em;
   }
 

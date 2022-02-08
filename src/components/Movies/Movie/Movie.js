@@ -1,7 +1,7 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Container } from "../../styles/Container.styled";
 
-const Movie = ({ movie, logo}) => {
+const Movie = ({ movie, logo }) => {
   return (
     <Container movie>
             <div className="movie">
@@ -24,11 +24,11 @@ const Movie = ({ movie, logo}) => {
                   <p className="sub_menu"><FontAwesomeIcon icon="angle-down" size="sm" /></p>
                 </div>
                 <div className="info">
-                  <p className="age">{movie.age}</p>
-                  <p className="length">{movie.length}</p>
+                  <p className="age">{movie.info.age}</p>
+                  <p className="length">{movie.info.length}</p>
                 </div>
                 <p className="tags">
-                  {movie.tags.map(tag => <span>{tag}</span> )}
+                  {movie.tags.map(tag => <span className="tag">{tag}</span> )}
                 </p>
               </div>              
             </div>                            
