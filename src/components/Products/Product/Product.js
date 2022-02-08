@@ -1,11 +1,12 @@
 import { StyledProduct } from "./Product.styled";
-import { ProductContainer } from "./styles/Container.styled";
+import { Container } from "./styles/Container.styled";
 
-const Product = ({ product, changeStatus }) => {
+const Product = ({ product, addToCompare }) => {
   return (
     <>
-    <ProductContainer card>
-      <div className="status"><div className={`banner ${product.status === "out" ? 'out' : ''}`} onClick={() => changeStatus(product)}>{product.stock} {product.status}</div></div>
+    <Container product onClick={() => addToCompare(product)} className="tooltip">
+      <span className="tooltiptext">Click to add to compare</span>
+      <div className="status"><div className={`banner ${product.stock === 0 ? 'out' : ''}`} >{product.stock === 0 ? 'out of stock' : product.status}</div></div>
       <StyledProduct>
         <div className="image">
           <img src={product.image.src} alt={product.image.alt} width="50%" />
@@ -14,10 +15,10 @@ const Product = ({ product, changeStatus }) => {
           <h2 className="title">{product.title}</h2>
           <p className="price">£{product.price}</p>
           <p className="description">{product.description}</p>
-          <p className="stock">{product.stock}</p>
+          <p className="stock">{product.stock} left</p>
         </div>
       </StyledProduct>
-    </ProductContainer>
+    </Container>
   </>
     );
 };

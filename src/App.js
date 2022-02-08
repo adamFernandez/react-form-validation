@@ -3,7 +3,7 @@ import { useEffect, useState } from 'react';
 
 
 // import { Container, Wrapper } from "./components/styles/index";
-
+import { capitalize } from './components/styles/Functions';
 
 import { Container } from './components/styles/Container.styled';
 import { Wrapper } from './components/styles/Wrapper.styled';
@@ -26,41 +26,30 @@ function App() {
   const [isSubmit, setIsSubmit] = useState(false);
   
   // setting the data state
-  const [data, setData] = useState("");
-  // const [listing, setListing] = useState("");
+  // const [data, setData] = useState("");
+  const [listing, setListing] = useState("");
+  const [movies, setMovies] = useState("");
+  const [products, setProducts] = useState("");
   const [page, setPage] = useState("form");
 
   // connecting to db
-  useEffect(() => {
-    const url = "http://localhost:3005/data";
-    const fetchData = async (page) => {
-      try {
-        const response = await fetch(url);
-        const json = await response.json();
-        setData(json);
-      } catch (error) {
-        console.log("Error: ", error);
-      }
+  const url = "http://localhost:3005/";
+  const fetchData = async (page) => {
+    try {
+      const response = await fetch(`${url}${page}`);
+      const json = await response.json();
+      var newSet = `set${capitalize(page)}`;
+      eval(newSet)(json);
+    } catch (error) {
+      console.log("Error: ", error);
     }
-    fetchData();
+  };
 
+  useEffect(() => {  
+    fetchData('listing');
+    fetchData('movies');
+    fetchData('products');
   },[]);
-  
-  // // connedt to the Listing db
-  // useEffect(() => {
-  //   const url = "http://localhost:3010/properties";
-  //   const fetchData = async () => {
-  //     try {
-  //       const response = await fetch(url);
-  //       const json = await response.json();
-  //       setListing(json);
-  //     } catch (error) {
-  //       console.log("Error: ", error);
-  //     }
-  //   };
-
-  //   fetchData();
-  // },[]);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -73,22 +62,19 @@ function App() {
     setIsSubmit(true);
   }
 
+  const addToCompare = (product) => {
+    console.log(product.id);
+  }
+
   const changeStatus = (item) => {
     const newStatus = item.status === 'active' ? 'expired' : 'active';
-    const newData = {...data};
-    const currentItem = newData.properties.find(i => i.id === item.id);
-    // newData.properties[item.id].status = newStatus;
-    setData(newData.properties.map(i => i.id === item.id 
-            ? {...currentItem, status: newStatus } : i));
-    console.log(newData.properties);
-    // const currentItem = data.properties.find(i => i.id === item.id);
-    // const newStatus = item.status === 'active' ? 'expired' : 'active';
-    // setData(
-    //   data.properties.map(i => i.id === item.id
-    //     ? {...currentItem, status: newStatus } 
-    //     : i
-    //   )
-    // )
+    const currentItem = listing.find(i => i.id === item.id);
+    setListing(
+      listing.map(i => i.id === item.id
+        ? {...currentItem, status: newStatus } 
+        : i
+      )
+    )
   }
 
   // show a component depending on menu clicked 
@@ -138,36 +124,35 @@ function App() {
         }
       </Container> */}      
       <MenuBar show={show}/>
-      {page === 'form' && data &&
-      
+      {page === 'form' && 
         <Container>        
           <Form header="Sign Form" formValues={formValues} handleChange={handleChange} formErrors={formErrors} handleSubmit={handleSubmit} />
         </Container>}
-      {page === 'movies' && data.page &&
+      {page === 'movies' && movies &&
       <>
         <h1 className="title">Movies</h1>
       <Wrapper auto>
-          <Movies data={data.movies} logo={logo} />
+          <Movies data={movies} logo={logo} />
       </Wrapper>
       <Wrapper>
-          <Movies data={data.movies} logo={logo} />             
+          <Movies data={movies} logo={logo} />             
       </Wrapper>
       </>
       }
-      { page === 'products' && data &&
+      { page === 'products' && products &&
       <>
         <h1 className="title">Products</h1>
         <Wrapper auto>
-          <Products data={data.products} changeStatus={changeStatus} />
+          <Products data={products} addToCompare={addToCompare} />
         </Wrapper>           
       </>
       }
       {
-        page === 'listing' && data &&
+        page === 'listing' && listing &&
         <>
           <h1 className='title'>Listing</h1>
           <Wrapper>
-            <Listing data={data.properties} changeStatus={changeStatus} />
+            <Listing data={listing} changeStatus={changeStatus} />
           </Wrapper>
         </>
       }

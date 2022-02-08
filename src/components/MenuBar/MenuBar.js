@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { StyledMenuBar } from "./MenuBar.styled";
 
-const MenuBar = ({ basketData = 0, show }) => {
+const MenuBar = ({ basketData = 1, show }) => {
 
   const [currency, setCurrency] = useState('USD');
     
