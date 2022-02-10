@@ -6,13 +6,7 @@ import ListItem from "../List/ListItem/ListItem";
 
 const Basket = ({ compareData, handleQuantity, resetQuantities, removeItem, totals }) => {
     return (
-      <Container table>
-        <List>
-          <ListItem>Hello</ListItem>
-          <ListItem>Hello</ListItem>
-          <ListItem>Hello</ListItem>
-          <ListItem>Hello</ListItem>
-        </List>
+      <Container>
         <Items compareData={compareData} handleQuantity={handleQuantity} removeItem={removeItem} />
         {/* <Totals total={totals} resetQuantities={resetQuantities} /> */}
       </Container>

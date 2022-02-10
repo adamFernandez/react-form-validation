@@ -16,14 +16,6 @@ export const StyledCard = styled.div`
       width: 100%;
     }
   }
-<<<<<<< HEAD
-  .title {
-    color: #000000;
-    text-align: left;
-    font-size: 1.3em;
-  }
-=======
->>>>>>> 5957040129561616bb8098c7fa1a94dd0fe7d2a3
 
   .info {
     justify-self: left;

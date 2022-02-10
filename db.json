@@ -63,8 +63,70 @@
       "title": "Smart Ring",
       "description": "Beautiful product description....",
       "price": 250,
-      "date-listed" : "7th May 2020",
-      "status": "available"
+      "listed" : "7th May 2020",
+      "storage": "128",
+      "status": "available",
+      "properties": {
+        "os": "iOs",
+        "year": "2021",
+        "colours": ["Gold", "Silver", "Blue", "Steal"],
+        "body": ["Glass", "Ceramic", "Steel"]
+      },
+      "communication": {
+        "fiveg": true,
+        "fivegfreq": "Sub-6",
+        "4G": true,
+        "wifi": "Wi-Fi 6",
+        "bluetooth": "5.0",
+        "NFC": true,
+        "SIM": ["Nano-SIM", "eSIM"]
+      },
+      "camera": {
+        "back": 4,
+        "front": 1,
+        "resolution" : "12.0",
+        "resolutionfront": "12.0"
+      },
+      "features": {
+        "features": ["Stereo Speakers", "Hearing Aid Compatible"],
+        "sensors": ["Fingerprint Reader", "Gyroscope/Accelerometer", "Proximity Scanner", "Barometer", "Face Scanner"],
+        "resistant": {
+          "water": true,
+          "ip": "IP 68",
+          "shock": false
+        }
+      },
+      "display": {
+        "screen": {
+          "size": "6.7",
+          "resolution": "2778x1284",
+          "ppi": "458",
+          "type": "Retina"
+        },
+        "secondary": false,
+        "touch": true,
+        "refresh": "120Hz"
+      }, 
+      "processor": {
+        "speed": "3.22GHz",
+        "cores": "Hexa Core",
+        "soc": "Apple A15"
+      },
+      "powersource": {
+        "capacity": "4352 mAh",
+        "exchangeable": false,
+        "charging": {
+          "wireless": true,
+          "standard": "QI",
+          "fast": true
+        }
+      },
+      "measures": {
+        "weight": 230,
+        "width": 300,
+        "height": 400,
+        "depth": 5
+      }           
     },
     {
       "id": "2",
@@ -76,8 +138,70 @@
       "title": "2TB of Storage",
       "description": "Beautiful product description....",
       "price": 250,
-      "date-listed" : "7th May 2020",
-      "status": "available"
+      "listed" : "7th May 2020",
+      "storage": "128",
+      "status": "available",
+      "properties": {
+        "os": "iOs",
+        "year": "2021",
+        "colours": ["Gold", "Silver", "Blue", "Steal"],
+        "body": ["Glass", "Ceramic", "Steel"]
+      },
+      "communication": {
+        "fiveg": true,
+        "fivegfreq": "Sub-6",
+        "4G": true,
+        "wifi": "Wi-Fi 6",
+        "bluetooth": "5.0",
+        "NFC": true,
+        "SIM": ["Nano-SIM", "eSIM"]
+      },
+      "camera": {
+        "back": 4,
+        "front": 1,
+        "resolution" : "12.0",
+        "resolutionfront": "12.0"
+      },
+      "features": {
+        "features": ["Stereo Speakers", "Hearing Aid Compatible"],
+        "sensors": ["Fingerprint Reader", "Gyroscope/Accelerometer", "Proximity Scanner", "Barometer", "Face Scanner"],
+        "resistant": {
+          "water": true,
+          "ip": "IP 68",
+          "shock": false
+        }
+      },
+      "display": {
+        "screen": {
+          "size": "6.7",
+          "resolution": "2778x1284",
+          "ppi": "458",
+          "type": "Retina"
+        },
+        "secondary": false,
+        "touch": true,
+        "refresh": "120Hz"
+      }, 
+      "processor": {
+        "speed": "3.22GHz",
+        "cores": "Hexa Core",
+        "soc": "Apple A15"
+      },
+      "powersource": {
+        "capacity": "4352 mAh",
+        "exchangeable": false,
+        "charging": {
+          "wireless": true,
+          "standard": "QI",
+          "fast": true
+        }
+      },
+      "measures": {
+        "weight": 230,
+        "width": 300,
+        "height": 400,
+        "depth": 5
+      }
     },
     {
       "id": "3",
@@ -89,8 +213,70 @@
       "title": "Samsung Full HD Screen",
       "description": "Beautiful product description....",
       "price": 356,
-      "date-listed" : "7th May 2020",
-      "status": "available"
+      "listed" : "7th May 2020",
+      "storage": "60",
+      "status": "available",
+      "properties": {
+        "os": "iOs",
+        "year": "2021",
+        "colours": ["Gold", "Silver", "Blue", "Steal"],
+        "body": ["Glass", "Ceramic", "Steel"]
+      },
+      "communication": {
+        "fiveg": true,
+        "fivegfreq": "Sub-6",
+        "4G": true,
+        "wifi": "Wi-Fi 6",
+        "bluetooth": "5.0",
+        "NFC": true,
+        "SIM": ["Nano-SIM", "eSIM"]
+      },
+      "camera": {
+        "back": 4,
+        "front": 1,
+        "resolution" : "12.0",
+        "resolutionfront": "12.0"
+      },
+      "features": {
+        "features": ["Stereo Speakers", "Hearing Aid Compatible"],
+        "sensors": ["Fingerprint Reader", "Gyroscope/Accelerometer", "Proximity Scanner", "Barometer", "Face Scanner"],
+        "resistant": {
+          "water": true,
+          "ip": "IP 68",
+          "shock": false
+        }
+      },
+      "display": {
+        "screen": {
+          "size": "6.7",
+          "resolution": "2778x1284",
+          "ppi": "458",
+          "type": "Retina"
+        },
+        "secondary": false,
+        "touch": true,
+        "refresh": "120Hz"
+      }, 
+      "processor": {
+        "speed": "3.22GHz",
+        "cores": "Hexa Core",
+        "soc": "Apple A15"
+      },
+      "powersource": {
+        "capacity": "4352 mAh",
+        "exchangeable": false,
+        "charging": {
+          "wireless": true,
+          "standard": "QI",
+          "fast": true
+        }
+      },
+      "measures": {
+        "weight": 230,
+        "width": 300,
+        "height": 400,
+        "depth": 5
+      }
     },
     {
       "id": "4",
@@ -102,8 +288,70 @@
       "title": "Smart watch",
       "description": "Beautiful product description....",
       "price": 140,
-      "date-listed" : "7th May 2020",
-      "status": "available"
+      "listed" : "7th May 2020",
+      "storage": "60",
+      "status": "available",
+      "properties": {
+        "os": "iOs",
+        "year": "2021",
+        "colours": ["Gold", "Silver", "Blue", "Steal"],
+        "body": ["Glass", "Ceramic", "Steel"]
+      },
+      "communication": {
+        "fiveg": true,
+        "fivegfreq": "Sub-6",
+        "4G": true,
+        "wifi": "Wi-Fi 6",
+        "bluetooth": "5.0",
+        "NFC": true,
+        "SIM": ["Nano-SIM", "eSIM"]
+      },
+      "camera": {
+        "back": 4,
+        "front": 1,
+        "resolution" : "12.0",
+        "resolutionfront": "12.0"
+      },
+      "features": {
+        "features": ["Stereo Speakers", "Hearing Aid Compatible"],
+        "sensors": ["Fingerprint Reader", "Gyroscope/Accelerometer", "Proximity Scanner", "Barometer", "Face Scanner"],
+        "resistant": {
+          "water": true,
+          "ip": "IP 68",
+          "shock": false
+        }
+      },
+      "display": {
+        "screen": {
+          "size": "6.7",
+          "resolution": "2778x1284",
+          "ppi": "458",
+          "type": "Retina"
+        },
+        "secondary": false,
+        "touch": true,
+        "refresh": "120Hz"
+      }, 
+      "processor": {
+        "speed": "3.22GHz",
+        "cores": "Hexa Core",
+        "soc": "Apple A15"
+      },
+      "powersource": {
+        "capacity": "4352 mAh",
+        "exchangeable": false,
+        "charging": {
+          "wireless": true,
+          "standard": "QI",
+          "fast": true
+        }
+      },
+      "measures": {
+        "weight": 230,
+        "width": 300,
+        "height": 400,
+        "depth": 5
+      }
     },
     {
       "id": "5",
@@ -115,8 +363,70 @@
       "title": "Samsung Full HD Screen",
       "description": "Beautiful product description....",
       "price": 356,
-      "date-listed" : "7th May 2020",
-      "status": "available"
+      "listed" : "7th May 2020",
+      "storage": "60",
+      "status": "available",
+      "properties": {
+        "os": "iOs",
+        "year": "2021",
+        "colours": ["Gold", "Silver", "Blue", "Steal"],
+        "body": ["Glass", "Ceramic", "Steel"]
+      },
+      "communication": {
+        "fiveg": true,
+        "fivegfreq": "Sub-6",
+        "4G": true,
+        "wifi": "Wi-Fi 6",
+        "bluetooth": "5.0",
+        "NFC": true,
+        "SIM": ["Nano-SIM", "eSIM"]
+      },
+      "camera": {
+        "back": 4,
+        "front": 1,
+        "resolution" : "12.0",
+        "resolutionfront": "12.0"
+      },
+      "features": {
+        "features": ["Stereo Speakers", "Hearing Aid Compatible"],
+        "sensors": ["Fingerprint Reader", "Gyroscope/Accelerometer", "Proximity Scanner", "Barometer", "Face Scanner"],
+        "resistant": {
+          "water": true,
+          "ip": "IP 68",
+          "shock": false
+        }
+      },
+      "display": {
+        "screen": {
+          "size": "6.7",
+          "resolution": "2778x1284",
+          "ppi": "458",
+          "type": "Retina"
+        },
+        "secondary": false,
+        "touch": true,
+        "refresh": "120Hz"
+      }, 
+      "processor": {
+        "speed": "3.22GHz",
+        "cores": "Hexa Core",
+        "soc": "Apple A15"
+      },
+      "powersource": {
+        "capacity": "4352 mAh",
+        "exchangeable": false,
+        "charging": {
+          "wireless": true,
+          "standard": "QI",
+          "fast": true
+        }
+      },
+      "measures": {
+        "weight": 230,
+        "width": 300,
+        "height": 400,
+        "depth": 5
+      }
     },
     {
       "id": "6",
@@ -128,8 +438,70 @@
       "title": "Smart watch",
       "description": "Beautiful product description....",
       "price": 140,
-      "date-listed" : "7th May 2020",
-      "status": "available"
+      "listed" : "7th May 2020",
+      "storage": "60",
+      "status": "available",
+      "properties": {
+        "os": "iOs",
+        "year": "2021",
+        "colours": ["Gold", "Silver", "Blue", "Steal"],
+        "body": ["Glass", "Ceramic", "Steel"]
+      },
+      "communication": {
+        "fiveg": true,
+        "fivegfreq": "Sub-6",
+        "4G": true,
+        "wifi": "Wi-Fi 6",
+        "bluetooth": "5.0",
+        "NFC": true,
+        "SIM": ["Nano-SIM", "eSIM"]
+      },
+      "camera": {
+        "back": 4,
+        "front": 1,
+        "resolution" : "12.0",
+        "resolutionfront": "12.0"
+      },
+      "features": {
+        "features": ["Stereo Speakers", "Hearing Aid Compatible"],
+        "sensors": ["Fingerprint Reader", "Gyroscope/Accelerometer", "Proximity Scanner", "Barometer", "Face Scanner"],
+        "resistant": {
+          "water": true,
+          "ip": "IP 68",
+          "shock": false
+        }
+      },
+      "display": {
+        "screen": {
+          "size": "6.7",
+          "resolution": "2778x1284",
+          "ppi": "458",
+          "type": "Retina"
+        },
+        "secondary": false,
+        "touch": true,
+        "refresh": "120Hz"
+      }, 
+      "processor": {
+        "speed": "3.22GHz",
+        "cores": "Hexa Core",
+        "soc": "Apple A15"
+      },
+      "powersource": {
+        "capacity": "4352 mAh",
+        "exchangeable": false,
+        "charging": {
+          "wireless": true,
+          "standard": "QI",
+          "fast": true
+        }
+      },
+      "measures": {
+        "weight": 230,
+        "width": 300,
+        "height": 400,
+        "depth": 5
+      }
     },
     {
       "id": "7",
@@ -141,8 +513,70 @@
       "title": "Samsung Full HD Screen",
       "description": "Beautiful product description....",
       "price": 356,
-      "date-listed" : "7th May 2020",
-      "status": "available"
+      "listed" : "7th May 2020",
+      "storage": "60",
+      "status": "available",
+      "properties": {
+        "os": "iOs",
+        "year": "2021",
+        "colours": ["Gold", "Silver", "Blue", "Steal"],
+        "body": ["Glass", "Ceramic", "Steel"]
+      },
+      "communication": {
+        "fiveg": true,
+        "fivegfreq": "Sub-6",
+        "4G": true,
+        "wifi": "Wi-Fi 6",
+        "bluetooth": "5.0",
+        "NFC": true,
+        "SIM": ["Nano-SIM", "eSIM"]
+      },
+      "camera": {
+        "back": 4,
+        "front": 1,
+        "resolution" : "12.0",
+        "resolutionfront": "12.0"
+      },
+      "features": {
+        "features": ["Stereo Speakers", "Hearing Aid Compatible"],
+        "sensors": ["Fingerprint Reader", "Gyroscope/Accelerometer", "Proximity Scanner", "Barometer", "Face Scanner"],
+        "resistant": {
+          "water": true,
+          "ip": "IP 68",
+          "shock": false
+        }
+      },
+      "display": {
+        "screen": {
+          "size": "6.7",
+          "resolution": "2778x1284",
+          "ppi": "458",
+          "type": "Retina"
+        },
+        "secondary": false,
+        "touch": true,
+        "refresh": "120Hz"
+      }, 
+      "processor": {
+        "speed": "3.22GHz",
+        "cores": "Hexa Core",
+        "soc": "Apple A15"
+      },
+      "powersource": {
+        "capacity": "4352 mAh",
+        "exchangeable": false,
+        "charging": {
+          "wireless": true,
+          "standard": "QI",
+          "fast": true
+        }
+      },
+      "measures": {
+        "weight": 230,
+        "width": 300,
+        "height": 400,
+        "depth": 5
+      }
     },
     {
       "id": "8",
@@ -154,8 +588,70 @@
       "title": "Smart watch",
       "description": "Beautiful product description....",
       "price": 140,
-      "date-listed" : "7th May 2020",
-      "status": "available"
+      "listed" : "7th May 2020",
+      "storage": "60",
+      "status": "available",
+      "properties": {
+        "os": "iOs",
+        "year": "2021",
+        "colours": ["Gold", "Silver", "Blue", "Steal"],
+        "body": ["Glass", "Ceramic", "Steel"]
+      },
+      "communication": {
+        "fiveg": true,
+        "fivegfreq": "Sub-6",
+        "4G": true,
+        "wifi": "Wi-Fi 6",
+        "bluetooth": "5.0",
+        "NFC": true,
+        "SIM": ["Nano-SIM", "eSIM"]
+      },
+      "camera": {
+        "back": 4,
+        "front": 1,
+        "resolution" : "12.0",
+        "resolutionfront": "12.0"
+      },
+      "features": {
+        "features": ["Stereo Speakers", "Hearing Aid Compatible"],
+        "sensors": ["Fingerprint Reader", "Gyroscope/Accelerometer", "Proximity Scanner", "Barometer", "Face Scanner"],
+        "resistant": {
+          "water": true,
+          "ip": "IP 68",
+          "shock": false
+        }
+      },
+      "display": {
+        "screen": {
+          "size": "6.7",
+          "resolution": "2778x1284",
+          "ppi": "458",
+          "type": "Retina"
+        },
+        "secondary": false,
+        "touch": true,
+        "refresh": "120Hz"
+      }, 
+      "processor": {
+        "speed": "3.22GHz",
+        "cores": "Hexa Core",
+        "soc": "Apple A15"
+      },
+      "powersource": {
+        "capacity": "4352 mAh",
+        "exchangeable": false,
+        "charging": {
+          "wireless": true,
+          "standard": "QI",
+          "fast": true
+        }
+      },
+      "measures": {
+        "weight": 230,
+        "width": 300,
+        "height": 400,
+        "depth": 5
+      }
     },
     {
       "id": "9",
@@ -167,8 +663,70 @@
       "title": "Sony Camcorder",
       "description": "Beautiful product description....",
       "price": 256,
-      "date-listed" : "7th May 2020",
-      "status": "available"
+      "listed" : "7th May 2020",
+      "storage": "60",
+      "status": "available",
+      "properties": {
+        "os": "iOs",
+        "year": "2021",
+        "colours": ["Gold", "Silver", "Blue", "Steal"],
+        "body": ["Glass", "Ceramic", "Steel"]
+      },
+      "communication": {
+        "fiveg": true,
+        "fivegfreq": "Sub-6",
+        "4G": true,
+        "wifi": "Wi-Fi 6",
+        "bluetooth": "5.0",
+        "NFC": true,
+        "SIM": ["Nano-SIM", "eSIM"]
+      },
+      "camera": {
+        "back": 4,
+        "front": 1,
+        "resolution" : "12.0",
+        "resolutionfront": "12.0"
+      },
+      "features": {
+        "features": ["Stereo Speakers", "Hearing Aid Compatible"],
+        "sensors": ["Fingerprint Reader", "Gyroscope/Accelerometer", "Proximity Scanner", "Barometer", "Face Scanner"],
+        "resistant": {
+          "water": true,
+          "ip": "IP 68",
+          "shock": false
+        }
+      },
+      "display": {
+        "screen": {
+          "size": "6.7",
+          "resolution": "2778x1284",
+          "ppi": "458",
+          "type": "Retina"
+        },
+        "secondary": false,
+        "touch": true,
+        "refresh": "120Hz"
+      }, 
+      "processor": {
+        "speed": "3.22GHz",
+        "cores": "Hexa Core",
+        "soc": "Apple A15"
+      },
+      "powersource": {
+        "capacity": "4352 mAh",
+        "exchangeable": false,
+        "charging": {
+          "wireless": true,
+          "standard": "QI",
+          "fast": true
+        }
+      },
+      "measures": {
+        "weight": 230,
+        "width": 300,
+        "height": 400,
+        "depth": 5
+      }
     }
   ],
   "movies": [

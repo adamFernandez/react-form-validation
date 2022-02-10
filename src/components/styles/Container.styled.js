@@ -22,6 +22,8 @@ export const Container = styled.div`
 			table && css`
         width: 100%;
 				border-radius: 0;
+				display: grid;
+				grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
 				
 				h1 {
 					margin: .5em 0;

@@ -176,7 +176,7 @@ function App() {
           <Wrapper>
             <Basket compareData={compareData} />
           </Wrapper>
-          <Wrapper>
+          <Wrapper row>
             <Comparison compareData={compareData} />
           </Wrapper>
         </>
