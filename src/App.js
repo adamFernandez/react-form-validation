@@ -18,19 +18,24 @@ import Form from "./components/Form/Form";
 import MenuBar from "./components/MenuBar/MenuBar";
 import Listing  from "./components/Listing/Listing";
 import Movies from './components/Movies/Movies';
-
+import Basket from './components/Basket/Basket';
+import Comparison from './components/Comparison/Comparison';
 function App() {
   const defaultValues = { username: '', email: '', password: ''};
   const [formValues, setFormValues] = useState(defaultValues);
   const [formErrors, setFormErrors] = useState({});
   const [isSubmit, setIsSubmit] = useState(false);
   
-  // setting the data state
+  // setting the data state for the different pages
   // const [data, setData] = useState("");
   const [listing, setListing] = useState("");
   const [movies, setMovies] = useState("");
   const [products, setProducts] = useState("");
   const [page, setPage] = useState("form");
+
+  // compare data state
+  const [compareData, setCompareData] = useState([]);
+
 
   // connecting to db
   const url = "http://localhost:3005/";
@@ -62,10 +67,6 @@ function App() {
     setIsSubmit(true);
   }
 
-  const addToCompare = (product) => {
-    console.log(product.id);
-  }
-
   const changeStatus = (item) => {
     const newStatus = item.status === 'active' ? 'expired' : 'active';
     const currentItem = listing.find(i => i.id === item.id);
@@ -77,9 +78,21 @@ function App() {
     )
   }
 
+  // Add product to compare
+  const addToCompare = (product) => {
+    console.log(product.id);
+    const exist = compareData.find(item => item.id === product.id);
+    product.quantity = 1;
+    exist  
+      ? setCompareData(compareData.map(item => item.id === product.id ? {...exist, quantity: exist.quantity + 1} : item))
+      : setCompareData([...compareData, product]);		
+	}
+
   // show a component depending on menu clicked 
   const show = (e) => {
-    setPage(e.target.innerText.toLowerCase());
+    e.target.tagName === 'path' 
+      ? setPage('compare') 
+      : setPage(e.target.innerText.toLowerCase());
   }
 
   useEffect(() => {
@@ -153,6 +166,18 @@ function App() {
           <h1 className='title'>Listing</h1>
           <Wrapper>
             <Listing data={listing} changeStatus={changeStatus} />
+          </Wrapper>
+        </>
+      }
+      {
+        page === 'compare' &&
+        <>
+          <h2 className='title'>Comparison</h2>
+          <Wrapper>
+            <Basket compareData={compareData} />
+          </Wrapper>
+          <Wrapper>
+            <Comparison compareData={compareData} />
           </Wrapper>
         </>
       }

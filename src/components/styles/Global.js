@@ -31,10 +31,11 @@ export const GlobalStyles = createGlobalStyle`
        .tooltiptext {
             visibility: hidden;
             width: 120px;
-            background-color: #888888;
+            background-color: #3a3a3a;
             color: #ffffff;
             text-align: center;
             padding: .2em 0;
+            border: 1px solid black;
             border-radius: .5em;
             
             position: absolute;

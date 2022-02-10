@@ -18,6 +18,16 @@ export const Container = styled.div`
 				}
     `}
     
+		${({ table }) => 
+			table && css`
+        width: 100%;
+				border-radius: 0;
+				
+				h1 {
+					margin: .5em 0;
+				}
+    `}
+    
 		${({ product }) => 
 			product && css`
         width: 300px;
@@ -28,9 +38,8 @@ export const Container = styled.div`
 				position: relative;
 				background-color: #fff;
 				margin: .5em auto;
-				border: 1px solid #999999;
 				padding: 1.2em;
-				/* overflow: hidden; */
+				// overflow: hidden;
 				border: none;
 				
 				.status {
@@ -273,5 +282,5 @@ export const Container = styled.div`
         
 				
 				`}
-				`;
+`;
 

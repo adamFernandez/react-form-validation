@@ -39,23 +39,21 @@ export const StyledMenuBar = styled.div`
   }
 
   .cart {
+    position: relative;
     margin-left: auto;
-    // grid-column: 3/4;
-    // grid-row: 1/1;
+    margin-right: .3em;
     cursor: pointer;   
     
     .counter {
       font-size: 0.9em;
       background-color: #ffffff;
-      border: 1px solid $light-red;
+      border: 4px solid $light-red;
       border-radius: 50%;
-      width: 1.5rem;
-      height: 1.5rem;
+      width: 5rem;
+      height: 5rem;
       line-height: 1.5rem;
-      position: relative;
-      z-index: 20;
-      right: 5.7vw;
-      top: 1.3vw;
+      position: absolute;
+      z-index: 40;
       text-align: center;
       cursor: pointer;
     }

@@ -1,5 +1,5 @@
 import { StyledProduct } from "./Product.styled";
-import { Container } from "./styles/Container.styled";
+import { Container } from "../../styles/Container.styled";
 
 const Product = ({ product, addToCompare }) => {
   return (

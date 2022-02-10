@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { StyledMenuBar } from "./MenuBar.styled";
 
-const MenuBar = ({ basketData = 1, show }) => {
+const MenuBar = ({ basketData = 1, show, toComparison }) => {
 
   const [currency, setCurrency] = useState('USD');
     
@@ -24,7 +24,7 @@ const MenuBar = ({ basketData = 1, show }) => {
             <FontAwesomeIcon className="symbol" value="USA" icon="dollar-sign" size="lg" onClick={(e) => switchCurrency(e)} />
             <FontAwesomeIcon className="symbol" value="EUR" icon="euro-sign" size="lg" onClick={() => switchCurrency(3)} />
           </div>
-            <FontAwesomeIcon className="cart" icon="shopping-bag" size="2x">
+            <FontAwesomeIcon className="cart" onClick={(e) => show(e)} icon="shopping-bag" size="2x">Basket
               {basketData === 0 && <span className="counter">2</span>}
             </FontAwesomeIcon>
         </StyledMenuBar>
