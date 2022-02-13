@@ -26,7 +26,6 @@ export const GlobalStyles = createGlobalStyle`
    .tooltip {
        position: relative;
        display: inline-block;
-       border-bottom: 1px dotted red;
 
        .tooltiptext {
             visibility: hidden;

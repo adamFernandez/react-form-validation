@@ -1,8 +1,11 @@
 import { StyledListItem } from "./ListItem.styled"
 
-const ListItem = ({ text }) => {
+const ListItem = ({ text, src }) => {
   return (
-    <StyledListItem>{text}</StyledListItem>
+    <StyledListItem>
+      <img src={src} alt="" width="50%" />
+      <p>{text}</p>
+    </StyledListItem>
   )
 }
 
