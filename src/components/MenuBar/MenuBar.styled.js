@@ -1,30 +1,25 @@
 import styled from "styled-components";
 
 export const StyledMenuBar = styled.div`
-  margin: 1em 0;
+  z-index: 100;
+  position: sticky;
+  top: 0;
+  margin-bottom: .5em;
   width: 100%;
   height: 3em;
   background-color: #e4eeff;
-  display: flex;
-  align-items: center;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  align-content: center;
   font-size: 1.4em;
   
   div:nth-child(n){
-      margin-left: .6em;
       cursor: pointer;
   }
 
-  // .form {
-  //     cursor: pointer;
-  // }
-  // .movies {
-  //     cursor: pointer;
-  // }
-  // .card {
-  //     cursor: pointer;
-  // }
-
   .currency_symbols {
+    justify-self: center;
+
     display: flex;
     color: #999999;
 
@@ -33,32 +28,44 @@ export const StyledMenuBar = styled.div`
     }
     
     .symbol {
-      padding-left: .2em;
+      width: .4em;
+      margin-left: .1em;
       cursor: pointer;
     }
   }
 
   .cart {
+    width: 50%;
     position: relative;
-    margin-left: auto;
-    margin-right: .3em;
-    cursor: pointer;   
-    
+    justify-self: center;
+
     .counter {
-      font-size: 0.9em;
-      background-color: #ffffff;
-      border: 4px solid $light-red;
-      border-radius: 50%;
-      width: 5rem;
-      height: 5rem;
-      line-height: 1.5rem;
       position: absolute;
+      top: 48%;
+      right: 27%;
+      font-size: 0.6em;
+      font-weight: bold;
+      background-color: #ffffff;
+      border-radius: 50%;
+      width: 45%;
+      height: 45%;
+      padding-top: 7%;
       z-index: 40;
       text-align: center;
+    }
+    
+    .overlay {
+      z-index: 1000;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      right: 0;
+      top: 0;
+      background-color: hsla(120, 80%, 10%, 25%);
       cursor: pointer;
     }
   }
-
+  
 
   .sub_menu {
     display: grid;

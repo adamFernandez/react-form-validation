@@ -41,7 +41,7 @@ export const Container = styled.div`
 				background-color: #fff;
 				margin: .5em auto;
 				padding: 1.2em;
-				// overflow: hidden;
+				overflow: hidden;
 				border: none;
 				
 				.status {
@@ -60,16 +60,16 @@ export const Container = styled.div`
 					
 					.banner {
 						position: relative;
-						top: 1.3vw;
-						right: -1.3vw;
-						font-size: .8vw;
+						top: 20px;
+						right: -7%;
+						font-size: .7em;
 						display: grid;
 						align-items: center;
 						justify-content: center;
-						border-radius: 50%;
+						// border-radius: 50%;
 						padding: .2em 0;
-						width: 60px;
-						height: 60px;
+						width: 35%;
+						// height: 60px;
 						background-color: #02641e;
 						transform: rotate(45deg) translate(2%, -10%);
 					}

@@ -90,7 +90,8 @@ function App() {
 
   // show a component depending on menu clicked 
   const show = (e) => {
-    e.target.tagName === 'path' 
+    console.log(e.target.className);
+    e.target.className === 'overlay' 
       ? setPage('compare') 
       : setPage(e.target.innerText.toLowerCase());
   }
@@ -136,7 +137,7 @@ function App() {
           : <pre>{JSON.stringify(formValues, undefined, 2)}</pre>
         }
       </Container> */}      
-      <MenuBar show={show}/>
+      <MenuBar compareData={compareData} show={show}/>
       {page === 'form' && 
         <Container>        
           <Form header="Sign Form" formValues={formValues} handleChange={handleChange} formErrors={formErrors} handleSubmit={handleSubmit} />
