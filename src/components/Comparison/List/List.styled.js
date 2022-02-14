@@ -11,9 +11,14 @@ export const StyledList = styled.ul`
 
   ${({ header }) => 
 			header && css`
+        
+
+
         font-weight: 600;
 				h1 {
 					margin: .5em 0;
 				}
+
+        
     `}
 `

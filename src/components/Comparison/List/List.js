@@ -9,7 +9,7 @@ const List = ({ item }) => {
       <ListItem text={item.storage} />
       <ListItem text={item.properties.os} />
       <ListItem text={item.properties.year} />
-      <ListItem text={item.properties.colours.map((c, i) => <span>{c}{ i < item.properties.colours.length-1 && ', '}</span>)} />
+      <ListItem text={item.properties.colours.map((c, i) => <span className="colour">{c}{ i < item.properties.colours.length-1 && ', '}</span>)} />
       <ListItem text={item.communication.fiveg ? <FontAwesomeIcon className="true" icon="check-circle"/> :  <FontAwesomeIcon className="false" icon="times-circle"/> } />
       <ListItem text={item.communication.fivegfreq} />
       <ListItem text={item.camera.back} />

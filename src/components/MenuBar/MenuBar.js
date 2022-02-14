@@ -19,16 +19,19 @@ const MenuBar = ({ compareData, basketData, show, toComparison }) => {
           {/* <div className="movies" onClick={(e) => show(e)}>M.Flex</div> */}
           <div className="card" onClick={(e) => show(e)}>Products</div>
           <div className="card" onClick={(e) => show(e)}>Listing</div>
-          <div className="currency_symbols">
-            <FontAwesomeIcon className="symbol" value="GBP" icon="pound-sign" size="lg" onClick={(e) => switchCurrency(e)} />
-            <FontAwesomeIcon className="symbol" value="USA" icon="dollar-sign" size="lg" onClick={(e) => switchCurrency(e)} />
-            <FontAwesomeIcon className="symbol" value="EUR" icon="euro-sign" size="lg" onClick={() => switchCurrency(3)} />
-          </div>
           <div className="cart" >
-            <div className="overlay" onClick={(e) => show(e)}></div>
-            <FontAwesomeIcon icon="shopping-bag" size="2x" />
-              {compareData.length > 0 && <span className="counter">{compareData.length}</span>}
+            <div className="currency">
+              <FontAwesomeIcon className="symbol" value="GBP" icon="pound-sign" size="lg" onClick={(e) => switchCurrency(e)} />
+              <FontAwesomeIcon className="symbol" value="USA" icon="dollar-sign" size="lg" onClick={(e) => switchCurrency(e)} />
+              <FontAwesomeIcon className="symbol" value="EUR" icon="euro-sign" size="lg" onClick={() => switchCurrency(3)} />
+            </div>
+            <div className="basket">
+              <div className="overlay" onClick={(e) => show(e)}></div>
+              <FontAwesomeIcon icon="shopping-bag" size="2x"  onClick={(e) => show(e)}/>
+              {compareData.length > 0 && <span className="counter"  onClick={(e) => show(e)}>{compareData.length}</span>}
+            </div>
           </div>
+
         </StyledMenuBar>
 
 				{/* <div className="sub_menu">

@@ -4,10 +4,17 @@ export const StyledListItem = styled.li`
 
   padding: .4em;
   list-style-type: none;
-
+  
 
   &:first-child {
+    img {
+      width: 80%;
+    }
+
+    
     height: 180px;
+    display: grid;
+    justify-items: center;
     align-items: end;
   }
 
@@ -21,5 +28,9 @@ export const StyledListItem = styled.li`
   
   .false {
     color: red;
+  }
+
+  .colour {
+    font-size: .9em;
   }
 `

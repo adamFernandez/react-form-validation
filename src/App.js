@@ -91,7 +91,7 @@ function App() {
   // show a component depending on menu clicked 
   const show = (e) => {
     console.log(e.target.className);
-    e.target.className === 'overlay' 
+    e.target.className === 'counter' 
       ? setPage('compare') 
       : setPage(e.target.innerText.toLowerCase());
   }

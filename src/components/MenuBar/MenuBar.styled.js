@@ -8,61 +8,67 @@ export const StyledMenuBar = styled.div`
   width: 100%;
   height: 3em;
   background-color: #e4eeff;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  display: flex;
+  /* grid-template-columns: repeat(4, minmax(100px, 125px)) 150px; */
   align-content: center;
+  align-items: center;
+  gap: 10px;
   font-size: 1.4em;
   
   div:nth-child(n){
       cursor: pointer;
   }
 
-  .currency_symbols {
-    justify-self: center;
-
-    display: flex;
-    color: #999999;
-
-    &:nth-child(1) {
-      padding: 0;
-    }
-    
-    .symbol {
-      width: .4em;
-      margin-left: .1em;
-      cursor: pointer;
-    }
+  &:first-child {
+    padding-left: .5em;
   }
-
+  
   .cart {
-    width: 50%;
-    position: relative;
-    justify-self: center;
-
-    .counter {
-      position: absolute;
-      top: 48%;
-      right: 27%;
-      font-size: 0.6em;
-      font-weight: bold;
-      background-color: #ffffff;
-      border-radius: 50%;
-      width: 45%;
-      height: 45%;
-      padding-top: 7%;
-      z-index: 40;
-      text-align: center;
+    display: flex;    
+    margin-left: auto;
+    
+    div:last-child {
+      margin: 0 .5em;
     }
     
-    .overlay {
-      z-index: 1000;
-      width: 100%;
-      height: 100%;
-      position: absolute;
-      right: 0;
-      top: 0;
-      background-color: hsla(120, 80%, 10%, 25%);
-      cursor: pointer;
+    .currency {
+      margin-top: .5rem;
+      color: #999999;
+      
+      .symbol {
+        width: .4em;
+        margin-left: .1em;
+        cursor: pointer;
+      }
+    }
+
+    .basket {
+      position: relative;
+
+      .counter {
+        position: absolute;
+        top: 48%;
+        right: 27%;
+        font-size: 0.6em;
+        font-weight: bold;
+        background-color: #ffffff;
+        border-radius: 50%;
+        width: 45%;
+        height: 45%;
+        padding-top: 7%;
+        z-index: 40;
+        text-align: center;
+      }
+      
+      .overlay {
+        z-index: 1000;
+        height: 100%;
+        position: absolute;
+        right: 0;
+        top: 0;
+        background-color: hsla(120, 80%, 10%, 25%);
+        cursor: pointer;
+      }
     }
   }
   

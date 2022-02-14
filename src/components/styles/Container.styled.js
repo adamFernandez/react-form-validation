@@ -20,11 +20,12 @@ export const Container = styled.div`
     
 		${({ table }) => 
 			table && css`
+
         width: 100%;
 				border-radius: 0;
 				display: grid;
-				grid-template-columns: minmax(240px, .18fr) repeat(auto-fit, minmax(200px, 1fr));
-				
+				grid-template-columns: minmax(240px, .18fr) repeat(auto-fit, minmax(190px, 1fr));
+
 				h1 {
 					margin: .5em 0;
 				}
