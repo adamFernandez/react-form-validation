@@ -1,6 +1,6 @@
 import Field from "./Field/Field";
 import Button from "../../Button/Button";
-import Select from "./Select/Select";
+import SelectField from "./SelectField/SelectField";
 
 import { StyledForm } from "./Form.styled";
 
@@ -31,23 +31,23 @@ const Form = ({ header, formValues, handleChange, formErrors, handleSubmit }) =>
             placeholder="Description"
             error={formErrors}
           />
-          <Select
+          <SelectField
             name="storage"
             options={["60", "128", "256", "516"]}
             error={formErrors}
           />
-          <Select
+          <SelectField
             name="status"
             options={["available", "out of stock"]}
             error={formErrors}
           />
-            <Select
-              name="OS"
+            <SelectField
+              name="os"
               options={["iOs", "Android", "Bada", "Blackberry", "Windows", "Symbian", "Tizen"]}
               error={formErrors}
               />
-            <Select
-              name="Year"
+            <SelectField
+              name="year"
               options={["2016","2017","2018","2019", "2020", "2021", "2022"]}
               error={formErrors}
               />

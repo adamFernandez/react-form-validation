@@ -1,6 +1,7 @@
 import styled, { css } from 'styled-components';
 
 
+
 export const Container = styled.div`
     background-color: #fff;
     width: ${({ width }) => width || '60%'};
@@ -9,9 +10,29 @@ export const Container = styled.div`
     border-radius: .5em;
     padding: ${({ pd }) => pd || '1.2em'} 1.2em;
 
+
     ${({ card }) => 
 			card && css`
         width: 300px;
+				
+				h1 {
+					margin: .5em 0;
+				}
+    `}
+    
+		${({ form }) => 
+			form && css`
+
+				@keyframes slideDown {
+					from { translateY(400px) }
+					to { translateY(0) }
+				}
+
+        width: 95%;
+				border: none;
+				animation-name: slideDown;
+				animation-duration: 4s;
+				
 				
 				h1 {
 					margin: .5em 0;

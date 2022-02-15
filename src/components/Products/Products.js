@@ -16,14 +16,16 @@ const Products = ({ data, addToCompare, logged=true }) => {
         {data && data.map(product => 
             <Product key={product.id} product={product} addToCompare={addToCompare} />
         )}
-        {form &&
-          <Container product>
+        {form 
+        ?
+          <Container form>
             <Form header="New Product"/>
           </Container>
-        }
+        :
         <Container addToList>
           <FontAwesomeIcon onClick={showForm} className="plus" icon="plus-circle" size="8x" />
         </Container>
+        }
     </StyledProducts>
   );
 };
