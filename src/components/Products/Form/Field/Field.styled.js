@@ -1,6 +1,0 @@
-import styled from "styled-components";
-
-export const StyledField = styled.div`
-  margin-bottom: .5em;
-  margin-top: .2em;
-`

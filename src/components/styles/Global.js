@@ -8,6 +8,7 @@ export const GlobalStyles = createGlobalStyle`
    } 
 
    body {
+       min-height: 101vh;
        background-color: #444960;
        font-family: 'Merriweather', sans-serif; 
        font-size: 1.15em;

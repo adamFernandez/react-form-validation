@@ -24,14 +24,18 @@ export const Container = styled.div`
 			form && css`
 
 				@keyframes slideDown {
-					from { translateY(400px) }
-					to { translateY(0) }
+					from { top: -50%; }
+					to { top: 80px; }
 				}
+				display: grid;
+				justify-self: center;
 
-        width: 95%;
 				border: none;
+				position: absolute;
+				top: 80px;
+				z-index: 1500;
 				animation-name: slideDown;
-				animation-duration: 4s;
+				animation-duration: 1.5s;
 				
 				
 				h1 {

@@ -5,7 +5,7 @@ const Select = ({name, options }) => {
   return (
     <StyledSelect name={name}>
       {options.map(option => 
-        <option value={option}>{capitalize(option)}</option>
+        <option key={option}  value={option}>{capitalize(option)}</option>
       )}
     </StyledSelect>
   )
