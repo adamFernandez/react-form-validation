@@ -7,15 +7,14 @@ export const StyledListItem = styled.li`
   
 
   &:first-child {
-    img {
-      width: 80%;
-    }
-
-    
     height: 180px;
     display: grid;
     justify-items: center;
     align-items: end;
+    
+    img {
+      width: 80%;
+    }
   }
 
   &:nth-child(n+2) {

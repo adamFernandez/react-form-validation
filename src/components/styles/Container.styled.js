@@ -18,13 +18,27 @@ export const Container = styled.div`
 				}
     `}
     
+    ${({ addToList }) => 
+			addToList && css`
+				padding: 0;
+				display: grid;
+				place-items: center;
+				border:none;
+				background: none;
+				color: white;
+
+				.plus {
+					cursor: pointer;
+				}
+    `}
+
 		${({ table }) => 
 			table && css`
 
         width: 100%;
 				border-radius: 0;
 				display: grid;
-				grid-template-columns: minmax(240px, .18fr) repeat(auto-fit, minmax(190px, 1fr));
+				grid-template-columns: minmax(240px, .18fr) repeat(auto-fit, minmax(190px, .2fr));
 
 				h1 {
 					margin: .5em 0;

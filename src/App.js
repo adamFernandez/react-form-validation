@@ -88,6 +88,11 @@ function App() {
       : setCompareData([...compareData, product]);		
 	}
 
+  // add Item to products
+  const addItem = () => {
+    
+  }
+
   // show a component depending on menu clicked 
   const show = (e) => {
     console.log(e.target.className);
