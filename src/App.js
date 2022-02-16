@@ -1,25 +1,18 @@
 import { useEffect, useState } from 'react';
 
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
-
-// import { Container, Wrapper } from "./components/styles/index";
 import { capitalize } from './components/styles/Functions';
 
 import { Container } from './components/styles/Container.styled';
 import { Wrapper } from './components/styles/Wrapper.styled';
-import { GlobalStyles } from './components/styles/Global';
+import { GlobalStyles } from './components/styles/GlobalStyles.js';
 
 import "./FontAwesomeIcons";
 import logo from "./img/netflix_2.png";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
-import Products from "./components/Products/Products";
-import Form from "./components/Form/Form";
-import MenuBar from "./components/MenuBar/MenuBar";
-import Listing  from "./components/Listing/Listing";
-import Movies from './components/Movies/Movies';
-import Basket from './components/Basket/Basket';
-import Comparison from './components/Comparison/Comparison';
+import { Products, Form, MenuBar, Listing, Movies, Basket, Comparison }  from './imports/components';
+
 function App() {
   const defaultValues = { username: '', email: '', password: ''};
   const [formValues, setFormValues] = useState(defaultValues);
@@ -135,6 +128,13 @@ function App() {
   return (
     <Wrapper>
       <GlobalStyles />
+    {/* <Router>
+      <MenuBar compareData={compareData} />
+      <Routes>
+        <Route path='/' exact component={MenuBar} />
+        <Route path='/form' exact component={Form} />
+      </Routes>
+    </Router> */}
       {/* Container showing success on 0 errors or the input values on the Form component*/}
       {/* <Container border='none' mg='0' pd='.1em'>
         {Object.keys(formErrors).length === 0 && isSubmit 

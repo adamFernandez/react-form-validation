@@ -13,11 +13,13 @@ const Form = ({ header, formValues, handleChange, formErrors, handleSubmit }) =>
           
           <StyledSection>
             <h4>General:</h4>
-            <InputField type="text" name="item" placeholder="Item" error={formErrors} /> 
-            <InputField type="text" name="price" placeholder="Price" error={formErrors} />
-            <InputField type="description" name="description" placeholder="Description" error={formErrors} />
-            <SelectField name="storage" options={["60", "128", "256", "516"]} error={formErrors} />
-            <SelectField name="status" options={["available", "out of stock"]} error={formErrors} />
+            <StyledSection input>
+              <InputField type="text" name="item" placeholder="Item" error={formErrors} /> 
+              <InputField type="text" name="price" placeholder="Price" error={formErrors} />
+              <InputField type="description" name="description" placeholder="Description" error={formErrors} />
+              <SelectField name="storage" options={["60", "128", "256", "516"]} error={formErrors} />
+              <SelectField name="status" options={["available", "out of stock"]} error={formErrors} />
+            </StyledSection>
           </StyledSection>        
           
           <StyledSection>
@@ -62,13 +64,13 @@ const Form = ({ header, formValues, handleChange, formErrors, handleSubmit }) =>
           <StyledSection>      
             <h4>Features</h4>
             <h5>Features</h5>
-              <StyledSection checkbox>
+              <StyledSection checkbox list>
                 {features.map(feature =>
                   <InputField type="checkbox" name={feature} />
                 )}
               </StyledSection>
             <h5>Sensors</h5>
-              <StyledSection checkbox>
+              <StyledSection checkbox list>
                 {sensors.map(sensor =>
                   <InputField type="checkbox" name={sensor} />
                 )}
@@ -76,6 +78,7 @@ const Form = ({ header, formValues, handleChange, formErrors, handleSubmit }) =>
           </StyledSection>        
                
         </StyledForm>
+        <Button text="Next" type="button" handleSubmit={handleSubmit} />
         <Button text="Submit" type="submit" handleSubmit={handleSubmit} />
       </>
     );

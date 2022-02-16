@@ -1,4 +1,7 @@
 import { useState } from 'react';
+
+import { Link } from 'react-router-dom';
+
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { StyledMenuBar } from "./MenuBar.styled";
 
@@ -13,7 +16,10 @@ const MenuBar = ({ compareData, basketData, show, toComparison }) => {
     }
     return (
 			<>
-				<StyledMenuBar>
+				<StyledMenuBar>          
+          <Link to='/form' className="form">Form</Link>
+          <Link to='/movies' className="form">Movies</Link>
+          <Link to='/Products' className="products">Products</Link>
           <div className="form" onClick={(e) => show(e)}>Form</div>
           <div className="movies" onClick={(e) => show(e)}>Movies</div>
           {/* <div className="movies" onClick={(e) => show(e)}>M.Flex</div> */}
@@ -31,7 +37,7 @@ const MenuBar = ({ compareData, basketData, show, toComparison }) => {
               {compareData.length > 0 && <span className="counter"  onClick={(e) => show(e)}>{compareData.length}</span>}
             </div>
           </div>
-
+          
         </StyledMenuBar>
 
 				{/* <div className="sub_menu">

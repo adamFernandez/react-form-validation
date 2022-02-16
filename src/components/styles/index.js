@@ -1,7 +1,3 @@
-import { Container } from "./Container.styled";
-import { Wrapper } from "./Wrapper.styled";
-
-const StyledContainer = Container;
-const StyledWrapper = Wrapper;
-
-export { StyledContainer, StyledWrapper };
+export { default as Container } from './Container.styled';
+export { default as Wrapper } from './Wrapper.styled';
+export { default as GlobalStyles } from './GlobalStyles';

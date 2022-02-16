@@ -10,7 +10,7 @@ export const Container = styled.div`
     border-radius: .5em;
     padding: ${({ pd }) => pd || '1.2em'} 1.2em;
 
-		.title {
+		h2.title {
 			color: #000000;
 			font-size: 1.1em;
 			text-align: left;
@@ -36,15 +36,15 @@ export const Container = styled.div`
 						top: 30vh;
 					}
 					100% {
-						top: 10vh; 
+						top: 7vh; 
 					}
 				}
-				width: 100%;
+				width: 50%;
 				display: grid;
 				justify-self: center;
 				border: none;
 				position: fixed;
-				top: 10vh;
+				top: 7vh;
 				z-index: 500;
 				transform: translateY(50%, -50%);
 				animation-name: slideDown;

@@ -18,9 +18,11 @@ const Products = ({ data, addToCompare, logged=true }) => {
         )}
         {form 
         ?
+        <>
           <Container form>
             <Form header="New Product"/>
           </Container>
+        </>
         :
         <Container addToList>
           <FontAwesomeIcon onClick={showForm} className="plus" icon="plus-circle" size="8x" />

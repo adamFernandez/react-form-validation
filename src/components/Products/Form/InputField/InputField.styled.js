@@ -3,17 +3,11 @@ import styled, { css } from "styled-components";
 export const StyledInputField = styled.div`
   margin: .5em 0;
 
-  &:nth-child(n){
-    display: grid;
-    align-content: center;
-    justify-content: center;
-    justify-items: center;
+  &:nth-child() {
+    input[type="checkbox"] {
+      border: 1x solid red;
+
+    }
   }
-
   
-  ${({ checkbox }) => 
-  checkbox && css`
-  border: 1px solid red;
-`}
-
 `
