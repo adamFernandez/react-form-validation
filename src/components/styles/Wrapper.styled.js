@@ -6,8 +6,6 @@ export const Wrapper = styled.section`
 	grid-template-columns: 1fr;
 	align-content: center;
 	justify-content: space-evenly;
-	// height: 101vh;
-	padding-top: 1em;
 
 	.title {
 		width: 100%;

@@ -3,13 +3,14 @@ import Button from "../../Button/Button";
 import SelectField from "./SelectField/SelectField";
 import { StyledForm } from "./Form.styled";
 import { StyledSection } from "./Section/Section.styled";
-import {colours, features, materials, communication, sensors, sim } from '../../data/index';
+import {colours, features, materials, communication, sensors, sims, wifis } from '../../data/index';
 
 const Form = ({ header, formValues, handleChange, formErrors, handleSubmit }) => {
   return (
       <>
         <h1>{header}</h1>
         <StyledForm onSubmit={handleSubmit}>
+          
           <StyledSection>
             <h4>General:</h4>
             <InputField type="text" name="item" placeholder="Item" error={formErrors} /> 
@@ -18,6 +19,7 @@ const Form = ({ header, formValues, handleChange, formErrors, handleSubmit }) =>
             <SelectField name="storage" options={["60", "128", "256", "516"]} error={formErrors} />
             <SelectField name="status" options={["available", "out of stock"]} error={formErrors} />
           </StyledSection>        
+          
           <StyledSection>
             <h4>Properties:</h4>
             <SelectField name="os" options={["iOs", "Android", "Bada", "Blackberry", "Windows", "Symbian", "Tizen"]} error={formErrors} />
@@ -36,14 +38,42 @@ const Form = ({ header, formValues, handleChange, formErrors, handleSubmit }) =>
                 <InputField type="checkbox" name={material}/>
               )}
             </StyledSection>
+          </StyledSection>
+
+          <StyledSection>
+            <h4>Communication:</h4>
+            <StyledSection checkbox>
+              <InputField type="checkbox" name="5G" />
+              <InputField type="checkbox" name="sub-6" />
+              <InputField type="checkbox" name="4G" />
+                {wifis.map(wifi => 
+                  <InputField type="checkbox" name={wifi} />
+                )}
+              <InputField type="checkbox" name="bluetooth" />
+              <InputField type="checkbox" name="nfc" />
+            </StyledSection>
+              <h5>Sim Cards</h5>
+              <StyledSection checkbox>
+                {sims.map(sim => 
+                  <InputField type="checkbox" name={sim} />
+                )}
+              </StyledSection>
+          </StyledSection> 
+          <StyledSection>      
+            <h4>Features</h4>
+            <h5>Features</h5>
+              <StyledSection checkbox>
+                {features.map(feature =>
+                  <InputField type="checkbox" name={feature} />
+                )}
+              </StyledSection>
+            <h5>Sensors</h5>
+              <StyledSection checkbox>
+                {sensors.map(sensor =>
+                  <InputField type="checkbox" name={sensor} />
+                )}
+              </StyledSection>
           </StyledSection>        
-          {/* <section>
-            <p>Communication:</p>
-            <SelectField name="fiveg" options={["", "Android", "Bada", "Blackberry", "Windows", "Symbian", "Tizen"]} error={formErrors} />
-            <SelectField name="year" options={["2016","2017","2018","2019", "2020", "2021", "2022"]} error={formErrors} />
-            <SelectField name="color" options={["Gold", "Silver", "Blue", "Steal", "Pink", "Red", "Black", "Yellow"]} error={formErrors} />
-            <SelectField name="body" options={["Glass", "Ceramic", "Steel"]} error={formErrors} />
-          </section>         */}
                
         </StyledForm>
         <Button text="Submit" type="submit" handleSubmit={handleSubmit} />

@@ -1,13 +1,19 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 
 export const StyledInputField = styled.div`
-  margin-bottom: .5em;
-  margin-top: .2em;
+  margin: .5em 0;
 
   &:nth-child(n){
     display: grid;
-    justify-items: center;
     align-content: center;
+    justify-content: center;
+    justify-items: center;
   }
+
+  
+  ${({ checkbox }) => 
+  checkbox && css`
+  border: 1px solid red;
+`}
 
 `

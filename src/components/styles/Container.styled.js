@@ -10,11 +10,16 @@ export const Container = styled.div`
     border-radius: .5em;
     padding: ${({ pd }) => pd || '1.2em'} 1.2em;
 
+		.title {
+			color: #000000;
+			font-size: 1.1em;
+			text-align: left;
+		}
 
     ${({ card }) => 
 			card && css`
         width: 300px;
-				
+
 				h1 {
 					margin: .5em 0;
 				}
@@ -24,21 +29,31 @@ export const Container = styled.div`
 			form && css`
 
 				@keyframes slideDown {
-					from { top: -50%; }
-					to { top: 80px; }
+					0% { 
+						top: -50vh;
+					 }
+					50% {
+						top: 30vh;
+					}
+					100% {
+						top: 10vh; 
+					}
 				}
+				width: 100%;
 				display: grid;
 				justify-self: center;
-
 				border: none;
-				position: absolute;
-				top: 80px;
-				z-index: 1500;
+				position: fixed;
+				top: 10vh;
+				z-index: 500;
+				transform: translateY(50%, -50%);
 				animation-name: slideDown;
-				animation-duration: 1.5s;
+				animation-duration: 2s;				
+				// animation-iteration-count: infinite;
+				// animation-direction: alternate;
+				animation-timing-function: ease;				
 				
-				
-				h1 {
+				h1 {					
 					margin: .5em 0;
 				}
     `}
