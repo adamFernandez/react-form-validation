@@ -1,5 +1,4 @@
 import { useEffect, useState } from 'react';
-
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 import { capitalize } from './components/styles/Functions';
@@ -128,21 +127,35 @@ function App() {
   return (
     <Wrapper>
       <GlobalStyles />
-    {/* <Router>
-      <MenuBar compareData={compareData} />
+    <Router>
       <Routes>
-        <Route path='/' exact component={MenuBar} />
-        <Route path='/form' exact component={Form} />
+        <Route path='/' element={<MenuBar compareData={compareData} />}>
+          <Route path='form' element={<Container><Form header="Sign Form" formValues={formValues} handleChange={handleChange} formErrors={formErrors} handleSubmit={handleSubmit} /></Container>} />
+          <Route path='movies' element={<Wrapper auto><Movies data={movies} logo={logo} /></Wrapper>} />
+          <Route path='products' element={<Wrapper auto><Products data={products} addToCompare={addToCompare} /></Wrapper>} />
+          <Route path='comparison' 
+            element={
+              <>
+              <Wrapper><Basket compareData={compareData} /></Wrapper>
+              <Wrapper row><Comparison compareData={compareData} /></Wrapper>
+              </>
+            }
+          />
+          <Route path='listing' element={<Wrapper><Listing data={listing} changeStatus={changeStatus} />
+          </Wrapper>} />
+        </Route>
       </Routes>
-    </Router> */}
+    </Router>
+    
       {/* Container showing success on 0 errors or the input values on the Form component*/}
       {/* <Container border='none' mg='0' pd='.1em'>
         {Object.keys(formErrors).length === 0 && isSubmit 
           ? <p>Signed in Successfully</p>
           : <pre>{JSON.stringify(formValues, undefined, 2)}</pre>
         }
-      </Container> */}      
-      <MenuBar compareData={compareData} show={show}/>
+      </Container> */}
+            
+      {/* <MenuBar compareData={compareData} show={show}/>
       {page === 'form' && 
         <Container>        
           <Form header="Sign Form" formValues={formValues} handleChange={handleChange} formErrors={formErrors} handleSubmit={handleSubmit} />
@@ -186,7 +199,7 @@ function App() {
             <Comparison compareData={compareData} />
           </Wrapper>
         </>
-      }
+      } */}
     </Wrapper>
   );
 }
