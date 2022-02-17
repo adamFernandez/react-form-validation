@@ -119,8 +119,7 @@ function App() {
       errors.password = "Password must be longer than 4 characters!";
     } else if (values.password.length > 10) {
       errors.password = "Password must be shorter than 10 characters!";
-    }
-    
+    }    
     return errors;
   }
 
@@ -130,8 +129,8 @@ function App() {
     <Router>
       <Routes>
         <Route path='/' element={<MenuBar compareData={compareData} />}>
-          <Route path='form' element={<Container><Form header="Sign Form" formValues={formValues} handleChange={handleChange} formErrors={formErrors} handleSubmit={handleSubmit} /></Container>} />
-          <Route path='movies' element={<Wrapper auto><Movies data={movies} logo={logo} /></Wrapper>} />
+          <Route path='' element={<Container><Form header="Sign Form" formValues={formValues} handleChange={handleChange} formErrors={formErrors} handleSubmit={handleSubmit} /></Container>} />
+          <Route path='Movies' element={<Wrapper auto><Movies data={movies} logo={logo} /></Wrapper>} />
           <Route path='products' element={<Wrapper auto><Products data={products} addToCompare={addToCompare} /></Wrapper>} />
           <Route path='comparison' 
             element={
@@ -154,52 +153,6 @@ function App() {
           : <pre>{JSON.stringify(formValues, undefined, 2)}</pre>
         }
       </Container> */}
-            
-      {/* <MenuBar compareData={compareData} show={show}/>
-      {page === 'form' && 
-        <Container>        
-          <Form header="Sign Form" formValues={formValues} handleChange={handleChange} formErrors={formErrors} handleSubmit={handleSubmit} />
-        </Container>}
-      {page === 'movies' && movies &&
-      <>
-        <h1 className="title">Movies</h1>
-      <Wrapper auto>
-          <Movies data={movies} logo={logo} />
-      </Wrapper>
-      <Wrapper>
-          <Movies data={movies} logo={logo} />             
-      </Wrapper>
-      </>
-      }
-      { page === 'products' && products &&
-      <>
-        <h1 className="title">Products</h1>
-        <Wrapper auto>
-          <Products data={products} addToCompare={addToCompare} />
-        </Wrapper>           
-      </>
-      }
-      {
-        page === 'listing' && listing &&
-        <>
-          <h1 className='title'>Listing</h1>
-          <Wrapper>
-            <Listing data={listing} changeStatus={changeStatus} />
-          </Wrapper>
-        </>
-      }
-      {
-        page === 'compare' &&
-        <>
-          <h2 className='title'>Comparison</h2>
-          <Wrapper>
-            <Basket compareData={compareData} />
-          </Wrapper>
-          <Wrapper row>
-            <Comparison compareData={compareData} />
-          </Wrapper>
-        </>
-      } */}
     </Wrapper>
   );
 }

@@ -1,3 +1,4 @@
+/* eslint-disable import/prefer-default-export */
 import styled from 'styled-components';
 
 export const StyledSelectField = styled.div`
@@ -5,4 +6,4 @@ export const StyledSelectField = styled.div`
   grid-template-columns: 1fr;
 
   margin-bottom: .5em;
-`
+`;

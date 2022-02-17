@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const StyledMenuBar = styled.div`
   z-index: 1000;
@@ -15,6 +15,36 @@ export const StyledMenuBar = styled.div`
   gap: 10px;
   font-size: 1.4em;
   
+  a {
+    color: #464646;
+    text-decoration: none;
+    border-top: 2px solid #e4eeff;
+    border-bottom: 2px solid #e4eeff;
+    transform: scale(100%);
+    transition: transform .2s;
+    
+    &:last-child {
+      border: none;
+    }
+    
+    
+    &:hover {
+      border-top: 2px solid #464646;
+      border-bottom: 2px solid #464646;
+      transform: scale(110%);
+
+      &:last-child {
+        border: none;
+      }
+    }
+
+    &:active {
+      border: none;
+      transform: scale(80%);
+    }
+  }
+
+
   div:nth-child(n){
       cursor: pointer;
   }
@@ -34,14 +64,15 @@ export const StyledMenuBar = styled.div`
     .currency {
       margin-top: .5rem;
       color: #999999;
-      
+
       .symbol {
         width: .4em;
         margin-left: .1em;
         cursor: pointer;
       }
     }
-
+    
+    
     .basket {
       position: relative;
 
