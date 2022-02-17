@@ -41,7 +41,7 @@ const MenuBar = ({ compareData, basketData, show, toComparison }) => {
           </div>
           
         </StyledMenuBar>
-          <Outlet />
+        <Outlet />
 				{/* <div className="sub_menu">
 					<span className="sub_menu_item">{onProducts ? 'Products' : 'Your Basket'}</span>
 				</div> */}

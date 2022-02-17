@@ -61,6 +61,7 @@ export const ListingContainer = styled.div`
   } */
 
   @media screen and (max-width: 600px) {
+    width: 80%;
     font-size: 2vw;
     .status {
       .banner {

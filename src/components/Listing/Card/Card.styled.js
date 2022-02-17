@@ -52,7 +52,8 @@ export const StyledCard = styled.div`
     font-size: .6em;
   }
 
-  @media screen and (max-width: 320px) { 
+  @media screen and (maxñ-width: 320px) { 
+    width: 100%;
     grid-template-columns: 1fr;
     justify-items: center;
     font-size: 4vw;
