@@ -17,8 +17,8 @@ const MenuBar = ({ compareData, basketData, show, toComparison }) => {
     return (
 			<>
 				<StyledMenuBar>          
-          <Link to='/form' className="form">Form</Link>
-          <Link to='/movies' className="form">Movies</Link>
+          <Link to='/' className="form">Form</Link>
+          <Link to='/movies' className="movies">Movies</Link>
           <Link to='/products' className="products">Products</Link>
           <Link to='/listing' className="listing">Listing</Link>
           {/* <div className="form" onClick={(e) => show(e)}>Form</div>
@@ -31,7 +31,7 @@ const MenuBar = ({ compareData, basketData, show, toComparison }) => {
               <FontAwesomeIcon className="symbol" value="USA" icon="dollar-sign" size="lg" onClick={(e) => switchCurrency(e)} />
               <FontAwesomeIcon className="symbol" value="EUR" icon="euro-sign" size="lg" onClick={() => switchCurrency(3)} />
             </div>
-            <Link to='/comparison'>
+            <Link to='/comparison' className="comparison">
               <div className="basket">
                 <div className="overlay" onClick={(e) => show(e)}></div>
                 <FontAwesomeIcon icon="shopping-bag" size="2x"  onClick={(e) => show(e)}/>

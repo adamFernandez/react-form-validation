@@ -1,5 +1,5 @@
 import styled, { css } from 'styled-components';
-
+import { scaleUp, slideDown } from './animations/animations';
 
 
 export const Container = styled.div`
@@ -28,30 +28,20 @@ export const Container = styled.div`
 		${({ form }) => 
 			form && css`
 
-				@keyframes slideDown {
-					0% { 
-						top: -50vh;
-					 }
-					50% {
-						top: 30vh;
-					}
-					100% {
-						top: 7vh; 
-					}
-				}
+				
 				width: 50%;
 				display: grid;
 				justify-self: center;
 				border: none;
 				position: fixed;
-				top: 7vh;
+				top: 3.3em;
 				z-index: 500;
 				transform: translateY(50%, -50%);
-				animation-name: slideDown;
-				animation-duration: 2s;				
+				animation-name: ${slideDown};
+				animation-duration: 1.3s;				
 				// animation-iteration-count: infinite;
 				// animation-direction: alternate;
-				animation-timing-function: ease;				
+				animation-timing-function: ease-in-out;				
 				
 				h1 {					
 					margin: .5em 0;
@@ -135,8 +125,8 @@ export const Container = styled.div`
 				}
 				
     `}
-
-
+		
+		
     ${({ movie }) => 
 			movie && css`
         width: 300px;
@@ -146,27 +136,27 @@ export const Container = styled.div`
 				background-color: transparent;
 				border: none;
 				
+				
 				.movie {
 					position: relative;
 					border: none;
-					height: 150px;
-					transition: width 150ms ease-in-out 250ms;
+					height: 150px;	
 					
 					
 					.trade {
 						font-family: Arial, sans-serif;
 						width: 100%;
-						height: 6vh;
+						height: 25%;
 						font-weight: 900;
 						position: absolute;
+						z-index: 5;
 						
 						img {
 							position: absolute;
-							z-index: 5;
 							left: .4em;
 							top: .4em;
 							width: 6%;
-							height: 100%;
+							height: 80%;
 						}
 						
 						.top10 {
@@ -182,6 +172,7 @@ export const Container = styled.div`
 							margin: 0;
 							clip-path: polygon(25% 0%, 100% 0%, 100% 100%, 26% 89%);
 							width: 12%;
+							height: 100%;
 							background-color: red;
 
 							.number {
@@ -191,18 +182,16 @@ export const Container = styled.div`
 							}
 						}
 					}				
-
+					
 					.front {						
 						position: relative;
-						transition: width 500ms ease-out 250ms;
 						
 						img {
+							transition: border-radius 600ms ease-out 250ms;
 							width: 100%;
 							border: none;
 							padding: 0;
-							margin: 0; 							
-							
-							transition: border-radius 600ms ease-out 250ms;
+							margin: 0;
 						}
 						
 						.info {
@@ -304,35 +293,34 @@ export const Container = styled.div`
 					}
 
 					&:hover {
-							.trade {
-								img {
-									z-index: 40;
-									top: -38px;
-									left: -20px;
-									width: 8%;
-								}
-								.top10 {
-									z-index: 0;
-									left: 0;
-								}
-							}							
+						.trade {
 							img {
-								border-top-left-radius: .5em;
-								border-top-right-radius: .5em;
+								/* top: -38px;
+								left: -20px; */
 							}
-							.front {
-								bottom: 50px;
-								right: 25px;								
+							.top10 {
+								visibility: hidden;
 							}
-							.back {
-								opacity: 1;
-								visibility: visible;
-								right: 25px;
-								bottom: 55px;
-							}
-
-							z-index: 40;
-							width: 350px;
+						}							
+						img {
+							border-top-left-radius: .5em;
+							border-top-right-radius: .5em;
+						}
+						.front {
+							/* bottom: 50px;
+							right: 25px;								 */
+						}
+						.back {
+							opacity: 1;
+							visibility: visible;
+						}
+						
+						animation: ${scaleUp};
+						animation-duration: .3s;
+						animation-timing-function: ease-out;
+						animation-direction: alternate;
+						transform: scale(115%) translateY(-35%);	
+						z-index: 2400;
 					}
 				}
 				

@@ -28,7 +28,7 @@ const Movie = ({ movie, logo }) => {
                   <p className="length">{movie.info.length}</p>
                 </div>
                 <p className="tags">
-                  {movie.tags.map(tag => <span className="tag">{tag}</span> )}
+                  {movie.tags.map((tag, id) => <span key={id} className="tag">{tag}</span> )}
                 </p>
               </div>              
             </div>                            
