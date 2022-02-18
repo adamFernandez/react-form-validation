@@ -17,10 +17,10 @@ const MenuBar = ({ compareData, basketData, show, toComparison }) => {
     return (
 			<>
 				<StyledMenuBar>          
-          <NavLink to='/' className={({ isActive }) => isActive && "isActive" }>Form</NavLink>
-          <NavLink to='/movies' className={({ isActive }) => isActive && "isActive" }>Movies</NavLink>
-          <NavLink to='/products' className={({ isActive }) => isActive && "isActive" }>Products</NavLink>
-          <NavLink to='/listing' className={({ isActive }) => isActive && "isActive" }>Listing</NavLink>
+          <NavLink to='/' className={({ isActive }) => isActive ? "isActive" : '' }>Form</NavLink>
+          <NavLink to='/movies' className={({ isActive }) => isActive ? "isActive" : '' }>Movies</NavLink>
+          <NavLink to='/products' className={({ isActive }) => isActive ? "isActive" : '' }>Products</NavLink>
+          <NavLink to='/listing' className={({ isActive }) => isActive ? "isActive" : '' }>Listing</NavLink>
           {/* <div className="form" onClick={(e) => show(e)}>Form</div>
           <div className="movies" onClick={(e) => show(e)}>Movies</div>
           <div className="card" onClick={(e) => show(e)}>Products</div>
@@ -31,7 +31,7 @@ const MenuBar = ({ compareData, basketData, show, toComparison }) => {
               <FontAwesomeIcon className="symbol" value="USA" icon="dollar-sign" size="lg" onClick={(e) => switchCurrency(e)} />
               <FontAwesomeIcon className="symbol" value="EUR" icon="euro-sign" size="lg" onClick={() => switchCurrency(3)} />
             </div>
-            <NavLink to='/comparison' className={({ isActive }) => isActive && "isActive" }>
+            <NavLink to='/comparison' className={({ isActive }) => isActive ? "isActive" : '' }>
               <div className="basket">
                 <div className="overlay" onClick={(e) => show(e)}></div>
                 <FontAwesomeIcon icon="shopping-bag" size="2x"  onClick={(e) => show(e)}/>
