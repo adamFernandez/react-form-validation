@@ -4,18 +4,27 @@ import styled, { css } from 'styled-components';
 export const StyledSection = styled.section`
   width: 100%;
   padding: .2em;
-  border: 1px solid #dddddd;
+  // border: 1px solid #dddddd;
   
   h4 {
-    margin: .7em .2em;
+    margin: .5em .2em;
   }
   h5 {
-    margin: .5em .6em
+    margin: .3em .6em;
   }
   
   ${({ input }) => input && css`
-    border: none;
-    
+    border-top: 1px solid #dddddd;
+    margin-top: 0;
+    padding: 0;
+  `}
+  
+  ${({ buttons }) => buttons && css`
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: center;
+    justify-items: center;
+    grid-gap: .2em;
   `}
     
   ${({ checkbox }) => checkbox && css`

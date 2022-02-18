@@ -14,6 +14,12 @@ export const StyledMenuBar = styled.div`
   align-items: center;
   gap: 10px;
   font-size: 1.4em;
+
+  .isActive {
+    border-top: 2px solid #464646;
+    border-bottom: 2px solid #464646;
+    transform: scale(110%);
+  }
   
   a {
     color: #464646;

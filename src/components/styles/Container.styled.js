@@ -26,10 +26,8 @@ export const Container = styled.div`
     `}
     
 		${({ form }) => 
-			form && css`
-
-				
-				width: 50%;
+			form && css`				
+				width: 60%;
 				display: grid;
 				justify-self: center;
 				border: none;
@@ -38,13 +36,11 @@ export const Container = styled.div`
 				z-index: 500;
 				transform: translateY(50%, -50%);
 				animation-name: ${slideDown};
-				animation-duration: 1.3s;				
-				// animation-iteration-count: infinite;
-				// animation-direction: alternate;
+				animation-duration: 1.3s;
 				animation-timing-function: ease-in-out;				
 				
-				h1 {					
-					margin: .5em 0;
+				h2 {					
+					margin: .3em 0;
 				}
     `}
     

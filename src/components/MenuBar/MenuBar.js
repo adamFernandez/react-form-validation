@@ -1,6 +1,6 @@
 import { useState } from 'react';
 
-import { Outlet, Link } from 'react-router-dom';
+import { Outlet, NavLink } from 'react-router-dom';
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { StyledMenuBar } from "./MenuBar.styled";
@@ -17,10 +17,10 @@ const MenuBar = ({ compareData, basketData, show, toComparison }) => {
     return (
 			<>
 				<StyledMenuBar>          
-          <Link to='/' className="form">Form</Link>
-          <Link to='/movies' className="movies">Movies</Link>
-          <Link to='/products' className="products">Products</Link>
-          <Link to='/listing' className="listing">Listing</Link>
+          <NavLink to='/' className={({ isActive }) => isActive && "isActive" }>Form</NavLink>
+          <NavLink to='/movies' className={({ isActive }) => isActive && "isActive" }>Movies</NavLink>
+          <NavLink to='/products' className={({ isActive }) => isActive && "isActive" }>Products</NavLink>
+          <NavLink to='/listing' className={({ isActive }) => isActive && "isActive" }>Listing</NavLink>
           {/* <div className="form" onClick={(e) => show(e)}>Form</div>
           <div className="movies" onClick={(e) => show(e)}>Movies</div>
           <div className="card" onClick={(e) => show(e)}>Products</div>
@@ -31,13 +31,13 @@ const MenuBar = ({ compareData, basketData, show, toComparison }) => {
               <FontAwesomeIcon className="symbol" value="USA" icon="dollar-sign" size="lg" onClick={(e) => switchCurrency(e)} />
               <FontAwesomeIcon className="symbol" value="EUR" icon="euro-sign" size="lg" onClick={() => switchCurrency(3)} />
             </div>
-            <Link to='/comparison' className="comparison">
+            <NavLink to='/comparison' className={({ isActive }) => isActive && "isActive" }>
               <div className="basket">
                 <div className="overlay" onClick={(e) => show(e)}></div>
                 <FontAwesomeIcon icon="shopping-bag" size="2x"  onClick={(e) => show(e)}/>
                 {compareData.length > 0 && <span className="counter"  onClick={(e) => show(e)}>{compareData.length}</span>}
               </div>
-            </Link>
+            </NavLink>
           </div>
           
         </StyledMenuBar>
