@@ -10,35 +10,32 @@ import {
 import { useNavigate as navigate } from 'react-router-dom';
 import Products from '../Products';
 
-const Form =({
-  header, formValues, handleChange, formErrors, handleSubmit,
-}) => {
+const Form =({ header, formErrors, handleSubmit }) => {
 
   const [page, setPage] = useState(1);
   
   const addPage = () => {
-    let p = page;
-    p = p ++;
-    console.log(page);
-    setPage(p);
+    
+    setPage(page + 1);
     navigate(`/page${page}`);
   }
 
   const pageBack = () => {
-    let p = page;
-    p = p--;
-    setPage(p);
-    navigate(`/page${page}`);
+    console.log(page + 1);
+    // let p = page;
+    // p = p--;
+    // setPage(p);
+    // navigate(`/page${page}`);
   }
   return (
     <>
       <h1>{header}</h1>
       <StyledForm onSubmit={handleSubmit}>
         <Routes>
-          <Route path="/" element={<Page1 header="General" />} />
-          <Route path="/page2" element={<Page2 header="Properties" formErrors={formErrors} />} />
-          <Route path="/page3" element={<Page3 header="Communication" />} />
-          <Route path="/page4" element={<Page4 header="Features" />} />
+            <Route path="/" element={<Page1 header="General" />} />
+            <Route path="/page2" element={<Page2 header="Properties" formErrors={formErrors} />} />
+            <Route path="/page3" element={<Page3 header="Communication" />} />
+            <Route path="/page4" element={<Page4 header="Features" />} />
         </Routes>
       </StyledForm>
       <StyledSection buttons>
