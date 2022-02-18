@@ -17,18 +17,15 @@ const Form =({
   const [page, setPage] = useState(1);
   
   const addPage = () => {
-    let p = page;
-    p = p ++;
     console.log(page);
-    setPage(p);
-    navigate(`/page${page}`);
+    setPage(page + 1);
+    // navigate(`/page${page}`);
   }
 
   const pageBack = () => {
-    let p = page;
-    p = p--;
-    setPage(p);
-    navigate(`/page${page}`);
+    setPage(page - 1);
+    console.log(page);
+    // navigate(`/page${page}`);
   }
   return (
     <>

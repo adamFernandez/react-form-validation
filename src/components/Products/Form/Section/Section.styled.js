@@ -14,7 +14,7 @@ export const StyledSection = styled.section`
   }
   
   ${({ input }) => input && css`
-    border-top: 1px solid #dddddd;
+    // border-top: 1px solid #dddddd;
     margin-top: 0;
     padding: 0;
   `}
