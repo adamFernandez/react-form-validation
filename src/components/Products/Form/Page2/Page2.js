@@ -11,12 +11,12 @@ const Page2 = ({ header, formErrors }) => {
 
       <h5>Colors:</h5>
       <StyledSection checkbox>
-        {colours.map((color) => <InputField className="checkbox" type="checkbox" name={color} />)}
+        {colours.map((color, index) => <InputField key={index} className="checkbox" type="checkbox" name={color} />)}
       </StyledSection>
 
       <h5>Body:</h5>
       <StyledSection checkbox>
-        {materials.map((material) => <InputField type="checkbox" name={material} />)}
+        {materials.map((material, index) => <InputField key={index} type="checkbox" name={material} />)}
       </StyledSection>
     </StyledSection>
   )

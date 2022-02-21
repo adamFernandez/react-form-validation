@@ -8,11 +8,11 @@ const Page4 = ({ header, formErrors }) => {
       <h4>{header}:</h4>
       <h5>Features</h5>
       <StyledSection checkbox list>
-        {features.map((feature) => <InputField type="checkbox" name={feature} />)}
+        {features.map((feature, index) => <InputField key={index} type="checkbox" name={feature} />)}
       </StyledSection>
       <h5>Sensors</h5>
       <StyledSection checkbox list>
-        {sensors.map((sensor) => <InputField type="checkbox" name={sensor} />)}
+        {sensors.map((sensor, index) => <InputField key={index} type="checkbox" name={sensor} />)}
       </StyledSection>
     </StyledSection>
   )

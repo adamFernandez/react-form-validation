@@ -10,6 +10,7 @@ import { GlobalStyles } from './components/styles/GlobalStyles.js';
 import "./FontAwesomeIcons";
 import logo from "./img/netflix_2.png";
 
+import { Button, Page1, Page2, Page3, Page4 } from "./components/Products/Form/index";
 import { Products, Form, MenuBar, Listing, Movies, Basket, Comparison }  from './imports/components';
 
 function App() {
@@ -129,9 +130,10 @@ function App() {
     <Router>
       <Routes>
         <Route path='/' element={<MenuBar compareData={compareData} />}>
-          <Route path='' element={<Container><Form header="Sign Form" formValues={formValues} handleChange={handleChange} formErrors={formErrors} handleSubmit={handleSubmit} /></Container>} />
+          <Route index element={<Container><Form header="Sign Form" formValues={formValues} handleChange={handleChange} formErrors={formErrors} handleSubmit={handleSubmit} /></Container>} />
           <Route path='movies' element={<Wrapper auto><Movies data={movies} logo={logo} /></Wrapper>} />
-          <Route path='products' element={<Wrapper auto><Products data={products} addToCompare={addToCompare} /></Wrapper>} />
+          <Route path='products/*' element={<Wrapper auto><Products data={products} addToCompare={addToCompare} /></Wrapper>} />
+          <Route path='listing' element={<Wrapper><Listing data={listing} changeStatus={changeStatus} /></Wrapper>} />
           <Route path='comparison' 
             element={
               <>
@@ -140,7 +142,6 @@ function App() {
               </>
             }
           />
-          <Route path='listing' element={<Wrapper><Listing data={listing} changeStatus={changeStatus} /></Wrapper>} />
         </Route>
       </Routes>
     </Router>
