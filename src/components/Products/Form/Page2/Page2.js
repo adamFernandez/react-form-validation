@@ -1,7 +1,8 @@
 import { SelectField, InputField } from "../index";
 import { StyledSection } from "../Section/Section.styled";
+import { colours, materials } from "../../../data/index";
 
-const Page2 = ({ header, colours, materials, formErrors }) => {
+const Page2 = ({ header, formErrors }) => {
   return (
     <StyledSection>
       <h4>{header}:</h4>

@@ -22,3 +22,18 @@ export const slideDown = keyframes`
     top: 3.3em; 
   }
 `;
+
+export const rubberButton = keyframes`
+  0% {
+    transform: scale(80%);
+  }
+  50% {
+    transform: scale(100%);
+  }
+  75% {
+    transform: scale(120%);
+  }
+  100% {
+    transform: scale(90%);
+  }
+`

@@ -27,7 +27,7 @@ export const StyledMenuBar = styled.div`
     border-top: 2px solid #e4eeff;
     border-bottom: 2px solid #e4eeff;
     transform: scale(100%);
-    transition: transform .2s;
+    transition: transform 100ms;
     
     &:last-child {
       border: none;
@@ -46,7 +46,7 @@ export const StyledMenuBar = styled.div`
 
     &:active {
       border: none;
-      transform: scale(80%);
+      transform: scale(65%);
     }
   }
 

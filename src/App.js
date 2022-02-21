@@ -130,7 +130,7 @@ function App() {
       <Routes>
         <Route path='/' element={<MenuBar compareData={compareData} />}>
           <Route path='' element={<Container><Form header="Sign Form" formValues={formValues} handleChange={handleChange} formErrors={formErrors} handleSubmit={handleSubmit} /></Container>} />
-          <Route path='Movies' element={<Wrapper auto><Movies data={movies} logo={logo} /></Wrapper>} />
+          <Route path='movies' element={<Wrapper auto><Movies data={movies} logo={logo} /></Wrapper>} />
           <Route path='products' element={<Wrapper auto><Products data={products} addToCompare={addToCompare} /></Wrapper>} />
           <Route path='comparison' 
             element={
@@ -140,8 +140,7 @@ function App() {
               </>
             }
           />
-          <Route path='listing' element={<Wrapper><Listing data={listing} changeStatus={changeStatus} />
-          </Wrapper>} />
+          <Route path='listing' element={<Wrapper><Listing data={listing} changeStatus={changeStatus} /></Wrapper>} />
         </Route>
       </Routes>
     </Router>

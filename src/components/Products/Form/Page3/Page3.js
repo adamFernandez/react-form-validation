@@ -1,7 +1,8 @@
 import { InputField } from "../index";
 import { StyledSection } from "../Section/Section.styled";
+import { wifis, sims } from "../../../data/index";
 
-const Page3 = ({ header, wifis, sims, formErrors }) => {
+const Page3 = ({ header, formErrors }) => {
   return (
     <StyledSection>
       <h4>{header}:</h4>

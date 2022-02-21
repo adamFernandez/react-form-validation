@@ -23,7 +23,7 @@ const Products = ({ data, addToCompare, logged=true }) => {
         ?
         <>
           <Container form>
-            <Form header="New Product"/>
+            <Form header="New Item"/>
           </Container>
         </>
         :
@@ -31,7 +31,17 @@ const Products = ({ data, addToCompare, logged=true }) => {
           <FontAwesomeIcon onClick={showForm} className="plus" icon="plus-circle" size="8x" />
         </Container>
         }
-        
+        {/* <Container form>
+          
+            <Routes>
+              <Route path="/">
+                <Route path="/" element={<Form header="New Product"/>} />
+                <Route path="/" element={<Form header="New Product"/>} />
+                <Route path="/" element={<Form header="New Product"/>} />
+              </Route>
+            </Routes>
+          
+        </Container> */}
     </StyledProducts>
   );
 };
