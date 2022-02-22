@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { Routes, Route, Outlet } from 'react-router-dom';
 import { StyledProducts } from "./Products.styled";
+import { Overlay } from '../styles/Overlay.styled';
 
 import { Button, Page1, Page2, Page3, Page4 } from "./Form/index";
 
@@ -11,8 +12,15 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const Products = ({ data, addToCompare, logged=true, formErrors }) => {
   const [form, setForm] = useState(false);
+  const [hide, setHide] = useState(true);
+  
+  const hideOverlay = () => {
+    setHide(!hide);
+    console.log(hide);
+  }
+
   const showForm = () => {
-    setForm(true);
+    setForm(!form);
   }
   return (
     <StyledProducts>
@@ -22,19 +30,9 @@ const Products = ({ data, addToCompare, logged=true, formErrors }) => {
         {form 
         ?
         <>
+          <Overlay zindex="500" onClick={hideOverlay} animation={hide && '${fadeOut} 5s' } />
           <Container form>
             <Form header="New Item"/>
-            {/* <Routes>
-              <Route path="/">
-                <Route path="" element={<Form header="New Item"/>}>
-                  <Route path="/page1" element={<Page1 header="General" />} />
-                  <Route path="/page2" element={<Page2 header="Properties" formErrors={formErrors} />} />
-                  <Route path="/page3" element={<Page3 header="Communication" />} />
-                  <Route path="/page4" element={<Page4 header="Features" />} />
-                </Route>
-              </Route>
-        </Routes>
-        <Outlet /> */}
           </Container>
         </>
         :

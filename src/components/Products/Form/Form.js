@@ -49,10 +49,10 @@ const Form =({
         <Outlet />
       </StyledForm>
       <StyledSection buttons>
-        <Button text={`Back${page}`} type="button" pd=".5em 0" onClick={pageBack} disabled={page === 1 && 'true' } />
-        <Button text="Next" type="button" pd=".5em 0" onClick={addPage} />
+        <Button text={`Back`} type="button" pd=".5em 0" onClick={pageBack} disabled={page === 1 && 'true' } />
+        { page < 4 && <Button text="Next" type="button" pd=".5em 0" onClick={addPage} disabled={page === 4 && 'true'} /> }
+        { page === 4 && <Button text="Submit"  type="submit" pd=".5em 0" handleSubmit={handleSubmit} /> }
       </StyledSection>
-      {/* <Button text="Submit" type="submit" handleSubmit={handleSubmit} /> */}
     </>
   );
 }
