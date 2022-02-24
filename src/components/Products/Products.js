@@ -14,9 +14,10 @@ const Products = ({ data, addToCompare, logged=true, formErrors }) => {
   const [form, setForm] = useState(false);
   const [hide, setHide] = useState(true);
   
-  const hideOverlay = () => {
+  const hideOverlay = (e) => {
     setHide(!hide);
     console.log(hide);
+    
   }
 
   const showForm = () => {
@@ -30,7 +31,7 @@ const Products = ({ data, addToCompare, logged=true, formErrors }) => {
         {form 
         ?
         <>
-          <Overlay zindex="500" onClick={hideOverlay} animation={hide && '${fadeOut} 5s' } />
+          <Overlay zindex="500" onClick={hideOverlay} className={hide ? 'out' : 'in'} />
           <Container form>
             <Form header="New Item"/>
           </Container>

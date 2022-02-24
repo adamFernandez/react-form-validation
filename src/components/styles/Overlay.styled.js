@@ -1,17 +1,26 @@
 import styled from "styled-components";
-import { fadeIn } from "./animations/animations";
+import { fadeIn, fadeOut } from "./animations/animations";
 
 export const Overlay = styled.div`
   display: grid;
   width: 100%;
   height: 100%;
-  background-color: rgba(0 ,0 ,0 , 0.75);
+  background-color: white;
   position: fixed;
   z-index: ${({ zindex }) => zindex || '800'};
   top: 0;
   left: 0;
   cursor: pointer;
-  visibility: ${({ visibility }) => visibility || 'visible' };
+  transition-duration: 2000ms;
+  transition-property: background-color;
+  
+  .in {
+    background-color: red !important;
+    border: 1px solid red;
+  }
 
-  animation: ${({ animation }) => animation || '${fadeIn} 5s' } ;
+  
+  .out {
+    background-color: blue;
+  }
 `
