@@ -1,4 +1,5 @@
 import { createGlobalStyle } from "styled-components";
+import { fadeIn, fadeOut, slideDown, slideUp } from "./animations/animations";
 
 export const GlobalStyles = createGlobalStyle`
     @import url('https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@300;400;500;700&display=swap');
@@ -47,8 +48,23 @@ export const GlobalStyles = createGlobalStyle`
        }
    }
 
+    .fadein {
+        // background-color: rgba(0,0,0,0.4);
+        animation: ${fadeIn} 1500ms;
+        animation-fill-mode: forwards;
+    }
 
-
+    .fadeout {
+        // background-color: rgba(0,0,0,0);
+        animation: ${fadeOut} 1500ms;
+        animation-fill-mode: forwards;
+    }
+    
+    .slideout {
+        animation: ${slideUp} 1300ms;
+        animation-timing-function: ease-in-out;
+        animation-fill-mode: forwards;
+    }
 
    
 `;

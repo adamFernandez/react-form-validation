@@ -20,11 +20,10 @@ export const StyledSection = styled.section`
   `}
   
   ${({ buttons }) => buttons && css`
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    display: flex;
     justify-content: center;
     justify-items: center;
-    grid-gap: .2em;
+    gap: .2em;
   `}
     
   ${({ checkbox }) => checkbox && css`

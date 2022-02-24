@@ -1,6 +1,6 @@
-import { SelectField, InputField } from "../index";
-import { StyledSection } from "../Section/Section.styled";
-import { colours, materials } from "../../../data/index";
+import { SelectField, InputField } from "../../index";
+import { StyledSection } from "../../Section/Section.styled";
+import { colours, materials } from "../../../../data/index";
 
 const Page2 = ({ header, formErrors }) => {
   return (

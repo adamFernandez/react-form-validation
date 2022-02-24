@@ -12,16 +12,22 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const Products = ({ data, addToCompare, logged=true, formErrors }) => {
   const [form, setForm] = useState(false);
-  const [hide, setHide] = useState(true);
+  const [fade, setFade] = useState(false);
   
-  const hideOverlay = () => {
-    setHide(!hide);
-    console.log(hide);
+  const hideOverlay = (e) => {
+    setFade(!fade);
+    console.log(fade, e.target.className);
+    setTimeout(() => {
+      setForm(!form);
+    }, 2000);
   }
 
   const showForm = () => {
     setForm(!form);
+    setFade(true);
   }
+
+  
   return (
     <StyledProducts>
         {data && data.map(product => 
@@ -30,14 +36,14 @@ const Products = ({ data, addToCompare, logged=true, formErrors }) => {
         {form 
         ?
         <>
-          <Overlay zindex="500" onClick={hideOverlay} animation={hide && '${fadeOut} 5s' } />
-          <Container form>
+          <Overlay zindex="500" onClick={hideOverlay} className={fade ? 'fadein' : 'fadeout' } />
+          <Container form className={!fade && 'slideout'}>
             <Form header="New Item"/>
           </Container>
         </>
         :
-        <Container addToList>
-          <FontAwesomeIcon onClick={showForm} className="plus" icon="plus-circle" size="8x" />
+        <Container addToList className={fade ? 'fadeout' : 'fadein'} >
+          <FontAwesomeIcon onClick={showForm} className='plus' icon="plus-circle" size="8x" />
         </Container>
         }
     </StyledProducts>

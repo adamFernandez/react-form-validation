@@ -1,6 +1,6 @@
-import { InputField } from "../index";
-import { StyledSection } from "../Section/Section.styled";
-import { wifis, sims } from "../../../data/index";
+import { InputField } from "../../index";
+import { StyledSection } from "../../Section/Section.styled";
+import { wifis, sims } from "../../../../data/index";
 
 const Page3 = ({ header, formErrors }) => {
   return (

@@ -1,5 +1,5 @@
-import { InputField, SelectField } from '../index';
-import { StyledSection } from '../Section/Section.styled';
+import { InputField, SelectField } from '../../index';
+import { StyledSection } from '../../Section/Section.styled';
 
 const Page1 = ({ header, formErrors }) => {
   return (

@@ -1,6 +1,6 @@
-import { InputField } from "../index";
-import { StyledSection } from "../Section/Section.styled";
-import { features, sensors } from "../../../data/index";
+import { InputField } from "../../index";
+import { StyledSection } from "../../Section/Section.styled";
+import { features, sensors } from "../../../../data/index";
 
 const Page4 = ({ header, formErrors }) => {
   return (
