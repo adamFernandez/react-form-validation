@@ -1,10 +1,14 @@
+import React from 'react';
 import { InputField, SelectField } from '../../index';
 import { StyledSection } from '../../Section/Section.styled';
 
-const Page1 = ({ header, formErrors }) => {
+function Page1({ header, formErrors }) {
   return (
     <StyledSection>
-      <h4>{header}:</h4>
+      <h4>
+        {header}
+        :
+      </h4>
       <StyledSection input>
         <InputField type="text" name="item" placeholder="Item" error={formErrors} />
         <InputField type="text" name="price" placeholder="Price" error={formErrors} />
@@ -13,7 +17,7 @@ const Page1 = ({ header, formErrors }) => {
         <SelectField name="status" options={['available', 'out of stock']} error={formErrors} />
       </StyledSection>
     </StyledSection>
-  )
+  );
 }
 
 export default Page1;
