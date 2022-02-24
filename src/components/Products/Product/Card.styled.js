@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const StyledCard = styled.div`
   position: relative;
@@ -8,7 +8,7 @@ export const StyledCard = styled.div`
   border-bottom: 1px solid #bbbbbb;
   margin: 0;
   padding: .2em 0;
-  
+
   .image {
     width: 90%;
 
@@ -69,7 +69,4 @@ export const StyledCard = styled.div`
       padding-left: .5em;
     }
   } */
-  
-  
-
-`
+`;

@@ -36,8 +36,8 @@ export const Container = styled.div`
 				z-index: 500;
 				transform: translateY(50%, -50%);
 				animation-name: ${slideDown};
-				animation-duration: 1.3s;
-				animation-timing-function: ease-in-out;	
+				animation-duration: 1300ms;
+				animation-timing-function: ease-in-out;				
 				
 				h2 {					
 					margin: .3em 0;
