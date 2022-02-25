@@ -1,6 +1,3 @@
-/* eslint-disable no-unused-vars */
-/* eslint-disable react/react-in-jsx-scope */
-/* eslint-disable react/jsx-filename-extension */
 import { useEffect, useState } from 'react';
 import {
   useNavigate, Routes, Route, Outlet,

@@ -1,4 +1,3 @@
-/* eslint-disable import/no-cycle */
 export { default as Section } from './Section/Section';
 export { default as SelectField } from './SelectField/SelectField';
 export { default as InputField } from './InputField/InputField';

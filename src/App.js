@@ -1,10 +1,3 @@
-/* eslint-disable no-eval */
-/* eslint-disable react/react-in-jsx-scope */
-/* eslint-disable react/jsx-filename-extension */
-/* eslint-disable no-param-reassign */
-/* eslint-disable no-unused-expressions */
-/* eslint-disable max-len */
-/* eslint-disable no-unused-vars */
 import { useEffect, useState } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
@@ -15,8 +8,8 @@ import { Wrapper } from './components/styles/Wrapper.styled';
 import { GlobalStyles } from './components/styles/GlobalStyles';
 
 import './FontAwesomeIcons';
-import logo from './img/netflix_2.png';
-
+import logo from "./img/netflix_2.png";
+ 
 import {
   Products, Form, MenuBar, Listing, Movies, Basket, Comparison,
 } from './imports/components';
@@ -39,11 +32,11 @@ function App() {
 
   // connecting to db
   const url = 'http://localhost:3005/';
-  const fetchData = async () => {
+  const fetchData = async (tab) => {
     try {
-      const response = await fetch(`${url}${page}`);
+      const response = await fetch(`${url}${tab}`);
       const json = await response.json();
-      const newSet = `set${capitalize(page)}`;
+      const newSet = `set${capitalize(tab)}`;
       eval(newSet)(json);
     } catch (error) {
       console.log('Error: ', error);
