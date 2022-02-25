@@ -25,7 +25,7 @@ function App() {
   const [listing, setListing] = useState('');
   const [movies, setMovies] = useState('');
   const [products, setProducts] = useState('');
-  const [page, setPage] = useState('form');
+  const [page, setPage] = useState();
 
   // compare data state
   const [compareData, setCompareData] = useState([]);

@@ -10,7 +10,7 @@ export const GlobalStyles = createGlobalStyle`
 
    body {
        min-height: 101vh;
-       background-color: #444960;
+       background-color: #2a2d3b;
        font-family: 'Merriweather', sans-serif; 
        font-size: 1.15em;
        margin: 0;
@@ -32,13 +32,12 @@ export const GlobalStyles = createGlobalStyle`
        .tooltiptext {
             visibility: hidden;
             width: 120px;
-            background-color: #3a3a3a;
-            color: #ffffff;
+            /* background-color: #3a3a3a; */
+            color: #3a3a3a;;
             text-align: center;
-            padding: .2em 0;
-            border: 1px solid black;
+            padding: .2em;
             border-radius: .5em;
-            
+            border: none;
             position: absolute;
             z-index: 15;
        }
