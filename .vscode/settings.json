@@ -2,8 +2,7 @@
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": true
   },
-  "esling.validate": [
-    "javascript"
-  ],
-  "prettier.enable": false
+  "editor.formatOnSave": true,
+  "prettier.jsxSingleQuote": true,
+  "editor.formatOnSaveMode": "modificationsIfAvailable"
 }

@@ -1,6 +1,3 @@
-/* eslint-disable no-unused-vars */
-/* eslint-disable react/react-in-jsx-scope */
-/* eslint-disable react/jsx-filename-extension */
 import { useEffect, useState } from 'react';
 import {
   useNavigate, Routes, Route, Outlet,
@@ -11,7 +8,7 @@ import {
 } from './index';
 
 import { StyledForm } from './Form.styled';
-import { StyledSection } from './Section/Section.styled';
+import { StyledSection } from "./Section/Section.styled";
 
 import {
   colours, features, materials, communication, sensors, sims, wifis,
@@ -52,9 +49,9 @@ function Form({
         <Outlet />
       </StyledForm>
       <StyledSection buttons>
-        { page > 1 && <Button text="Back" type="button" pd=".5em 0" onClick={pageBack} disabled={page === 1 && 'true'} className={page === 1 ? 'fadeout' : 'fadein'} /> }
-        { page < 4 && <Button text="Next" type="button" pd=".5em 0" onClick={addPage} disabled={page === 4 && 'true'} /> }
-        { page === 4 && <Button text="Submit" type="submit" pd=".5em 0" handleSubmit={handleSubmit} /> }
+        {page > 1 && <Button text="Back" type="button" pd=".5em 0" onClick={pageBack} disabled={page === 1 && 'true'} className={page === 1 ? 'fadeout' : 'fadein'} />}
+        {page < 4 && <Button text="Next" type="button" pd=".5em 0" onClick={addPage} disabled={page === 4 && 'true'} />}
+        {page === 4 && <Button text="Submit" type="submit" pd=".5em 0" handleSubmit={handleSubmit} />}
       </StyledSection>
     </>
   );

@@ -1,5 +1,4 @@
-/* eslint-disable no-unused-vars */
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 import { capitalize } from './components/styles/Functions';
@@ -9,7 +8,7 @@ import { Wrapper } from './components/styles/Wrapper.styled';
 import { GlobalStyles } from './components/styles/GlobalStyles';
 
 import './FontAwesomeIcons';
-import logo from './img/netflix_2.png';
+import logo from "./img/netflix_2.png";
 
 import {
   Products, Form, MenuBar, Listing, Movies, Basket, Comparison,
@@ -33,11 +32,11 @@ function App() {
 
   // connecting to db
   const url = 'http://localhost:3005/';
-  const fetchData = async () => {
+  const fetchData = async (tab) => {
     try {
-      const response = await fetch(`${url}${page}`);
+      const response = await fetch(`${url}${tab}`);
       const json = await response.json();
-      const newSet = `set${capitalize(page)}`;
+      const newSet = `set${capitalize(tab)}`;
       eval(newSet)(json);
     } catch (error) {
       console.log('Error: ', error);
