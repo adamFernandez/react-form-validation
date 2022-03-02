@@ -11,8 +11,11 @@ import './FontAwesomeIcons';
 import logo from "./img/netflix_2.png";
 
 import {
-  Products, Form, MenuBar, Listing, Movies, Basket, Comparison,
+  Products, Form, MenuBar, Listing, Movies, Basket, Comparison, AddItem
 } from './imports/components';
+
+import Page2 from './components/Products/Form/Pages/Page2/Page2';
+import InputField from './components/Products/Form/InputField/InputField';
 
 function App() {
   const defaultValues = { username: '', email: '', password: '' };
@@ -29,6 +32,10 @@ function App() {
 
   // compare data state
   const [compareData, setCompareData] = useState([]);
+
+  // form items list state
+  const [formList, setFormList] = useState([]);
+  const [formListItems, setFormListItems] = useState([]);
 
   // connecting to db
   const url = 'http://localhost:3005/';
@@ -111,6 +118,25 @@ function App() {
 
   };
 
+  // add Item to Form
+  const addForm = (e) => {
+    setFormList(formList.concat(
+      <Container key={formList.length}>
+        {formListItems}
+        <AddItem color="black" onClick={addFormItem} />
+      </Container>
+    ))
+  }
+
+  const addFormItem = (e) => {
+    setFormListItems(formListItems.concat(
+      <InputField key={formListItems.lenght} name="input" />
+    ))
+  }
+
+  useEffect(() => {
+  }, [formListItems])
+
   // show a component depending on menu clicked
   const show = (e) => {
     console.log(e.target.className);
@@ -123,6 +149,7 @@ function App() {
     if (Object(formErrors).length === 0 && isSubmit) {
       console.log(formValues);
     }
+
   }, [formErrors]);
 
   return (
@@ -131,7 +158,15 @@ function App() {
       <Router>
         <Routes>
           <Route path="/" element={<MenuBar compareData={compareData} />}>
-            <Route index element={<Container><Form header="Sign Form" formValues={formValues} handleChange={handleChange} formErrors={formErrors} handleSubmit={handleSubmit} /></Container>} />
+            <Route
+              index
+              element={(
+                <>
+                  <Container><Form header="Sign Form" formValues={formValues} handleChange={handleChange} formErrors={formErrors} handleSubmit={handleSubmit} /></Container>
+                  {formList}
+                  <AddItem onClick={addForm} />
+                </>
+              )} />
             <Route path="movies" element={<Wrapper auto><Movies data={movies} logo={logo} /></Wrapper>} />
             <Route path="products/*" element={<Wrapper auto><Products data={products} addToCompare={addToCompare} /></Wrapper>} />
             <Route path="listing" element={<Wrapper><Listing data={listing} changeStatus={changeStatus} /></Wrapper>} />

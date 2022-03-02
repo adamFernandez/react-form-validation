@@ -1,4 +1,4 @@
-import { keyframes } from "styled-components";
+import { keyframes } from 'styled-components';
 
 export const scaleUp = keyframes`
   0% {
@@ -48,7 +48,7 @@ export const rubberButton = keyframes`
   100% {
     transform: scale(90%);
   }
-`
+`;
 
 export const fadeIn = keyframes`
   0% {
@@ -57,9 +57,9 @@ export const fadeIn = keyframes`
   100%{
     opacity: 1;
   }
-  `
-  
-  export const fadeOut = keyframes`
+  `;
+
+export const fadeOut = keyframes`
   0% {
     opacity: 1;
   }
@@ -67,4 +67,4 @@ export const fadeIn = keyframes`
     opacity: 0;
     visibility: hidden;
   }
-`
+`;

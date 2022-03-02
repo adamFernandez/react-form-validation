@@ -4,6 +4,7 @@ import { StyledProducts } from './Products.styled';
 import { Overlay } from '../styles/Overlay.styled';
 import Product from './Product/Product';
 import Form from './Form/Form';
+import AddItem from './AddItem/AddItem';
 import { Container } from '../styles/Container.styled';
 
 function Products({
@@ -38,9 +39,7 @@ function Products({
           </>
         )
         : (
-          <Container addToList className={fade ? 'fadeout' : 'fadein'}>
-            <FontAwesomeIcon onClick={showForm} className="plus" icon="plus-circle" size="8x" />
-          </Container>
+          <AddItem onClick={showForm} />
         )}
     </StyledProducts>
   );

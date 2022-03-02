@@ -10,7 +10,7 @@ export const GlobalStyles = createGlobalStyle`
 
    body {
        min-height: 101vh;
-       background-color: #2a2d3b;
+       background-color: #3a3a4f;
        font-family: 'Merriweather', sans-serif; 
        font-size: 1.15em;
        margin: 0;
