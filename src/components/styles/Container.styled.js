@@ -48,6 +48,7 @@ export const Container = styled.div`
     ${({ addToList }) =>
 	addToList &&
 	css`
+			
       background: none;
       border: none;
       color: white;

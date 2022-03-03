@@ -12,6 +12,8 @@ export { default as Movies } from '../components/Movies/Movies';
 export { default as Basket } from '../components/Basket/Basket';
 export { default as Comparison } from '../components/Comparison/Comparison';
 export { default as AddItem } from '../components/Products/AddItem/AddItem';
+export { default as AddForm } from '../components/AddForm/AddForm';
+export { default as RemoveItem } from '../components/RemoveItem/RemoveItem';
 
 // Form 
 

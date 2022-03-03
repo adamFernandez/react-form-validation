@@ -11,11 +11,12 @@ import './FontAwesomeIcons';
 import logo from "./img/netflix_2.png";
 
 import {
-  Products, Form, MenuBar, Listing, Movies, Basket, Comparison, AddItem
+  Products, Form, MenuBar, Listing, Movies, Basket, Comparison, AddItem, AddForm
 } from './imports/components';
 
 import Page2 from './components/Products/Form/Pages/Page2/Page2';
 import InputField from './components/Products/Form/InputField/InputField';
+import { StyledForm } from './components/Products/Form/Form.styled';
 
 function App() {
   const defaultValues = { username: '', email: '', password: '' };
@@ -35,7 +36,6 @@ function App() {
 
   // form items list state
   const [formList, setFormList] = useState([]);
-  const [formListItems, setFormListItems] = useState([]);
 
   // connecting to db
   const url = 'http://localhost:3005/';
@@ -121,21 +121,20 @@ function App() {
   // add Item to Form
   const addForm = (e) => {
     setFormList(formList.concat(
-      <Container key={formList.length}>
-        {formListItems}
-        <AddItem color="black" onClick={addFormItem} />
+      <Container key={`form${formList.length}`}>
+        <AddForm />
       </Container>
     ))
   }
 
-  const addFormItem = (e) => {
-    setFormListItems(formListItems.concat(
-      <InputField key={formListItems.lenght} name="input" />
-    ))
-  }
+  // const addFormItem = (e) => {
+  //   setFormListItems(previousListItems => previousListItems.concat(
+  //     <InputField key={formListItems.lenght} name={`input`} />
+  //   ))
+  // }
 
-  useEffect(() => {
-  }, [formListItems])
+  // useEffect(() => {
+  // }, [formListItems])
 
   // show a component depending on menu clicked
   const show = (e) => {

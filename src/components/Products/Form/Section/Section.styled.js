@@ -45,8 +45,7 @@ export const StyledSection = styled.section`
         div:nth-child(n) {
             display: grid;
             grid-template-columns: 1fr .5fr;
-            justify-items: left;
-          
+            justify-items: left;       
 
         }
       
