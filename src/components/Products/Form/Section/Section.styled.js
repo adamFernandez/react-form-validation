@@ -24,6 +24,13 @@ export const StyledSection = styled.section`
     justify-items: center;
     gap: .2em;
   `}
+  
+  ${({ checkboxform }) => checkboxform && css`
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    gap: .2em;
+  `}
     
   ${({ checkbox }) => checkbox && css`
 

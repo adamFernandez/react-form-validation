@@ -127,15 +127,6 @@ function App() {
     ))
   }
 
-  // const addFormItem = (e) => {
-  //   setFormListItems(previousListItems => previousListItems.concat(
-  //     <InputField key={formListItems.lenght} name={`input`} />
-  //   ))
-  // }
-
-  // useEffect(() => {
-  // }, [formListItems])
-
   // show a component depending on menu clicked
   const show = (e) => {
     console.log(e.target.className);

@@ -12,7 +12,7 @@ import AddCheckbox from '../AddCheckbox/AddCheckbox';
 
 const AddForm = () => {
   const [formListItems, setFormListItems] = useState([]);
-  const [select, setSelect] = useState(null);
+  const [select, setSelect] = useState("");
 
   const getSelected = (value) => {
     switch (value) {
@@ -23,13 +23,14 @@ const AddForm = () => {
       case "checkbox":
         return <AddCheckbox key={formListItems.length} />;
       case "select":
-        return <SelectField key={formListItems.length} name="select element" options={['input', 'checkbox', 'select', 'button']} handleChange={handleChange} />;
+        return <SelectField key={formListItems.length} name="select element" options={['Insert Options']} handleChange={handleChange} />;
       default:
         return "";
     }
   }
   const addFormItem = (e) => {
     const selected = getSelected(select);
+    select === "" ? setSelect("input") : '';
     setFormListItems(formListItems.concat(
       selected
     ));
@@ -52,8 +53,8 @@ const AddForm = () => {
     <StyledForm>
       {formListItems}
       <StyledSection buttons>
-        <SelectField name="select form items" options={['input', 'checkbox', 'select', 'button']} handleChange={handleChange} mb="" />
-        <AddItem color="black" key={formListItems.length} onClick={() => addFormItem()} size="2x" width="10%" />
+        <SelectField selected={select} name="select form items" options={['input', 'checkbox', 'select', 'button']} handleChange={handleChange} mb="" />
+        <AddItem color="black" key={formListItems.length} onClick={addFormItem} size="2x" width="10%" />
       </StyledSection>
       {/* <Button text="Submit" type="submit" pd=".5em 0" handleSubmit={handleSubmit} /> */}
     </StyledForm>

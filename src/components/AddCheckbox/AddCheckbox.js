@@ -8,19 +8,20 @@ const AddCheckbox = () => {
   const [checkboxList, setCheckboxList] = useState([]);
 
   const removeCheckBox = (e) => {
-    const newList = checkboxList.filter((i) => i !== item);
+    setCheckboxList(checkboxList.filter((item) => item.key !== e.target.parentElement.key));
+    console.log((e.target.parentElement.id));
+    console.log(checkboxList);
 
   }
 
   const addCheckBox = (e) => {
     setCheckboxList(checkboxList.concat(
-      <StyledSection buttons>
-        <InputField type="checkbox" name={`checkbox ${checkboxList.length}`} key={checkboxList.length} />
-        <RemoveItem color="red" key={`RemoveItem-${checkboxList.length}`} onClick={() => removeCheckBox()} size="1x" width="10%" />
+      <StyledSection checkboxform key={`checkbox${checkboxList.length}`}>
+        <InputField type="checkbox" name={`checkbox ${checkboxList.length}`} />
+        <RemoveItem color="red" id={`checkbox${checkboxList.length}`} onClick={(e) => removeCheckBox(e)} size="1x" width="10%" />
       </StyledSection>
     ))
   }
-
 
   useEffect(() => {
     addCheckBox();
@@ -30,7 +31,6 @@ const AddCheckbox = () => {
   return (
     <StyledSection buttons>
       <StyledSection checkbox>
-        {checkboxList.length === 0 && <InputField type="checkbox" name={`checkbox ${checkboxList.length}`} key={checkboxList.length} />}
         {checkboxList}
       </StyledSection>
       <AddItem color="black" key={`AddItem-${checkboxList.length}`} onClick={addCheckBox} size="2x" width="10%" />
